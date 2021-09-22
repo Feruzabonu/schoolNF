@@ -95,7 +95,7 @@ getStaff=()=>{
 setTimeout(()=>{
   this.setState({
     loader:false})
-  }, 4000)
+  }, 1000)
 
 
   }).catch(err=>{
@@ -114,13 +114,6 @@ setTimeout(()=>{
 }
 
     render() {
-      const contentStyle = {
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-      };
         
         return (
             <div>
@@ -130,26 +123,12 @@ setTimeout(()=>{
           </div>
           
          : 
-            <>  <br/><br/><br/>
-            <Carousel style={{position:'relative',}} className="carTur">
-            {this.state.direktor!==null?this.state.direktor.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px',  width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-</Carousel>
+            <>
+           <div className={styles.header}>
+                   <h1> Maktab ma'muriyati.</h1>
+               </div>
                 <Container>
+                <div className={styles.body}>
                 <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
  return(
@@ -159,18 +138,20 @@ setTimeout(()=>{
         src={item.image}
         alt='...'
         position='top'
+         style={{width:'415px', height:'277px'}}
+      
       />
       <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-        <MDBCardTitle>{item.full_name}</MDBCardTitle>
+        <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
         <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
           Maktab Direktori
         </MDBCardText>
       </MDBCardBody>
-      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px', minHeight:'160px'}}>
         <small className='text-muted' style={{fontSize:'16px'}}>
           <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
           <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-          <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+          <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
         </small>
       </MDBCardFooter>
     </MDBCard>
@@ -188,18 +169,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -216,18 +198,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -243,18 +226,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -269,18 +253,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -296,18 +281,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -323,18 +309,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -350,18 +337,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -377,18 +365,19 @@ setTimeout(()=>{
                   src={item.image}
                   alt='...'
                   position='top'
+                   style={{width:'415px', height:'277px'}}
                 />
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
-                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
                     Maktab Direktori
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
-                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
                   </small>
                 </MDBCardFooter>
               </MDBCard>
@@ -400,6 +389,7 @@ setTimeout(()=>{
                     
 
                     </MDBRow>
+                    </div>
                 </Container></>
       }  </div>
         )
