@@ -88,9 +88,9 @@ export default class App extends Component {
               </Route>
 
               <Route exact path="/rahbariyat/">
-                <NavBar />
+                
                 <Maktabmamuriyati />
-                <Footer />
+               
               </Route>
 
               <Route exact path="/yangiliklar/">
