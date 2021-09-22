@@ -129,12 +129,13 @@ setTimeout(()=>{
                </div>
                 <Container>
                 <div className={styles.body}>
-                <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+                <MDBRow className='row-cols-1 row-cols-md-3  g-4'>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
  return(
   <MDBCol>
     <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
-      <MDBCardImage
+      <MDBCardImage 
+      className={styles.card_img}
         src={item.image}
         alt='...'
         position='top'
@@ -166,6 +167,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -195,6 +197,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -223,6 +226,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -250,6 +254,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -278,6 +283,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -306,6 +312,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -334,6 +341,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
@@ -362,6 +370,7 @@ setTimeout(()=>{
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
+                className={styles.card_img}
                   src={item.image}
                   alt='...'
                   position='top'
