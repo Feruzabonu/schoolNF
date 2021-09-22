@@ -1,0 +1,1078 @@
+/* .wrapper{
+    margin-top: 0;
+    background-color: black;
+    height: 90vh;
+    border-bottom: 2px solid black;
+} */
+/* .fer{background-color:rgba(0, 0, 0, 0.302); } */
+.dashboard{
+    margin-top: 0;
+    height: 90.5vh;
+    
+    text-align: center;
+    /* opacity: 0.6; */
+    
+}
+.temur{
+    z-index:-23;
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.yuqori{
+    width: 100%;
+    height: 70px;
+  
+    position: relative;}
+    .yuqori  .first{
+        position: absolute;
+        display: flex;
+        padding-bottom: 15px;}
+    .yuqori .iconEmail{
+            font-size: 1.4rem;
+            color: white;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+.usericon{
+    font-size: 24px;
+    color: #FFF;
+    margin-top: 25px;
+    position:absolute;
+    top:-5px;
+    right:20px !important;
+}
+
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+    color: #f1f1f1; 
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.registericon{
+    font-size: 24px;  
+    color: #FFF;
+    margin-top: 25px;
+    position:absolute;
+    top:0px;
+    right:60px !important;
+}
+@media screen and (max-width: 992px){
+    .wrapper{
+        height: 150vh;
+    }
+    .iconEmail{
+        margin-top:-5px ;
+    }
+    .dashboard{
+        height: 150vh;
+    }
+    .usericon{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 800px){
+    .wrapper{
+        height: 140vh;
+    }
+    .dashboard{
+        height: 70vh;
+    }
+    .overlay{
+        opacity: 1 !important;
+    }
+    .yuqori .iconEmail{
+        margin-top:3px ;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .wrapper{
+        height: 130vh;
+    }
+    /* .dashboard{
+        height: 130vh;
+    } */
+  
+}
+
+
+.container{
+    width: 100%;
+    height: 350px;
+    /* background-color: gray; */
+    /* border-bottom: 2px solid black; */
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+}
+.bir{
+    width: 31%;
+    height: 300px;
+    margin-right: 1%;
+    margin-left: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.ikki{
+    width: 31%;
+    height: 300px;
+    margin-right: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.uch{
+    width: 31%;
+    height: 300px;
+    margin-right: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.containercha {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.overlay .icon{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-size: 2rem;
+}
+.overlay h3{
+    color: white;
+}
+.containercha:hover .overlay {
+    opacity: 1;
+}
+@media screen and (max-width: 1100px) {
+    .container{
+        height: 300px;
+    }
+    .bir, .ikki, .uch{
+        height: 250px;
+    }
+    .registericon{
+        top:0px !important;
+        right:45px !important;
+    }
+    .usericon{
+        top:0px !important;
+        right:10px !important;
+    }
+
+}
+@media screen and (max-width: 950px) {
+    .container{
+        height: 300px;
+    }
+    .bir, .ikki, .uch{
+        height: 250px;
+    }
+    .registericon{
+        top:0px !important;
+        right:55px !important;
+    }
+    .usericon{
+        top:0px !important;
+        right:20px !important;
+    }
+
+}
+@media screen and (max-width: 900px) {
+    .container{
+        display: block;
+        height: 830px;
+    }
+    .bir, .ikki{
+        margin-top: 10px;
+        display: inline-block;
+        height: 300px;
+        width: 48%;
+    }
+    .uch{
+        display: block;
+        height: 500px;
+        width: 97%;
+        margin-left: auto;
+    }
+    .registericon{
+        top:0px !important;
+        right:55px !important;
+    }
+    .usericon{
+        top:0px !important;
+        right:20px !important;
+    }
+}
+@media screen and (max-width: 820px) {
+    .registericon{
+        top:-15px !important;
+        right:70px !important;
+    }
+    .usericon{
+        top:-15px !important;
+        right:20px !important;
+    }
+}
+@media screen and (max-width: 750px) {
+    .container{
+        height: 580px;
+        margin-top:0px;
+    }
+    .bir, .ikki{
+        height: 250px;
+        width: 48%;
+    }
+    .uch{
+        height: 300px;
+        width: 97%;
+    }
+    .registericon{
+        top:-15px !important;
+        right:70px !important;
+    }
+    .usericon{
+        top:-15px !important;
+        right:20px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    .container{
+        height: 940px;
+    }
+    .bir{
+        margin: 0;
+        margin-top: 10px;
+        height: 300px;
+        width: 95%;
+    }
+    .ikki{
+        margin: auto;
+        height: 300px;
+        width: 95%;
+    }
+    .uch{
+        margin: auto;
+        height: 300px;
+        width: 95%;
+    }
+    .registericon{
+        top:-15px !important;
+        right:70px !important;
+    }
+   
+  
+}
+@media screen and (max-width: 400px) {
+    .container{
+        height: 780px;
+    }
+    .bir, .ikki, .uch{
+        height: 250px;
+    }
+    .registericon{
+        top:-15px !important;
+        right:70px !important;
+    }
+}
+@media screen and (max-width: 300px) {
+    .container{
+        height: 630px;
+    }
+    .bir, .ikki, .uch{
+        height: 200px;
+    }
+    .registericon{
+        top:-15px !important;
+        right:70px !important;
+    }
+}
+
+.containerRow{
+    padding: 0 20px;
+    padding-bottom: 40px;
+}
+
+.col h3{
+    color: #201f51;
+    line-height: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid darkred;
+}
+.col .video{
+    width: 100%;
+}
+.col p{
+    margin-top: 10%;
+    font-family: "Popins",sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #555;
+}
+.col .pp{
+    line-height: 1.7rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+@media (max-width: 500px){
+    .col .pp{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 410px){
+    .col .pp{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+
+.colNews{
+    padding: 0;
+    height: 120px;
+}
+.colNews .rasm{
+    width: 100%;
+    margin-top: 10px;
+    height: 60%;
+    border-radius: 10px;
+}
+.colNews h5{
+    margin: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: grey;
+}
+.colNews p{
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 3%;
+    letter-spacing: -1px;
+    font-weight: 600;
+    color: darkblue;
+}
+@media (max-width: 1002px){
+    .colNews h5{
+        font-size: 0.8rem;
+    }
+    .colNews p{
+        font-size: 0.9rem;
+    }
+    .colNews .rasm{
+        height: 50%;
+    }
+}
+@media (max-width: 992px){
+    .colNews h5{
+        font-size: 0.8rem;
+    }
+    .colNews p{
+        font-size: 1.2rem;
+    }
+    .colNews .rasm{
+        height: 70%;
+    }
+}
+@media (max-width: 768px){
+    .colNews h5{
+        font-size: 0.8rem;
+    }
+    .colNews p{
+        font-size: 1.2rem;
+    }
+    .colNews .rasm{
+        width: 90%;
+    }
+}
+@media (max-width: 450px){
+    .colNews h5{
+        font-size: 0.7rem;
+    }
+    .colNews p{
+        font-size: 1.1rem;
+    }
+    .colNews .rasm{
+        width: 100%;
+        height: 60%;
+    }
+}
+@media (max-width: 400px){
+    .colNews h5{
+        font-size: 0.6rem;
+    }
+    .colNews p{
+        font-size: 1rem;
+    }
+    .colNews .rasm{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.buttoncha {
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.buttoncha span{
+    font-size: 1.3rem;
+}
+
+.buttoncha:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 10%;
+    right: -20px;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.buttoncha:hover{
+    padding-right: 24px;
+    padding-left:8px;
+}
+
+.buttoncha:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+
+.bayroqlar{
+    position: absolute;
+    top: 20px;
+    width: 120px;
+    z-index: 50000;
+    left: 65%;
+}
+.bayroqlar img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+}
+@media (max-width: 820px){
+    .bayroqlar{
+        top: 0px;
+        left: 0% !important;
+        
+    }
+    .usericon{
+        top: -20px;
+       right:150px;
+         margin-right: 15px;
+     }
+}
+@media (min-width:1025px){
+    .bayroqlar{
+        top: 15px;
+        left: 64% !important;
+        
+    }
+   
+}
+@media (min-width:1200px){
+    .bayroqlar{
+        top: 15px;
+        left: 70% !important;
+        
+    }
+   
+}
+
+@media (max-width: 1024px) and (min-width:821px){
+    .bayroqlar{
+        top: 15px;
+        left: 80%;
+        
+    }
+   
+}
+
+@media (max-width: 500px){
+    .bayroqlar{
+        top: 0px;
+        left: 0% !important;
+        
+    }
+    .usericon{
+       top: -15px;
+        float: right;
+        margin-right: 15px;
+    }
+}
+
+
+.Navbar .maktabLogo{
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    
+    .meauto   .navLink{
+       
+            display: inline-block;
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            margin-left: 30px;
+            margin-top: 10px;
+          
+        }
+    
+        .meauto .navLink::after {
+            display:block;
+            content: '';
+            border-bottom: solid 3px white;  
+            transform: scaleX(0);  
+            transition: transform 400ms ease-in-out;
+        }
+        
+    .meauto .navLink:hover::after {
+            transform: scaleX(1);
+        }
+    
+    .meauto .searchIcon{
+        color: white;
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    
+    .meauto .searchIcon:hover{
+        color: red;
+    }
+    .meauto .userIcon{
+        color: white;
+        text-shadow: 0px 0px 40px white;
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-left: 3px;
+        transform:translate(0px, 2px);
+        transition: 0.5s ease;
+    }
+    .kirish{
+        color: white;
+        font-size: 1.2rem;
+        display:inline-block;
+    }
+    .meauto .kirish:hover{
+        border-top: 0;
+    }
+    
+    
+    
+    .meauto{
+      margin-top:-10px;
+        background-color:rgba(0, 0, 0, 0.398) !important;
+        text-align:center;
+    }   
+       
+    @media screen and (max-width:566px) {
+        .meauto{
+            position: absolute;
+            background-color:rgba(0, 0, 0, 0.398) !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
+    }
+    
+    @media (max-width: 786px){
+        .meauto{
+            position: absolute !important;
+            background-color:#02024e !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
+    .meauto  .kirish{
+            margin: 0px;
+            padding: 0px;
+            font-size: 2rem;
+           
+        }
+    .meauto  .userIcon{
+            margin-left: 20px;
+            font-size: 2rem;
+           
+        }
+    
+    
+        .meauto .navLink{ 
+            font-size: 1.6rem;
+            margin-top: 0px;
+           
+            }
+    }
+    
+    @media (max-width: 992px){
+        .meauto{
+            position: absolute !important;
+            background-color:#02024e !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
+        .meauto .navLink{ 
+            font-size: 1.6rem;
+            padding:10px;
+            margin: 0px;
+            }
+        .meauto .kirish{
+            padding:0px;
+            margin: 0px;
+                font-size: 2rem;
+        }
+        .meauto .userIcon{
+            margin-left: 20px;
+            font-size: 2rem;
+            padding-top:-10px;
+        }
+      
+        .meauto{
+            margin-left:0;
+        }
+    }
+    
+    @media (min-width:993px){
+        .meauto{ 
+            text-align: center;
+            width:100%;
+            background-color:transparent !important; 
+        }
+        .meauto .navLink{ 
+            font-size: 1.1rem;
+            padding:10px;
+            margin: 0px;
+            }
+        .kirish{
+            margin-top:30px;
+    
+        }
+    }
+    @media (min-width:1200px){
+        .meauto{ width:80vw;
+            margin-left:30px;
+        }
+        .kirish{
+           padding-left: 10px;
+            float: right;
+            right: 0px;
+            margin-top:30px;
+           
+            
+        }
+    
+    
+    }
+
+
+
+   .yuqori p{
+        color: white;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+.second{
+    position: absolute;
+    display: flex;
+    padding-top: 15px;
+    margin-left: 69%;}
+.second .iconEmail{
+        font-size: 1.3rem;
+        color: red;
+        margin-right: 10px;
+     margin-top: 6px;  
+    }
+ .second  p{
+        color: white;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+.userIcon{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1150px;
+  
+    transition: 0.5s ease;
+}
+.userIcon:hover{
+    color: blue;
+}
+@media (max-width: 1000px){
+    .userIcon{
+        margin-left: 99%;
+    }
+}
+@media (max-width: 820px){
+    .userIcon{
+        margin-left: 99%;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px){
+    .userIcon{
+        margin-left: 90%;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 680px){
+    .userIcon{
+        margin-left: 85%;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 580px){
+    .userIcon{
+        margin-left: 80%;
+        font-size: 1.6rem;
+
+    }
+}
+
+@media (max-width: 500px){
+    .userIcon{
+        margin-left: 90%;
+        font-size: 1.6rem;
+        
+    }
+}
+@media (max-width: 1000px) {
+    .first{
+        margin-left: -5%;
+    }
+    .second{
+        display: none;
+    }
+}
+@media (max-width: 820px) {
+ 
+ 
+    .first{
+        display: none;
+    }
+    .second{
+        display: none;
+    }
+    .yuqori{
+        height: 60px;
+    }
+}
+
+@media (max-width: 820px){
+.yuqori{
+   
+    height: 60px;
+   
+}
+
+}
+.bayroqlar{
+    width: 120px;
+    z-index: 50000;
+    display: block;
+    margin:10px;
+    margin-left: 20px !important;
+}
+.bayroqlar img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+.userIcon{margin-left:20px; font-size: 18px; transform: translate(0px, 5px);}
+.maktabLogo {
+    color: white !important;
+}
+@media screen and (max-width:566px) {
+    .bayroqlar{
+        margin-left: 175px !important;
+    }
+    .maktabLogo{
+margin-left: 10px;
+    }
+}
+@media screen and (min-width:567px) {
+    .bayroqlar{
+        margin-left: 200px !important;
+    }
+}
+@media screen and (min-width:768px) {
+    .bayroqlar{
+        margin-left: 280px !important;
+    }
+}
+@media screen and (min-width:992px) {
+    .maktabLogo{
+        padding-top:40px;
+    }
+    .bayroqlar{
+        margin-left: 0px !important;
+    }
+}
+.container, .containerRow{
+    background-color: white !important;
+    padding-top: 30px;
+}
+.containerRow{margin-top: -30px; padding-top:30px;}
+@media screen and (min-width:1200px) {
+    .bayroqlar{
+        margin-left: 50px !important;
+        margin-top: 5px !important;
+    }
+
+}
+
+
+.maktabLogo{
+    margin-top: 5px;
+    margin:auto;
+    text-align: left;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.meauto   .navLink{
+   
+        display: inline-block;
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0px;
+        margin-left: 30px;
+    }
+
+    .meauto .navLink::after {
+        display:block;
+        content: '';
+        border-bottom: solid 3px white;  
+        transform: scaleX(0);  
+        transition: transform 400ms ease-in-out;
+    }
+    
+.meauto .navLink:hover::after {
+        transform: scaleX(1);
+    }
+
+.meauto .searchIcon{
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.meauto .searchIcon:hover{
+    color: red;
+}
+.meauto .userIcon{
+    color: white;
+    text-shadow: 0px 0px 40px white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 3px;
+    transform:translate(0px, 2px);
+    transition: 0.5s ease;
+}
+.kirish{
+    color: white;
+    font-size: 1rem;
+   margin:auto;
+   display: flex;
+    display:inline-block;
+}
+.meauto .kirish:hover{
+    border-top: 0;
+}
+
+
+
+.meauto{
+    padding-top:10px;
+    background-color:#02024e;
+    text-align:center;
+    padding-bottom:15px;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}   
+   
+
+
+@media (max-width: 992px){
+    
+    .meauto .navLink{ 
+        font-size: 1.3rem;
+        padding:20px;
+        margin: 0px;
+        }
+    .meauto .kirish{
+        padding:0px;
+        margin: 0px;
+            font-size: 1.3rem;
+    }
+    .meauto .userIcon{
+        margin-left: 20px;
+        font-size: 1.3rem;
+    }
+  
+    .meauto{
+        margin-left:0;
+    }
+}
+
+@media (min-width:993px){
+    .meauto{ width:70vw;
+        padding: 0px;
+        margin:0px;
+        background-color:transparent;
+    }
+}
+@media (min-width:1200px){
+    .meauto{ width:100%;
+       padding-top: 10px;
+    }
+    .kirish{
+     
+        float: right;
+        right: 0px;         
+    }
+
+
+}
+.Navbar{
+    position:absolute !important;
+    top:90px !important;
+    z-index: 234 !important;
+    background-color:transparent;
+margin-top: 0px;
+padding-top: 0px;height:60px;
+width:100%;
+
+display: flex;
+/* z-index: 1; */
+
+align-items: center;
+justify-content: center;}
+
+@media (max-width: 786px){
+    .meauto  .kirish{
+            margin: 0px;
+            padding: 10px;
+            font-size: 1.3rem;
+           
+        }
+        .meauto  .userIcon{
+            margin-left: 20px;
+            font-size: 1.3rem;
+           
+        }
+    .Navbar{z-index: 33455 !important;
+       
+top:70px !important;     
+    }
+  
+    .meauto{position: relative; top:60px; z-index: 4343 !important; width:90% !important;}
+        .meauto .navLink{ 
+            font-size: 1.3rem;
+            margin-top: 0px;
+ z-index: 3443;          
+            }
+    }
+    @media (max-width:500px){
+        .Navbar{
+            padding-left: 0px;
+        }
+    }
+
+    @media (max-width:786px){
+        .Navbar{
+            /* z-index: 2323; */
+            position:fixed !important;
+            
+        }
+    }
+
+    @media (min-width:1500px){
+        
+        .container{
+            margin-top: 200px;
+            height:500px;
+        }
+        .containercha, .image, .bir, .ikki, .uch{
+            height: 400px;
+        }
+        .rasm{height:100px !important;}
+        /* .containerRow{margin-top: 200px;} */
+    }

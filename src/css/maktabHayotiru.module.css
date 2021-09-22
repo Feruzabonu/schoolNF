@@ -1,0 +1,42 @@
+.panoramic{
+    margin-top: 100px !important;
+    padding:0;
+    height: 450px;
+}
+
+.secondContainer{
+    padding :0 !important;
+    overflow: hidden;
+}
+.PannellumReactContainer{
+    position: relative;
+}
+.PannellumReactContainer::before{
+    content:'Опыт кампуса';
+    position:absolute;
+    top:36%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: max-content;
+    color:white;
+    background-color: rgba(0,0,0,.4);
+    z-index: 10;
+    font-size: 40px;
+    text-align: center;
+    font-family:'Lobster',cursive;
+}
+.PannellumReactContainer::after{
+    content:"Кингстерский университет был основан в 1920 году Джоном Смитом для общественного блага и признан во всем мире. На протяжении всей нашей великой истории Kingster предлагал воспользоваться широким спектром научных возможностей. Мир стал лидером в области высшего образования и начал вносить изменения в этой области.";
+    position:absolute;
+    top:70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+    height: max-content;
+    color:white;
+    background-color: rgba(0,0,0,.4);
+    z-index: 10;
+    font-size: 25px;
+    text-align: center;
+}

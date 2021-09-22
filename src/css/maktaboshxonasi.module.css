@@ -1,0 +1,971 @@
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+.top{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 2% 0;
+    margin-top: -40px;
+}
+.top h1{
+    font-family: 'Lobster',cursive;
+    font-size: 50px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+}
+.top h1::before{
+  content:'' !important;
+  position: absolute;
+  top: 50%;
+  left: -80%;
+  width: 70% !important;
+  height: 4px !important;
+  background-color: #0F4C81 !important;
+  }
+  .top h1::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -80%;
+    width: 70%;
+    height: 4px;
+    background-color: #0F4C81;
+    }
+.top  img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.Tushlik{
+    padding-top: 50px !important;
+    z-index: 3;
+}
+.Tushlik img{
+width: 120% !important;
+height: 500px;
+z-index: 3 !important;
+object-fit: cover;
+box-shadow: 0 20px 30px rgba(0,0,0,.5);
+
+
+}
+.maktabTushlik{
+  padding-left: 10% !important;
+  padding-top: 5%;
+  background-color: #0F4C81;
+  height: 600px;
+  padding-right: 2% !important;
+  z-index: 2 !important;
+  width: 60%;
+}
+
+.maktabTushlik h1{
+  font-family: 'Lobster',cursive;
+  font-size: 40px !important;
+  color: white;
+} 
+.maktabTushlik p{
+  font-size:20px !important;
+  color:rgba(255,255,255,.9);
+  opacity: 0.8;
+}
+.cardText{
+  position: relative;
+  display: inline-block;
+}
+.cardText::before{
+content:'';
+position: absolute;
+top: 50%;
+left: -120%;
+width: 100%;
+height: 4px;
+background-color: #0F4C81;
+}
+.cardText::after{
+  content:'';
+  position: absolute;
+  top: 50%;
+  right: -120%;
+  width: 100%;
+  height: 4px;
+  background-color: #0F4C81;
+  }
+.card{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.card p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+}
+.card::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card::after{
+  content:'1';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card:hover::before{
+  left:-50%;
+
+}
+.card:hover::after{
+  right: -50%;
+
+}
+.card1{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  padding:0 20px !important;
+}
+.card1 p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+}
+.card1::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card1::after{
+  content:'2';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card1:hover::before{
+  left:-50%;
+
+}
+.card1:hover::after{
+  right: -50%;
+}
+.card2{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  padding:0 20px !important;
+}
+.card2 p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+
+
+
+}
+.card2::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card2::after{
+  content:'3';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 1s !important;
+  border-radius: 18px !important;
+}
+.card2:hover::before{
+ left:-50%;
+
+}
+.card2:hover::after{
+  right:-50%;
+}
+.ContainerMenyu{
+  background-image: url('../img/school6.jpg');
+  background-attachment: fixed;
+  text-align: center;
+  padding:8%;
+}
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 170px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya{
+  text-align: center;
+  margin-top:80px;
+  z-index: 1;
+
+}
+.galereya h1{
+  font-family:'Lobster',cursive;
+  font-size: 50px;
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative !important;
+}
+.galereya h1::before{
+  content:'' !important;
+  position: absolute;
+  top: 50%;
+  left: -120%;
+  width: 100% !important;
+  height: 4px !important;
+  background-color: #0F4C81 !important;
+  }
+
+.galereya h1::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -120%;
+    width: 100%;
+    height: 4px;
+    background-color: #0F4C81;
+  }
+.galereya img{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  filter : blur(2px);
+  z-index: 2 !important;
+  transition: all 0.3s;
+}
+.galereya img:hover{
+  filter : blur(0);
+   border-radius: 10%;
+   transform : rotate(0deg) scale(1.2);
+   z-index: 6 !important;
+   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media screen and (max-width:566px) {
+  .iconPath{
+    display: none;
+  }
+  .Tushlik img{
+    width: 100% !important;
+   }
+    .maktabTushlik{
+       margin-top:50px !important;
+       height: max-content;
+       margin-left: 15px;
+       margin-right: 15px !important;
+       width: 95% !important;
+       padding-right: 2% !important;
+   }
+.card{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card1{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card2{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 80px;
+} 
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 170px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya img{
+  margin-bottom: 30px;
+}
+.galereya img:hover{
+   transform : rotate(0deg) scale(1.1);   
+}
+}
+@media screen and (min-width:567px) {
+  .iconPath{
+    display: none;
+  }
+  .Tushlik img{
+    width: 100% !important;
+   }
+   .maktabTushlik{
+       margin-top:50px !important;
+       height: max-content;
+       margin-left: 15px;
+       margin-right: 15px !important;
+       width: 95% !important;
+       padding-right: 2% !important;
+   }
+.card{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card1{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card2{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 80px;
+}
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 170px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya img{
+  margin-bottom: 30px;
+}
+.galereya img:hover{
+   transform : rotate(0deg) scale(1.1);   
+}
+}
+
+@media screen and (min-width:768px) {
+  .iconPath{
+    display: none;
+  }
+  .Tushlik img{
+    width: 100% !important;
+   }
+   .maktabTushlik{
+       margin-top:50px !important;
+       height: max-content;
+       margin-left: 15px;
+       margin-right: 15px !important;
+       width: 95% !important;
+       padding-right: 2% !important;
+   }
+.card{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card1{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card2{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 80px;
+  margin-left: 200px;
+}
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 170px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya img{
+  margin-bottom: 30px;
+}
+.galereya img:hover{
+   border-radius:2%;
+   transform : rotate(0deg) scale(1.1);   
+}
+}
+@media screen and (min-width:992px) {
+  .iconPath{
+    position: relative;
+    display: block;
+}
+
+.Tushlik{
+      padding-top: 70px !important;
+      z-index: 3;
+  }
+.Tushlik img{
+ width: 120% !important;
+ height: 560px;
+ z-index: 3 !important;
+ object-fit: cover;
+ box-shadow: 0 20px 30px rgba(0,0,0,.5);
+
+
+}
+.maktabTushlik{
+    padding-left: 10% !important;
+    padding-top: 5%;
+    background-color: #0F4C81;
+    height: max-content;
+    padding-right: 2% !important;
+    z-index: 2 !important;
+    width: 60% !important;
+} 
+.maktabTushlik p{
+  margin-bottom: 30px !important;
+}
+.card{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card1{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 30px;
+}
+.card2{
+  width: 100%;
+  height: 380px;
+  margin-bottom: 80px;
+  margin-left: 0px;
+}
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 180px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya img{
+  margin-bottom: 30px;
+}
+.galereya img:hover{
+   border-radius:2%;
+   transform : rotate(0deg) scale(1.1);   
+}
+}
+@media screen and  (min-width:1200px) {
+  .top{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 2% 0;
+}
+.top h1{
+    font-family: 'Lobster',cursive;
+    font-size: 50px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+}
+.top h1::before{
+  content:'' !important;
+  position: absolute;
+  top: 50%;
+  left: -80%;
+  width: 70% !important;
+  height: 4px !important;
+  background-color: #0F4C81 !important;
+  }
+  .top h1::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -80%;
+    width: 70%;
+    height: 4px;
+    background-color: #0F4C81;
+    }
+.top  img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.Tushlik{
+    padding-top: 100px !important;
+    z-index: 3;
+}
+.Tushlik img{
+width: 120% !important;
+height: 500px;
+z-index: 3 !important;
+object-fit: cover;
+box-shadow: 0 20px 30px rgba(0,0,0,.5);
+
+
+}
+.maktabTushlik{
+  padding-left: 10% !important;
+  padding-top: 5%;
+  background-color: #0F4C81;
+  height: 600px;
+  padding-right: 2% !important;
+  z-index: 2 !important;
+  width: 60%;
+}
+
+.maktabTushlik h1{
+  font-family: 'Lobster',cursive;
+  font-size: 50px;
+  color: white;
+} 
+.maktabTushlik p{
+  font-size:25px;
+  color:rgba(255,255,255,.9);
+  opacity: 0.8;
+}
+.cardText{
+  position: relative;
+  display: inline-block;
+}
+.cardText::before{
+content:'';
+position: absolute;
+top: 50%;
+left: -120%;
+width: 100%;
+height: 4px;
+background-color: #0F4C81;
+}
+.cardText::after{
+  content:'';
+  position: absolute;
+  top: 50%;
+  right: -120%;
+  width: 100%;
+  height: 4px;
+  background-color: #0F4C81;
+  }
+.card{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  padding:0 20px !important;
+}
+.card p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+
+
+
+}
+.card::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+}
+.card::after{
+  content:'1';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+
+}
+.card:hover::before{
+  width: 0%;
+  content:''
+
+}
+.card:hover::after{
+  width: 0%;
+  content:''
+
+}
+.card1{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  padding:0 20px !important;
+}
+.card1 p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+
+
+
+}
+.card1::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+}
+.card1::after{
+  content:'2';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+
+}
+.card1:hover::before{
+  width: 0%;
+  content:''
+
+}
+.card1:hover::after{
+  width: 0%;
+  content:''
+
+}
+.card2{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+  margin-bottom: 150px;
+  background-color: #0F4C81;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+  padding:0 20px !important;
+}
+.card2 p{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1 !important;
+  color:rgba(255,255,255,.7);
+
+
+
+}
+.card2::before{
+  content:'0';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: right;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+}
+.card2::after{
+  content:'3';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: #0F4C81;
+  text-align: left;
+  font-size: 300px;
+  color:rgba(255,255,255,.5);
+  z-index: 2 !important;
+  transition: all 0.3s;
+  border-radius: 18px !important;
+
+
+}
+.card2:hover::before{
+  width: 0%;
+  content:''
+
+}
+.card2:hover::after{
+  width: 0%;
+  content:''
+
+}
+.cardMenyu{
+  background-color: white;
+  border-radius:8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 1% 2%;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 180px;
+}
+.cardMenyu h1{
+  font-family: 'Lobster',cursive;
+  font-size:25px;
+}
+.cardMenyu1 h1{
+  font-size: 25px;
+  color:white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.galereya{
+  text-align: center;
+  margin-top:80px;
+  z-index: 1;
+
+}
+.galereya h1{
+  font-family:'Lobster',cursive;
+  font-size: 50px;
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative !important;
+}
+.galereya h1::before{
+  content:'' !important;
+  position: absolute;
+  top: 50%;
+  left: -120%;
+  width: 100% !important;
+  height: 4px !important;
+  background-color: #0F4C81 !important;
+  }
+
+.galereya h1::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -120%;
+    width: 100%;
+    height: 4px;
+    background-color: #0F4C81;
+  }
+.galereya img{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  filter : blur(2px);
+  z-index: 2 !important;
+  transition: all 0.3s;
+}
+.galereya img:hover{
+  filter : blur(0);
+   border-radius: 10%;
+   transform : rotate(0deg) scale(1.2);
+   z-index: 6 !important;
+   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+}

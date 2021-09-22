@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.tana{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.content p{
+    font-size: 17px;
+    margin:1px 0px 6px 0px;
+    color: rgb(43, 43, 43);
+}
+.content p b{
+    margin:1px 0px 6px 0px;
+    color: black;
+}
+
+.content div{
+    width: 145px;
+    height: 34px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #0f0f0f;
+    margin-left: 20px;
+  background-color: none;
+    font-weight: 500;
+    box-shadow: 0px 5px 8px black;
+    transition: all 0.4s linear;
+}
+.content div:hover{
+    background-color: rgb(20, 20, 204);
+    border: rgb(20, 20, 204);
+    color: #f0f0f0;
+    line-height: 34px;
+    border-radius: 17px;
+}
+@media(min-width:520px){
+    .line{
+        width: 30%;
+        border-bottom: lightsteelblue solid 4px;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    .sarlavha{
+        transform: translateY(18px);
+        text-align: center;
+        font-family: 'Lobster',cursive;
+        font-size: 60px;
+    }
+    .content{
+
+        width: 260px;
+        text-align: left;
+        margin-top: 7px;
+        margin-left: 12px
+    }
+    .card{
+        width: 500px;
+        margin: 40px 30px;
+        display: flex;
+        flex-direction: row;
+        background-image: url('../img/bg.png');
+        background-size: 100% 130%;
+        background-position: 50px center;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        transition: all 0.5s;
+}
+    .card:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transform: scale(1.004);
+    }
+    .image{
+    width: 220px;
+    margin: 8px 0px 8px  8px;
+    height: auto;
+    }
+}
+@media(max-width:520px){
+    .line{
+        width: 50%;
+        border-bottom: lightsteelblue solid 4px;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    .sarlavha{
+        transform: translateY(13px);
+        text-align: center;
+        font-family: 'Lobster',cursive;
+        font-size: 34px;
+    }
+    .content{
+        width: 90%;
+        text-align: center;
+        margin: 12px 5% 21px 5%;
+    }
+    .content div{
+        margin: 2px auto;
+    }
+    .card{
+        max-width: 400px;
+        margin: 20px 4%;
+        display: flex;
+        flex-direction: column;
+        background-image: url('../img/bg.png');
+        background-size: 100% 112%;
+        background-position: center 12%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    .image{
+    width: 97%;
+    margin: 1.5%;
+    height: auto;
+    
+    }
+}

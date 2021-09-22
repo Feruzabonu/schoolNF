@@ -1,0 +1,270 @@
+body{
+    background-color: white !important;
+}
+.sliderHeader{
+    width:100%;
+    height:660px !important; 
+    z-index: 1;
+    margin-top: -30px !important;
+}
+.headerImage{
+    width:100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    filter: brightness(60%);
+    position: relative;
+}
+.slidertext{
+    position: absolute;
+    top:70% !important;
+    left: 50%;
+    transform: translate(-50%,-60%);
+   z-index: 28;
+  
+   text-align: center;
+   padding:0 15px;
+  
+}
+.slidertext p{
+    color:rgba(255,255,255,0.7);
+    font-size: 30px;
+    margin-top: 10px;
+    background-color:rgba(0, 0, 0, 0.371);
+}
+.carddirektor{
+    margin-left: 10%;
+    margin-top:100px;
+    width:80%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.carddirektor img{
+    width:250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.carddirektor p{
+    color:rgba(255,255,255,0.8);
+    display: inline-block;
+    background-color: #04376A;
+    font-size: 20px;
+    padding:5px 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.direktorbr{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 900; 
+    margin-right: 30px;
+}
+.direktor{
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Lobster';
+}
+.cardwrap{
+    position: relative;
+    overflow-y: auto;
+    height:400px;
+    background-image:url('../img/schoolpattern.png');
+    background-position:center;
+    background-size:100% 100%;
+    background-attachment: fixed;
+}
+
+.sliderComment{
+    width:80%;
+    margin-left:10%;
+    padding-top: 3%;
+    margin-top:100px;
+    border:solid 7px #0F4C81;
+    margin-bottom: 50px;
+    text-align: center;
+   
+    background-color:rgba(20, 6, 111, 0.35);
+    background-image:url(../img/bag.png) ;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color:  hsl(209, 61%, 16%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      transition: all 0.5s;
+
+}
+    .review {
+        background: #fff;
+        padding: 1.5rem 5rem !important;
+        border-radius:  0.25rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s linear;
+        text-align: center;
+      }
+      .sliderComment:hover {
+        box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+      }
+      .imgcontainer {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+      }
+      .personimg {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+      }
+      .quoteicon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transform: translateY(25%);
+        background: #0F4C81;
+        color: #fff;
+      }
+      .imgcontainer::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color:#0F4C81;
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        border-radius: 50%;
+      }
+      .author {
+        letter-spacing:  0.1rem;
+        text-transform: capitalize;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+        
+      }
+      .job {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        color: hsl(205, 78%, 60%);
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+        color:  hsl(210, 22%, 49%);
+      }
+      .info {
+        margin-bottom: 0.75rem;
+        margin-bottom: 1.25rem;
+        color: hsl(210, 22%, 49%);
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+ @media screen and (max-width:566px) {
+    .slidertext{
+        top:70% !important;
+    }
+    .slidertext p{
+        font-size: 25px;
+    }
+    .carddirektor{
+        margin-top:20px !important;
+        height: max-content;
+    }
+    .direktorbr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width:567px) {
+    .sliderHeader{
+        margin-top: 0;
+    }
+    .slidertext{
+        top:80% !important;
+    }
+    .slidertext p{
+        font-size: 25px;
+    }
+    .carddirektor{
+        margin-top:20px !important;
+        height: max-content;
+    }
+    .direktorbr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width:768px) {
+    .sliderHeader{
+        margin-top: 20px;
+    }
+    .slidertext{
+        top:80% !important;
+    }
+    .slidertext p{
+        font-size: 25px;
+    }
+    .carddirektor{
+        margin-top:60px !important;
+        height: max-content;
+    }
+    .direktorbr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width:992px) {
+    .slidertext{
+        top:80% !important;
+    }
+    .slidertext p{
+        font-size: 25px;
+    }
+    .carddirektor{
+        margin-top:80px !important;
+        height: max-content;
+    }
+    .direktorbr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .sliderHeader{
+        margin-top: 0;
+    }
+    .slidertext{
+        top:70% !important; 
+       padding:0 15px
+    }
+    .slidertext p{
+        font-size: 30px;
+    }
+    .carddirektor{
+        margin-left: 10%;
+        margin-top:100px !important;
+        height: 400px;
+    }
+    .direktorbr{
+        margin-left: 30px; 
+        margin-right: 30px;
+    }
+} 

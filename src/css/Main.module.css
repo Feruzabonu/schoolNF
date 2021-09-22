@@ -1,0 +1,12 @@
+.sinf{display:inline-block; width:200px; text-align:center; font-weight:bold; font-size: 30px; position: absolute; top:-50px; }
+.sinfraqam{position:absolute; top:15px; left:20%; font-size: 25px; color:#17035c}
+@media(max-width:1100px){
+    .sinfraqam{left:30%}
+}
+@media(max-width:800px){
+    .sinfraqam{left:40%}
+}
+
+@media(max-width:600px){
+    .sinfraqam{left:60%}
+}

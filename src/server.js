@@ -1,0 +1,17 @@
+export const info = [
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "13-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "15-maktab" },
+  { viloyat: "Toshkent", tuman: "Olmazor", nomi: "16-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "17-maktab" },
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "11-smaktab" },
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "13-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "21-maktab" },
+  { viloyat: "Toshkent", tuman: "Olmazor", nomi: "21-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "7-maktab" },
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "1-smaktab" },
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "3-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "5-maktab" },
+  { viloyat: "Toshkent", tuman: "Olmazor", nomi: "6-maktab" },
+  { viloyat: "Namangan", tuman: "Chust", nomi: "27-maktab" },
+  { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "31-smaktab" },
+];

@@ -1,0 +1,517 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: white !important;
+}
+.text_q{
+    font-family:  'Lobster', cursive ;
+    
+    padding-top: 20%;
+    padding-left: 10%;
+    /* background-color: rgb(255, 93, 29); */
+}
+.text_q h1{
+   font-size: 70px;
+   text-align: center;
+   font-family: 'Lobster',cursive;
+}
+
+.tavsilotlar{
+    height: 500px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.tavsilot{
+    padding-top: 100px !important;
+    z-index: 3;
+}
+.tavsilot img{
+width: 100% !important;
+height: 300px;
+z-index: 3 !important;
+object-fit: cover;
+box-shadow: 0 20px 30px rgba(0,0,0,.5);
+margin-left: 10% !important;
+
+}
+.tavsilottext{
+  padding-left: 8% !important;
+  padding-top: 5% !important;
+  background-color: #318CE7;
+  height: 530px !important;
+  padding-right: 5% !important;
+  z-index: 2 !important;
+  text-align: justify;
+}
+
+.tavsilottext h3{
+  font-family: 'Lobster',cursive;
+  font-size: 45px;
+  color: black;
+  margin-bottom: 3%;
+} 
+.tavsilottext p{
+  font-size:18px ;
+  color:black;
+  opacity: 0.8;
+}
+
+
+
+.talim{
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/talim.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5%;
+    padding: 10%;
+    text-align: justify;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.info{
+    width: 80%;
+    height: 300px;
+    padding: 8%;
+    margin-bottom: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.info_b{
+    width: 80%;
+    height: 350px;
+    padding: 8%;
+    margin-bottom: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin-top: -15px;
+}
+.info h3{
+    font-family:  'Lobster', cursive;
+    margin-top: 10px;
+}
+.info img{
+    width: 50px;
+    height: 50px;
+}
+
+.info_b h3{
+    font-family:  'Lobster', cursive;
+    margin-top: 10px;
+}
+.info_b img{
+    width: 50px;
+    height: 50px;
+}
+.jarayon{
+    width: 100%;
+    height: 780px;
+   
+}
+.jarayon_img{
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jarayon_img img{
+    width: 350px;
+    height: auto;
+}
+.jarayon_text{
+    height: 215px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    text-align: justify;
+}
+.jarayon_text h3{
+    font-family:  'Lobster', cursive;
+}
+.jarayon_text p{
+    font-size: 18px;
+}
+.line{
+    width: 150px;
+    border-bottom: 3px solid #318CE7;
+   margin-top: 3%;
+   margin-bottom: 3%;
+}
+
+
+.talablar{
+    height: 500px;
+    margin-top: 5%;
+    margin-bottom: 5% !;
+    
+}
+
+.talab{
+    padding-top: 100px !important;
+    z-index: 3;
+}
+.talab img{
+width: 100% !important;
+height: 300px;
+z-index: 3 !important;
+object-fit: cover;
+box-shadow: 0 20px 30px rgba(0,0,0,.5);
+
+
+}
+.talabtext{
+    width: 100%;
+  padding-left: 5% !important;
+  padding-top: 3%;
+  background-color: #318CE7;
+  height: 510px;
+  padding-right: 5% !important;
+  z-index: 2 !important;
+  text-align: justify;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.talabtext h3{
+  font-family: 'Lobster',cursive;
+  font-size: 35px;
+  color: black;
+  margin-bottom: 3%;
+} 
+.talabtext p{
+  font-size:17.5px;
+  color:black;
+  opacity: 0.8;
+}
+
+
+.muddat{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 500px;
+    padding: 3%;
+    padding-top: 100px;
+    margin-bottom: 5%;
+    background-image: url(../img/muddat1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.muddat_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.muddat_text1, .muddat_text2, .muddat_text3{
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #318CE7;
+}
+
+.muddat_text1 h3, .muddat_text2 h3, .muddat_text3 h3{
+    font-family: 'Lobster',cursive;
+    font-size: 25px;
+}
+.muddat_text1 p, .muddat_text2 p, .muddat_text3 p{
+    font-size: 20px;
+}
+.muddat_text1:hover {
+background-color:#FFF ;
+}
+.muddat_text2:hover {
+    background-color:#FFF ;
+    }
+    .muddat_text3:hover {
+        background-color:#FFF ;
+        }
+
+        .hujjat{
+            width: 900px;
+            height: 600px;
+            background-image: url(../img/hujjat.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+           margin: auto;
+           margin-bottom: 5% !important;
+           position: relative;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .hujjat_text{
+            position: absolute;
+            left: 0;
+            margin: 20px;
+            width: 350px;
+            padding: 16px;
+            background-color: white;
+            text-align: justify;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .hujjat_text h3{
+            font-family: 'Lobster',cursive;
+            font-size: 30px;
+        }
+        .hujjat_text p{
+            font-size: 18px;
+        }
+
+
+        /* media =============*/
+
+        @media (min-width:0px) and (max-width:567px){
+            .img{
+                visibility: hidden;
+            }
+            .text_q{
+                padding-left: 0px;
+               
+            }
+            .text_q h1{
+                font-size: 60px !important;
+            }
+            
+        
+        .tavsilotlar{
+            height: max-content !important;
+            
+        }
+        
+       
+        .tavsilot img{
+        width: 100% !important;
+       margin-left: 0px !important;
+        }
+        .tavsilottext{
+          height: auto;
+          padding-left: 6% !important;
+          padding-right: 8% !important;
+        }
+        
+        .tavsilottext h3{
+          font-size: 25px;
+          
+        } 
+        .tavsilottext p{
+          font-size:15px;
+          
+        }
+        
+        .talim{
+            width: 100%;
+            height: auto;
+            margin-bottom: 5%;
+        }
+        
+        .info{
+            margin: auto; 
+        }
+        .info_b{
+            margin: auto;
+        }
+      .jarayon{
+          height: auto;
+      }
+      .imtixon{
+          height: auto;
+      }
+      .hujjat{
+        width: 500px;
+      }
+    .hujjat_text{
+       left: 0px;
+       width: 430px;
+    }
+
+    .muddat_item{
+        display: inline-block;
+      margin-left:9%!important;
+      margin-right: auto !important;
+    }
+    .muddat{
+        height: 630px;
+        padding-top: 30px;
+        padding-left:10px;
+        text-align: center;
+        
+    }
+ 
+    }
+
+    @media (min-width:567px) and (max-width:768px){
+        .img{
+            visibility: hidden;
+        }
+        .text_q{
+            padding-left: 0px;
+        }
+        
+        .tavsilottext h3{
+            font-size: 25px;
+            
+          } 
+    .tavsilotlar{
+        height: max-content !important;
+        
+    }
+    
+   
+    .tavsilot img{
+        width: 100% !important;
+       margin-left: 0px !important;
+        }
+    .tavsilottext{
+      height: auto;
+    }
+    
+    .tavsilottext h3{
+      font-size: 30px;
+      
+    } 
+    .tavsilottext p{
+      font-size:16px;
+      
+    }
+    
+    .talim{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5%;
+    }
+    
+    .info{
+        margin: auto; 
+    }
+    .info_b{
+        margin: auto;
+    }
+  .jarayon{
+      height: auto;
+  }
+  .imtixon{
+      height: auto;
+  }
+  .hujjat{
+    width: 500px;
+  }
+.hujjat_text{
+   left: 15px;
+   width: 430px;
+}
+
+.muddat_item{
+    display: inline-block;
+    margin-left: 38px !important;
+}
+.muddat{
+    height: 630px;
+    padding-top: 30px;
+    text-align: center;
+} 
+    }
+
+    @media (min-width:768px) and (max-width:991px){
+        .img{
+            visibility: hidden;
+        }
+        .text_q{
+            padding-left: 20px;
+        }
+        
+    
+    .tavsilotlar{
+        height: max-content !important;
+        
+    }
+    
+   
+     .tavsilot img{
+        width: 100% !important;
+       margin-left: 0px !important;
+        }
+    .tavsilottext{
+      height: auto;
+    }
+    
+    .tavsilottext h3{
+      font-size: 30px;
+      
+    } 
+    .tavsilottext p{
+      font-size:18px;
+      
+    }
+    
+    .talim{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5%;
+    }
+    
+    .info{
+        margin: auto; 
+    }
+    .info_b{
+        margin: auto;
+    }
+  .jarayon{
+      height: auto;
+  }
+  .imtixon{
+      height: auto;
+  }
+  .hujjat{
+    width: 500px;
+  }
+.hujjat_text{
+   left: 15px;
+   width: 430px;
+}
+
+.muddat_item{
+    display: inline-block;
+    margin-left: 20% !important;
+}
+.muddat{
+    height: 630px;
+    padding-top: 30px;
+    text-align: center;
+} 
+    }
+
+    @media (min-width:991px) and (max-width:1200px){
+        .tavsilottext h3{
+            font-size: 25px;
+            
+          } 
+          .tavsilottext p{
+            font-size:16px;
+            
+          }
+          .info, .info_b{
+           width: 100%;
+          }
+          .jarayon{
+            height: auto;
+        }
+          .jarayon_text{
+              height: 280px;
+          }
+          .muddat{
+              padding-top: 100px;
+          }
+          .muddat_text1, .muddat_text2, .muddat_text3{
+              width: 300px;
+          }
+    }

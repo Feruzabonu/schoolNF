@@ -1,0 +1,113 @@
+/* Boshqaruv */
+
+
+
+.card{
+    margin: auto;
+    position: relative;
+    margin-bottom: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.rasm{
+    transition: all 0.5s;
+    padding: 18px;
+}
+.rasm:hover{
+    transform: scale(1.05,1.05);
+}
+
+
+/* Moliyaviy korsatkich */
+
+.jadval {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+
+.jadval th,.jadval td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+.jadval th {
+	text-align: left;
+}
+
+
+.jadval thead th {
+		background-color: #fff;
+        color: #55608f;
+        border-color: #fff;
+	}
+.jadval tbody tr{
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+}
+#tgr{box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;text-align:center; transition:0.5s; width:80%;  
+    background-color: #0c21c3; color:white; border-radius:50px; padding:10px; margin:auto}
+#tgr:hover{box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; background-color: white; color:#0c21c3}
+
+/* Moliyaviy tuzilma */
+
+/* .text{
+    position: relative;
+    
+    width: 100%;
+    height: 500px;
+    margin: 50px;
+    padding: 50px;
+    padding-top: 90px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left:auto;
+     margin-right:auto;
+      display:block;
+      background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../img/photo_2021-06-09_09-43-27.jpg');
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+} */
+
+@media (max-width:566px){
+    .tuzilma{
+        width: 460px;
+    }
+    .text{
+        width: 460px;
+    }
+}
+
+@media (min-width:566px)and (max-width:767px){
+    .tuzilma{
+        width: 550px;
+    }
+    .text{
+        width: 550px;
+    }
+}
+
+@media (min-width:768px)and (max-width:991px){
+    .tuzilma{
+        width: 700px;
+    }
+    .text{
+        width: 700px;
+    }
+    .rasm{
+        display: block !important; 
+        
+    }
+    .cardbody{
+        display: block !important ;
+    }
+}

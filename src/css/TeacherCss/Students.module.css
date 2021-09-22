@@ -1,0 +1,10 @@
+.yutuq{padding:40px}
+.card{ position:relative; height:300px; width:100%;  overflow:hidden;}
+.image{width:100%; height:300px;position:relative;  top:0px; left:0px;}
+.cardBody{background:linear-gradient(to top, black, rgba(8, 8, 8, 0.159)); transition: 0.5s; z-index: 34; width:100%;  padding:10px; 
+    position:absolute; top:260px;  height:40px;  color:white;  overflow: hidden;}
+.cardBody h3{color:white;position: relative; font-size: 19px;}
+a{text-decoration: none; color:white}
+a:hover{color:blue}
+.cardBody:hover{top:0px; height:300px; background:linear-gradient(to top, black, rgba(8, 8, 8, 0.378));}
+

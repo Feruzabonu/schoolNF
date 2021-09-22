@@ -1,0 +1,3 @@
+.text{box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;text-align:center; transition:0.5s; width:80%;  
+    background-color: #0c21c3; color:white; border-radius:50px; padding:10px; margin:auto}
+.text:hover{box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; background-color: white; color:#0c21c3}

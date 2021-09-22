@@ -1,0 +1,184 @@
+.container{
+    background-color: black;
+    width: 100%;
+    padding: 20px 50px;
+    padding-bottom: 50px;
+}
+.logoUchun h2{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+.logoUchun p{
+    color: grey;
+    font-size: 1.2rem;
+}
+.ulLi h2{
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+    border-bottom: 3px solid darkred;
+}
+.ulLi ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.ulLi ul li{
+    margin: 10px 0;
+}
+.ulLi ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    color: grey;
+    transition: 0.3s all ease;
+}
+.ulLi ul li a:hover{
+    color: white;
+}
+
+@media (max-width: 1055px){
+    .logoUchun h2{
+        font-size: 1.5rem;
+    }
+    .ulLi h2{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 970px){
+    .logoUchun p{
+        font-size: 1rem;
+    }
+    .ulLi h2{
+        font-size: 1.3rem;
+
+    }
+}
+@media (max-width: 890px){
+    .logoUchun h2{
+        font-size: 1.3rem;
+    }
+    .logoUchun p{
+        font-size: 1rem;
+    }
+    .ulLi h2{
+        font-size: 1.1rem;
+        
+    }
+    .ulLi ul li a{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 576px){
+    .logoUchun h2{
+        font-size: 1.5rem;
+    }
+    .logoUchun p{
+        font-size: 1.2rem;
+    }
+    .ulLi h2{
+        margin-top: 40px;
+        font-size: 1.4rem;
+        
+    }
+    .ulLi ul li a{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 350px){
+    .logoUchun h2{
+        font-size: 1.4rem;
+    }
+    .logoUchun p{
+        font-size: 1.1rem;
+    }
+    .ulLi h2{
+        margin-top: 40px;
+        font-size: 1.2rem;
+        
+    }
+    .container{
+        padding: 20px 20px;
+    }
+    .ulLi ul li a{
+        font-size: 1.1rem;
+    }
+}
+
+.container2{
+    background-color: #1c1b3b;
+    width: 100%;
+    padding: 20px 50px;
+}
+.container2 h1{
+    color: grey;
+    font-size: 1.3rem;
+    display: flex;
+}
+.wrapper1{
+    display: inline-block;
+}
+.wrapper2{
+    display: inline-block;
+    margin-left: 70%;
+}
+@media (max-width: 1100px){
+    .wrapper2{
+        margin-left: 60%;
+    }
+}
+@media (max-width: 852px){
+    .wrapper2{
+        margin-left: 50%;
+    }
+}
+@media (max-width: 700px){
+    .wrapper2{
+        margin-left: 40%;
+    }
+}
+@media (max-width: 600px){
+    .wrapper2{
+        margin-left: 30%;
+    }
+}
+@media (max-width: 530px){
+    .wrapper2{
+        margin-left: 20%;
+    }
+}
+@media (max-width: 476px){
+    .wrapper2{
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 434px){
+    .wrapper1{
+        display: none;
+    }
+    .wrapper2{
+        margin: 0 auto;
+    }
+}
+.icon1{
+    color: blue;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.icon2{
+    color: red;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.icon3{
+    color: darkred;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.icon4{
+    color:green;
+    font-size: 2rem;
+}

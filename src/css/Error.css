@@ -1,0 +1,46 @@
+.map_select {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #262626;
+}
+.map_for_select {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map_item {
+  width: 65%;
+}
+.map_item h4,
+.map_select h1 {
+  color: #fff;
+}
+.map_select h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+.map_item ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-self: start;
+  flex-wrap: wrap;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.map_item ul li {
+  margin: 10px 10px 10px 0;
+}
+.map_item button {
+  border-radius: 5px;
+}
+.school_ul3 {
+  column-count: 3;
+}
+@media screen and (max-width: 920px) {
+  .map_item {
+    width: 100%;
+  }
+}

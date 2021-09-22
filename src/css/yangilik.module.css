@@ -1,0 +1,39 @@
+.recent_news{
+    width: 100%;
+    height: auto;
+    padding: 6%;
+    position: relative;
+    background-color: lightsteelblue;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.title{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-bottom: red solid 1px;
+}
+.title h3{
+    font-size: 30px;
+    font-family: "Lobster";
+}
+
+.body_card{
+    cursor: pointer;
+}
+.body_card:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.recent_news p{
+    font-size: 15px;
+    text-align: justify;
+    color: darkgrey;
+    
+}
+.nomi{
+    font-size: 16px;
+}
+.body_card img{
+    width: 100%;
+    height: 70px;
+}
