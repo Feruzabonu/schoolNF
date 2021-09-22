@@ -15,6 +15,8 @@ import {Carousel} from 'react-bootstrap'
 import Global from '../host/Global';
 import { FadeLoader, ScaleLoader } from 'react-spinners';
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default class Maktabmamuriyati extends Component {
 state={
@@ -124,6 +126,7 @@ setTimeout(()=>{
           
          : 
             <>
+            <Navbar/>
            <div className={styles.header}>
                    <h1> Maktab ma'muriyati.</h1>
                </div>
@@ -399,7 +402,9 @@ setTimeout(()=>{
 
                     </MDBRow>
                     </div>
-                </Container></>
+                </Container>
+                <Footer/>
+                </>
       }  </div>
         )
     }
