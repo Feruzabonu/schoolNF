@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
-// import Car from "react-multi-Car";
-// import "react-multi-carousel/lib/styles.css";
 import { Carousel  as Car } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
@@ -10,13 +8,13 @@ import school4 from '../img/school13.jpg'
 import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
-// import {FadeLoader} from 'react-spinners'
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
 import {Carousel} from 'react-bootstrap'
 import Global from '../host/Global';
-import { FadeLoader } from 'react-spinners';
+import { FadeLoader, ScaleLoader } from 'react-spinners';
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 export default class Maktabmamuriyati extends Component {
 state={
@@ -127,9 +125,10 @@ setTimeout(()=>{
         return (
             <div>
               {this.state.loader === true ? 
-          <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+          <div className={styles.loader}>
+          <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
+          
          : 
             <>  <br/><br/><br/>
             <Carousel style={{position:'relative',}} className="carTur">
@@ -149,738 +148,258 @@ setTimeout(()=>{
   </Carousel.Item>)
            }):""}
    
-       {/* {this.state.orin1!==null?this.state.orin1.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.orin2!==null?this.state.orin2.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.orin3!==null?this.state.orin3.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.psixolog!==null?this.state.psixolog.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.kasaba!==null?this.state.kasaba.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.chqbt!==null?this.state.chqbt.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-   
-       {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
-             return(
-              <Carousel.Item>
-      <img
-        className="d-block w-100"
-        style={{height:'90vh'}}
-        src={item.image}
-        alt="First slide"
-      />
-      <Carousel.Caption>
-        
-      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-    </Carousel.Caption>
-  </Carousel.Item>)
-           }):""}
-    */}
 </Carousel>
                 <Container>
-                    <Row>
+                <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
-             return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Maktab direktori</p>
-                                    </Col>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
-                                      <Row>  
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>)
+ return(
+  <MDBCol>
+    <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+      <MDBCardImage
+        src={item.image}
+        alt='...'
+        position='top'
+      />
+      <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+        <MDBCardTitle>{item.full_name}</MDBCardTitle>
+        <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+          Maktab Direktori
+        </MDBCardText>
+      </MDBCardBody>
+      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+        <small className='text-muted' style={{fontSize:'16px'}}>
+          <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+          <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+          <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+        </small>
+      </MDBCardFooter>
+    </MDBCard>
+  </MDBCol>
+
+
+  )
            }):""}
    
        {this.state.orin1!==null?this.state.orin1.map(item=>{
              return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
-                                      <Row>  
-                                      <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>)
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
+          
+              )
            }):""}
    
        {this.state.orin2!==null?this.state.orin2.map(item=>{
              return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-                                    </Col>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
-                                      <Row>  
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>)
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
+            )
            }):""}
    
        {this.state.orin3!==null?this.state.orin3.map(item=>{
              return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
-                                      <Row>  
-                                      <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>)
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>)
            }):""}
    
        {this.state.psixolog!==null?this.state.psixolog.map(item=>{
              return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Maktab amaliyotchi psixologi</p>
-                                    </Col>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
-                                      <Row>  
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
               )
            }):""}
    
        {this.state.kasaba!==null?this.state.kasaba.map(item=>{
              return(
-               <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
-                                      <Row>  
-                                      <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Kasaba uyushma raisi</p>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
               )
            }):""}
    
        {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
              return(
-                 <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Kutubxona mudirasi</p>
-                                    </Col>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
-                                      <Row>  
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
              )
            }):""}
    
        {this.state.chqbt!==null?this.state.chqbt.map(item=>{
              return(
-                 <Col lg={12}>
-                            <div className={styles.carddirektor} data-aos="zoom-in-up">
-                                <Row>
-                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
-                                      <Row>  
-                                      <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>{item.full_name}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                                      <span className={styles.direktor}> 1974-yil</span>
-                                        </Col> */}
-                                      
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{item.position}</span>
-                                        </Col>
-                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>E-mail pochta:</span>
-                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
-                                        </Col> */}
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{item.phone}</span>
-                                        </Col>
-                                        <Col lg={12} style={{marginBottom:'5px'}}>
-                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{item.description}</span>
-                                        </Col>
-                                     </Row>
-                                    </Col>
-                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={item.image}/>
-                                        <p style={{textAlign:'center'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
              )
            }):""}
    
        {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
              return(
-              <Col lg={12}>
-              <div className={styles.carddirektor} data-aos="zoom-in-up">
-                  <Row>
-                      <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                          <img src={item.image}/>
-                          <p style={{textAlign:'center'}}>Boshlang'ich tashkilot yoshlar yetakchisi</p>
-                      </Col>
-                      <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
-                        <Row>  
-                          <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>F.I.O:</span>
-                        <span className={styles.direktor}>{item.full_name}</span>
-                          </Col>
-                          {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
-                        <span className={styles.direktor}> 1974-yil</span>
-                          </Col> */}
-                        
-                          <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                        <span className={styles.direktor}>{item.position}</span>
-                          </Col>
-                          {/* <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
-                        <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
-                          </Col>
-                          <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>E-mail pochta:</span>
-                        <span className={styles.direktor}>alisherovich@gmail.com</span>
-                          </Col> */}
-                          <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>Telefon raqami:</span>
-                        <span className={styles.direktor}>{item.phone}</span>
-                          </Col>
-                          <Col lg={12} style={{marginBottom:'5px'}}>
-                          <span className={styles.direktorbr}>Qo'shimcha:</span>
-                        <span className={styles.direktor}>{item.description}</span>
-                          </Col>
-                       </Row>
-                      </Col>
-                  </Row>
-              </div>
-          </Col>
+              <MDBCol>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+                <MDBCardImage
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                />
+                <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
+                  <MDBCardTitle>{item.full_name}</MDBCardTitle>
+                  <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
+                    Maktab Direktori
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6'}}>
+                  <small className='text-muted' style={{fontSize:'16px'}}>
+                    <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
+                    <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
+                    <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description}<br/>
+                  </small>
+                </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
              )
            }):""}
    
                   
-                        <Col lg={12}>
+                    
 
-                        <Car autoplay
-                       className={styles.sliderComment}
-                      //  style={{backgroundColor:'lightgrey'}}
-                        >
-{this.state.direktor!==null?this.state.direktor.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Maktab direktori</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}               
-{this.state.orin1!==null?this.state.orin1.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.orin2!==null?this.state.orin2.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.orin3!==null?this.state.orin3.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.psixolog!==null?this.state.psixolog.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Maktab amaliyotchi psixologi</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.kasaba!==null?this.state.kasaba.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Kasaba uyushma raisi</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Kutubxona mudirasi</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.chqbt!==null?this.state.chqbt.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-{this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
-             return(
-               <div>
-                       <article className='review' data-aos="zoom-in-up">
-      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={item.image} className={styles.personimg} />
-        <span className={styles.quoteicon}>
-          <FaQuoteRight />
-        </span>
-      </div>
-      <h4 className={styles.author}>{item.full_name}</h4>
-      <p className={styles.job}>Boshlang'ich tashkilot yoshlar yetakchisi</p>
-      <br/>
-      
-    </article>
-                       </div>
-            
-)}):''}       
-                                           </Car>
-                        </Col>
-
-                    </Row>
+                    </MDBRow>
                 </Container></>
       }  </div>
         )
