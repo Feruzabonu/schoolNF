@@ -11,8 +11,7 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import axios from "axios";
 import Aos from "aos";
-import styles from "../css/alochilar.module.css";
-
+import {FaStar} from 'react-icons/fa'
 import { getExcellent, getPupil } from "../host/Config";
 
 import { url, user } from "../host/Host";
@@ -136,7 +135,7 @@ export default class BoshSahifaDavomi extends Component {
             </Row>
           </Container>
         </div>
-        <Container fluid style={{ backgroundColor: "white" }}>
+        <Container style={{ backgroundColor: "white" }}>
           <Row>
             <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
@@ -146,8 +145,7 @@ export default class BoshSahifaDavomi extends Component {
                   A'lochilar doskasi
                 </h1>
 
-                <Container className={style.back}>
-                  {/* <div className={style.line}></div> */}
+                <Container>
                   <br />
 
                   <Row>
@@ -156,69 +154,25 @@ export default class BoshSahifaDavomi extends Component {
                           var pupil = this.setPupils(item.pupil);
                           var classes = this.echoClasses(pupil.clas);
                           return (
-                            <Col lg={6} md={6} sm={12}>
-                              <div
-                                className={style.card}
-                                style={{ marginTop: "10px" }}
-                              >
-                                <div className={style.qizil}>
-                                  Bizning faxrimiz
-                                </div>
-                                <img
-                                  src={
+                            <Col lg={12} md={12} sm={12}>
+                              <div className={style.card}>
+                        <div className={style.cardImg}>
+                         <img src={
                                     pupil.image !== null ? pupil.image : school2
                                   }
-                                  alt=""
-                                />
-                                <p
-                                  style={{
-                                    fontSize: "20px",
-                                    textAlign: "center",
-                                    marginTop: "20px",
-                                    fontWeight: "bold",
-                                    color: "black",
-                                  }}
-                                >
-                                  {pupil.full_name}
-                                </p>
-                                <p
-                                  style={{
-                                    fontSize: "18px",
-                                    color: "black",
-                                    textAlign: "center",
-                                  }}
-                                >
-                                  {this.echoClasses(pupil.clas).class_number} -
+                                   style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                        </div>
+                        <div className={style.cardText} style={{padding:'10px',backgroundColor:'white'}}>
+                            <p style={{color:'#1EB2A6',fontWeight:'600',marginTop:'10px',marginLeft:'10px'}}>A'lochi o'quvchi</p>
+                            <h5 style={{fontSize:'23px',marginTop:'-15px',marginLeft:'10px'}}>{pupil.full_name}</h5>
+                            <h6 style={{fontSize:'20px',marginTop:'-15px',marginLeft:'10px'}}> {this.echoClasses(pupil.clas).class_number} -
                                   "{this.echoClasses(pupil.clas).class_char}"
-                                  sinf
-                                </p>
-                              </div>
-                            </Col>
-                            // (<div style={{padding:'10px'}}>
-                            // <div className={style.card}>
-                            // <div className={style.qizil}>Bizning faxrimiz</div>
-                            //     <Row>
-                            //                       <Col lg={5}>
-                            //                         <img src={pupil.image !== null ? pupil.image : school2} alt="" />
-                            //                       </Col>
-                            //                       <Col lg={7}>
-                            //                         <p style={{fontSize:'20px', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                            //                          {pupil.full_name}
-                            //                         </p>
-
-                            //                         <p style={{fontSize:'18px', color:'black'}}>
-
-                            //                           {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
-                            //                         </p>
-
-                            //                         {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                            //                       </Col>
-                            //                       </Row>
-                            //                       {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi.
-                            //                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                            //                       </p> */}
-                            //                     </div>
-                            //                     </div>)
+                                  sinf</h6>
+                            <FaStar style={{color:'#1EB2A6',marginLeft:'10px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/>
+                        </div>
+                    </div>
+                   </Col>
+                
                           );
                         })
                       : ""}

@@ -133,7 +133,11 @@ export default class App extends Component {
                 <Tadbirlar />
                 
               </Route>
-
+              <Route exact path="/boshsahifa/">
+                
+                <BoshSahifa />
+                
+              </Route>
               <Route exact path="/">
                 <BoshSahifa />
               </Route>

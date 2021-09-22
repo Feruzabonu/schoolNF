@@ -90,7 +90,7 @@ export default class Navbar extends Component {
                 <div className={styles.navbarDiv}>                    
                     <div className={styles.navbar}>
                         <ul style={{listStyleType:'none'}}>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/home">Bosh sahifa</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/boshsahifa">Bosh sahifa</Link></li>
                             <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabhayoti/">Maktab hayoti</Link></li>
                             <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/qabul/">Qabul</Link></li>
                             <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/yangiliklar/">Yangiliklar</Link></li>
@@ -117,12 +117,13 @@ export default class Navbar extends Component {
                 </div>
                 <div  className={this.state.visible? styles.navMobile:styles.noNav}>
                     <ul style={{listStyleType:'none'}}>
-                    <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/home">Bosh sahifa</Link></li>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabhayoti">Maktab hayoti</Link></li>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/qabul">Qabul</Link></li>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/yangiliklar">Yangiliklar</Link></li>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabmamuriyati">Maktab ma'muriyati</Link></li>
-                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabalochilari">Maktab a'lochilari</Link></li>
+
+                    <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/boshsahifa">Bosh sahifa</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabhayoti/">Maktab hayoti</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/qabul/">Qabul</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/yangiliklar/">Yangiliklar</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabmamuriyati/">Maktab ma'muriyati</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabalochilari/">Maktab a'lochilari</Link></li>
                         </ul>
                     </div>
                 </div>

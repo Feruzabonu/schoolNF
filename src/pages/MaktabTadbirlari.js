@@ -11,6 +11,7 @@ import her5 from "../img/h5.png";
 import "./form.css";
 import yil from "../img/yil.jpg";
 import her6 from "../img/h6.png";
+import {FaRegCalendarAlt} from 'react-icons/fa'
 import {
   Clusterer,
   GeolocationControl,
@@ -93,58 +94,28 @@ export default class MaktabTadbirlari extends Component {
           style={{ backgroundColor: "white", marginTop: "-10px" }}
         >
           <h2>Maktab tadbirlari</h2>
+          <Container>
           <Row style={{ textAlign: "center" }}>
             {this.state.events.map((item, key) => {
               return key < 3 ? (
-                <Col
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }}
-                >
-                  <div className={style.flipBox}>
-                    <div className={style.flipBoxInner}>
-                      <div className={style.flipBoxFront}>
-                        <img src={item.image} alt="Paris" />
-                      </div>
-                      <div className={style.flipBoxBack}>
-                        <p>{item.title}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <Row className={style.map}>
-                    <Col xs={10} sm={10} md={10} lg={10}>
-                      <h3>{item.title}</h3>
-                      <div className={style.innerMap}>
-                        <FontAwesomeIcon
-                          className={style.redIcon1}
-                          icon={faCalendarAlt}
-                        />
-                        <span>{item.date}</span>
-                      </div>
-                      <div className={style.innerMap}>
-                        <FontAwesomeIcon
-                          className={style.redIcon1}
-                          icon={faClock}
-                        />
-                        <span>{item.time}</span>
-                      </div>
-                      <div className={style.innerMap}>
-                        <FontAwesomeIcon
-                          className={style.redIcon2}
-                          icon={faMapMarkerAlt}
-                        />
-                        <span>{item.address}</span>
-                      </div>
-                    </Col>
-                  </Row>
-                </Col>
+                <Col lg={4} md={6} sm={12} style={{padding:'0'}} className={style.tadbirCard}>
+                           
+                        <div style={{height:'250px'}}>
+                            <img src={item.image} style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'5px 5px 0 0'}}/>
+                        </div>
+                        <div style={{textAlign:"left",padding:'20px',backgroundColor:'white'}}>
+                            <FaRegCalendarAlt style={{color:'#1EB2A6'}}/> <span style={{marginLeft:'10px',color:'#949494',fontSize:'14px',fontWeight:'700'}}>{item.date} {item.time} {item.address}</span>
+                            <h4 style={{marginTop:'20px'}}>{item.title}</h4>
+                            
+                         </div>
+                    
+                           </Col>
               ) : (
                 ""
               );
             })}
           </Row>
+          </Container>
           <Link to={`/tadbirlar/`} className={style.barchasiniKurish}>
             Hamma tadbirlarni ko'rish -&gt;
           </Link>

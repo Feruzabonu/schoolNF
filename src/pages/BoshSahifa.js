@@ -32,9 +32,9 @@ import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { BiCalendar} from 'react-icons/bi';
 
 import maktab from "../img/1 g.jpg";
-import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from "../host/Config";
 import { url, user } from "../host/Host";
 import axios from "axios";
@@ -43,6 +43,7 @@ import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 import YouTube from "react-youtube";
 import Global from "../host/Global";
 import { Clock } from "./Clock";
+import ScaleLoader from 'react-spinners/ScaleLoader';
 
 export default class BoshSahifa extends Component {
   state = {
@@ -113,163 +114,21 @@ export default class BoshSahifa extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <div>
             <Navbar/>
-          
 
-            <div className="iconsHead">
-              <div>
-                <Tooltip placement="left" title="ittower01@gmail.com">
-                  {" "}
-                  <a
-                    target="_blank"
-                    style={{ borderRadius: "10px 0px 0px 0px" }}
-                    className="ahref"
-                    href={`mailto: ${
-                      this.state.school !== null
-                        ? this.state.school.email
-                        : "ittower01@gmail.com"
-                    }`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      style={{ fontSize: "25px" }}
-                    />
-                  </a>
-                </Tooltip>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://t.me/samarqand_33_maktab"
-                >
-                  <i className="fab fa-telegram"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.instagram.com/33_maktab_official/"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/"
-                >
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg"
-                >
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </div>
-              <div>
-                <Tooltip placement="left" title="+998 93 082 03 72">
-                  {" "}
-                  <a
-                    target="_blank"
-                    className="ahref"
-                    style={{
-                      borderTop: " 1px solid blue",
-                      borderRadius: "0px 0px 0px 10px",
-                    }}
-                    href={`tel: ${
-                      this.state.school !== null
-                        ? this.state.school.phone
-                        : "+998 93 082 03 72"
-                    }`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faPhone}
-                      style={{
-                        fontSize: "25px",
-                        borderRadius: "0px 0px 0px 10px",
-                      }}
-                    />
-                  </a>{" "}
-                </Tooltip>
-              </div>
-            </div>
-            <div style={{ width: "100vw" }}>
-              <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
-                <Container fluid>
-                  {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
-                  <Navbar.Toggle
-                    style={{ backgroundColor: "darkblue", outline: "none" }}
-                  >
-                    <i
-                      class="fa fa-bars"
-                      aria-hidden="true"
-                      style={{ fontSize: "1.6rem", color: "white" }}
-                    ></i>
-                  </Navbar.Toggle>
-                  <Navbar.Collapse
-                    id="responsive-navbar-nav"
-                    style={{ width: "60%", color: "white" }}
-                  >
-                    <Nav className={style.meauto}>
-                      <NavLink to={`/`}>
-                        <span className={style.navLink}>Bosh sahifa</span>
-                      </NavLink>
-                      <NavLink to={`/hayot/`}>
-                        <span className={style.navLink}>Maktab hayoti</span>
-                      </NavLink>
-                      <NavLink to={`/qabul/`}>
-                        <span className={style.navLink}>Qabul</span>
-                      </NavLink>
-                      <NavLink to={`/yangiliklar/`}>
-                        <span className={style.navLink}>Yangiliklar</span>
-                      </NavLink>
-                      <NavLink to={`/rahbariyat/`}>
-                        <span className={style.navLink}>
-                          Maktab ma'muriyati
-                        </span>
-                      </NavLink>
-                      <NavLink to={`/alochilar/`}>
-                        <span className={style.navLink}>
-                          Maktab a'lochilari
-                        </span>
-                      </NavLink>
-                      {/* <div className={style.bayroqlar}>
-                               <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
-                              <Link to='/ru'><img src={flagRU} /></Link>
-                          </div> */}
-                      {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
-                    </Nav>
-                  </Navbar.Collapse>
-                </Container>
-              </Navbar>
-            </div>
-
-            <div className="gth">
-              <div className="carg" style={{ zIndex: "-345" }}>
-                <div className="carg_item">
-                  <Carousel
+            <div className={style.header}>
+            <Carousel
                     autoplay
                     effect="fade"
-                    style={{ zIndex: "-234" }}
+                    style={{ zIndex: "-234" ,width:'100%',height:'100vh'}}
                     {...props}
                   >
                     <div className="carg_img">
-                      <img src={bg1t} />
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
                     <div className="carg_img">
                       <img
@@ -281,21 +140,20 @@ export default class BoshSahifa extends Component {
                           //      : headerT
                           //    : headerT
                         }
+                        style={{width:'100%',height:'100%',objectFit:'cover'}}
                       />
                     </div>
                     <div className="carg_img">
-                      <img src={bg2t} />
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
                   </Carousel>
-                </div>{" "}
-              </div>
               <div className="yozuvT">
                 <h4>XUSH KELIBSIZ</h4>
                 {/* <br /> */}
                 <h1>MAKTABIMIZGA</h1>
                 <div className="yozuvBtn">
-                  <Link to="/hayot/">
-                    <Button>Maktab hayoti</Button>
+                  <Link to="/maktabhayoti/">
+                    <Button style={{backgroundColor:'#1EB2A6'}}>Maktab hayoti</Button>
                   </Link>
                 </div>
               </div>
@@ -387,9 +245,10 @@ export default class BoshSahifa extends Component {
               </div>
             </div>
 
-            <div className={style.containerRow}>
-              <Row>
-                <Col xs={12} sm={12} md={4} lg={4} className={style.col}>
+            <div className={style.containerRow} style={{backgroundColor:'#F8F8F8'}}>
+           <Container>
+           <Row>
+                <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
                   <h3>Maktabga video sayohat</h3>
                   {/* <img src={rasm1} className={style.img}/> */}
                   <YouTube
@@ -418,50 +277,22 @@ export default class BoshSahifa extends Component {
                   </p>
                 </Col>
 
-                <Col xs={12} sm={12} md={8} lg={8} className={style.col}>
+                <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
                   <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
-
                   <Row>
                     <Col xs={12} sm={12} md={12} lg={12}>
                       <Row>
                         {this.state.news.map((item, key) => {
-                          return key < 6 ? (
-                            <Col lg={6}>
-                              <Row>
-                                <Col
-                                  xs={3}
-                                  sm={3}
-                                  md={3}
-                                  lg={3}
-                                  className={style.colNews}
-                                >
-                                  <img
-                                    src={item.image}
-                                    className={style.rasm}
-                                  />
-                                </Col>
-                                <Col
-                                  xs={9}
-                                  sm={9}
-                                  md={9}
-                                  lg={9}
-                                  className={style.colNews}
-                                  style={{
-                                    paddingLeft: "10px",
-                                    paddingRight: "8px",
-                                  }}
-                                >
-                                  <p>{item.title}</p>
-                                  <h5>
-                                    <i
-                                      style={{ marginRight: "10px" }}
-                                      className="far fa-calendar-alt"
-                                    ></i>
-                                    {item.published_time.substring(0, 10)}
-                                  </h5>
-                                </Col>
-                              </Row>
-                            </Col>
+                          return key < 5 ? (
+                            <div className={style.new}>
+                                     <div className={style.new_img}><img src={item.image}/></div>
+                                     <div className={style.new_text}>
+                                         <div className={style.meta}>
+                                             <div style={{cursor:"pointer"}}><BiCalendar size="14px" color="#1eb2a6"/><span style={{fontSize:'14px', color: '#1eb2a6', fontWeight:'normal'}}> {item.published_time.substring(0, 10)}</span></div>
+                                             <p>{item.title}</p>
+                                         </div>
+                                     </div>
+                                 </div>
                           ) : (
                             ""
                           );
@@ -477,6 +308,7 @@ export default class BoshSahifa extends Component {
                   </Link>
                 </Col>
               </Row>
+           </Container>
             </div>
             <BoshSahifaDavomi />
             <MaktabTadbirlari />

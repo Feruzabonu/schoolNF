@@ -31,6 +31,7 @@ import myImage from "../img/360.jpeg";
 import Global from "../host/Global";
 import { url, user } from "../host/Host";
 import Navbar from "./Navbar";
+import Footer from './Footer'
 
 export default class MaktabHayoti extends Component {
   state = {
@@ -134,28 +135,28 @@ export default class MaktabHayoti extends Component {
                     aos-duration="2000"
                     style={{ position: "absolute", top: "200px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "450px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "700px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "950px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
@@ -166,7 +167,7 @@ export default class MaktabHayoti extends Component {
                       left: "35px",
                     }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
@@ -177,7 +178,7 @@ export default class MaktabHayoti extends Component {
                       left: "35px",
                     }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
@@ -188,7 +189,7 @@ export default class MaktabHayoti extends Component {
                       left: "35px",
                     }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "#0F4C81" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                 </Col>
                 <Col lg={11}>
@@ -410,7 +411,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -459,7 +460,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -510,7 +511,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -559,7 +560,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -608,7 +609,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -658,7 +659,7 @@ export default class MaktabHayoti extends Component {
                       />
                       <div
                         style={{
-                          backgroundColor: "#0F4C81",
+                          backgroundColor: "#1EB2A6",
                           marginTop: "30px",
                           padding: "10%",
                           height: "380px",
@@ -709,7 +710,7 @@ export default class MaktabHayoti extends Component {
                       md={6}
                       sm={12}
                       className={styles.director}
-                      style={{ backgroundColor: "#0F4C81", padding: "10%" }}
+                      style={{ backgroundColor: "#1EB2A6", padding: "10%" }}
                     >
                       <p>
                         {data.m_h_o !== null && data !== null
@@ -728,6 +729,7 @@ export default class MaktabHayoti extends Component {
                 </Col>
               </Row>
             </Container>
+            <Footer/>
           </div>
         )}
       </div>

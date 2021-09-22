@@ -160,17 +160,12 @@ html {
   color: #ffffff;
 }
 .loaderT {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: white;
-  z-index: 5534434;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0px;
+  align-items:center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 }
 ::-webkit-scrollbar-track {
   border: 5px solid white;
@@ -272,8 +267,8 @@ html {
   position: relative;
 }
 .carg img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   z-index: -542345 !important;
 }
 .gth {
@@ -283,8 +278,8 @@ html {
 .carg_img {
   position: relative;
   z-index: -52435 !important;
-  width: 100%!;
-  height: 590px;
+  width: 100% !important;
+  height: 100vh !important;
 }
 .carg_item {
   width: 100vw;
@@ -300,7 +295,7 @@ html {
   padding-top: 180px;
   z-index: 0;
   height: 590px;
-  background-color: rgba(0, 0, 0, 0.302);
+ 
 }
 .yozuvT h4 {
   font-size: 18px;

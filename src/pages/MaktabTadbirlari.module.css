@@ -227,3 +227,20 @@
     font-size: 1rem;
   }
 }
+
+
+
+
+.tadbirlar{
+  text-align: center !important;
+  padding-top: 100px;
+}
+.tadbirCard{
+  width: 31% !important;
+  height: 500px;
+  margin:1% !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 60px !important;
+}
