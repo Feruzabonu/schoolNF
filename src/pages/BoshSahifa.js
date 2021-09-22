@@ -4,15 +4,10 @@ import {
   faNewspaper,
   faPhone,
   faSchool,
-  faSearch,
-  faSignInAlt,
-  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
-import { ContainerDashboard, XushKelibsiz } from "./StyleBoshSahifa";
 import style from "./BoshSahifa.module.css";
-import { Button, Container, Nav, Navbar, Row, Col } from "react-bootstrap";
-import { NavbarContainer } from "./StyleBoshSahifa";
+import { Button, Container, Nav,Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rasm1 from "../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg";
 import rasm2 from "../img/mira-kireeva-xTq26wLo5do-unsplash.jpg";
@@ -36,7 +31,8 @@ import { Link, NavLink } from "react-router-dom";
 import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
-import NavBar from "./Navbar";
+import Navbar from "./Navbar";
+
 import maktab from "../img/1 g.jpg";
 import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from "../host/Config";
@@ -121,25 +117,8 @@ export default class BoshSahifa extends Component {
           </div>
         ) : (
           <div>
-            {/* <NavBar/> */}
-            <ContainerDashboard>
-              <div
-                className="yuqori"
-                style={{ backgroundColor: "transparent", width: "100vw" }}
-              >
-                <div className="gerbHead" style={{ width: "100%" }}>
-                  <img src={gerb} alt="" />
-                  <p>
-                    Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan
-                    davlat umumta'lim maktabi
-                  </p>
-
-                  {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
-                  {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
-                </div>
-                <div id="vaqt">{this.state.clock}</div>
-              </div>
-            </ContainerDashboard>
+            <Navbar/>
+          
 
             <div className="iconsHead">
               <div>

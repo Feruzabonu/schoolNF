@@ -11,7 +11,7 @@ import Gallery from "./pages/gallery";
 import Login from "./pages/Login/Login";
 import Alochilar from "./pages/alochilar";
 import Yutuqlarimiz from "./pages/yutuqlarimiz";
-import NavBar from "./pages/Navbar";
+import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
 import Error from "./pages/Error";
 import Tadbirlar from "./pages/Tadbirlar";
@@ -82,56 +82,56 @@ export default class App extends Component {
               </Route>
 
               <Route exact path="/qabul/">
-                <NavBar />
+                
                 <Qabul />
-                <Footer />
+                
               </Route>
 
-              <Route exact path="/rahbariyat/">
-                <NavBar />
+              <Route exact path="/maktabmamuriyati/">
+                
                 <Maktabmamuriyati />
-                <Footer />
+                
               </Route>
 
               <Route exact path="/yangiliklar/">
-                <NavBar />
+                
                 <Yangiliklar />
-                <Footer />
+                
               </Route>
 
-              <Route exact path="/hayot/">
-                <NavBar />
+              <Route exact path="/maktabhayoti/">
+               
                 <MaktabHayoti />
-                <Footer />
+                
               </Route>
 
-              <Route exact path="/alochilar/">
-                <NavBar />
+              <Route exact path="/maktabalochilari/">
+                
                 <Alochilar />
-                <Footer />
+                
               </Route>
 
               <Route exact path="/gallery/">
-                <NavBar />
+                
                 <Gallery />
-                <Footer />
+                
               </Route>
 
               <Route exact path="/yutuqlar/">
-                <NavBar />
+                
                 <Yutuqlarimiz />
-                <Footer />
+                
               </Route>
 
               <Route exact path="/maktaboshxonasi/">
-                <NavBar />
+                
                 <MaktabOshxonasi />
-                <Footer />
+                
               </Route>
               <Route exact path="/tadbirlar/">
-                <NavBar />
+                
                 <Tadbirlar />
-                <Footer />
+                
               </Route>
 
               <Route exact path="/">

@@ -1,159 +1,133 @@
-import React, { Component } from "react";
-import "aos";
-import style from "./Navbar.module.css";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { AOS } from "aos";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
-import axios from "axios";
-import { url, user } from "../host/Host";
+import React, { Component } from 'react'
+import styles from '../css/navbar.module.css'
+import {BrowserRouter, Link} from 'react-router-dom'
+import {MenuOutlined} from '@ant-design/icons'
+import {BsClock} from 'react-icons/bs'
+import {FiPhone} from 'react-icons/fi'
+import {FaFacebookF,FaInstagram,FaTelegramPlane,FaYoutube} from 'react-icons/fa'
 import Global from "../host/Global";
-export default class NavBar extends Component {
-  state = {
-    school: null,
-    id: null,
-  };
-  getSchool = () => {
-    // var a=window.location.href.split('/')
-    var v = user;
-    axios
-      .get(`${url}/school-by-admin/${v}`)
-      .then((res) => {
-        this.setState({
-          school: res.data,
-          id: v,
+import { url, user } from "../host/Host";
+import axios from "axios";
+export default class Navbar extends Component {
+    state={
+        visible:false,
+        school: null,
+        id: null,
+    }
+    openNavbar=()=>{
+        this.state.visible?this.setState({visible:false}):this.setState({visible:true})
+    }
+    getSchool = () => {
+        // var a=window.location.href.split('/')
+        var v = user;
+        axios
+          .get(`${url}/school-by-admin/${v}`)
+          .then((res) => {
+            this.setState({
+              school: res.data,
+              id: v,
+            });
+          })
+          .catch((err) => {
+            window.location.href = window.location.href + "/error";
+          });
+      };
+      componentDidMount() {
+        this.getSchool();
+        window.addEventListener("load", () => {
+          this.setState({
+            loader: false,
+          });
         });
-      })
-      .catch((err) => {
-        window.location.href = window.location.href + "/error";
-      });
-  };
-  componentDidMount() {
-    this.getSchool();
-  }
-  render() {
-    return (
-      <div>
-        <div>
-          <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
-            <Container>
-              <Navbar.Brand>
-                <span
-                  className={style.maktabLogo}
-                  style={{
-                    cursor: "pointer",
-                    fontSize: "25px",
-                    postion: "relative",
-                    left: "-10px",
-                  }}
-                >
-                  <Link
-                    to={`/`}
-                    style={{
-                      color: "gold",
-                      fontWeight: "bold",
-                      letterSpacing: "5px",
-                    }}
-                  >
+        console.log(this.state.school)
+      }
+    render() {
+        return (
+            <div style={{zIndex:'2'}}>
+                
+                <div className={styles.top}>
+                    <div className={styles.name}>
+                        <h1 style={{color:'white'}}>{this.state.school !== null
+                      ? this.state.school.school_number + " - maktab"
+                      : "Maktab raqami"}</h1>
+                        <p style={{color:'white',marginTop:'-10px'}}>Ixtisoslashtirilgan xususiy maktab</p>
+                    </div>
+                    <div className={styles.info}>
+                     <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'30px'}}>
+                         <div><BsClock style={{fontSize:'35px',color:'white'}}/></div>
+                         <div style={{marginLeft:'10px'}}>
+                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Dushanba-juma</p>
+                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>8:00 dan 20:00 gacha</p>
+                         </div>
+                     </div>
+                     <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'50px'}}>
+                         <div><FiPhone style={{fontSize:'35px',color:'white'}}/></div>
+                         <div style={{marginLeft:'10px'}}>
+                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Qo'ng'iroq qiling</p>
+                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>{
+                      this.state.school !== null
+                        ? this.state.school.phone
+                        : "+998 93 082 03 72"
+                    }</p>
+                         </div>
+                     </div>
+                    </div>
+                    <div className={styles.socialMedia}>
+                    <div className={styles.icons} style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                         <FaFacebookF style={{color:'#1EB2A6'}}/>
+                     </div>
+                     <div className={styles.icons}  style={{ curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                         <FaInstagram style={{color:'#1EB2A6'}}/>
+                     </div>
+                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                         <FaTelegramPlane style={{color:'#1EB2A6'}}/>
+                     </div>
+                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                         <FaYoutube style={{color:'#1EB2A6'}}/>
+                     </div>
+                    </div>
+                </div>
+                <div className={styles.navbarDiv}>                    
+                    <div className={styles.navbar}>
+                        <ul style={{listStyleType:'none'}}>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/home">Bosh sahifa</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabhayoti/">Maktab hayoti</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/qabul/">Qabul</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/yangiliklar/">Yangiliklar</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabmamuriyati/">Maktab ma'muriyati</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabalochilari/">Maktab a'lochilari</Link></li>
+                        </ul>
+                    </div>
+                    <div className={styles.rightNavbar}>
                     {this.state.school !== null
                       ? this.state.school.school_number + " - maktab"
                       : "Maktab raqami"}
-                  </Link>
-                </span>
-              </Navbar.Brand>
-              <Navbar.Toggle style={{ color: " rgba(0, 0, 0, 0)" }}>
-                <i
-                  class="fa fa-bars"
-                  aria-hidden="true"
-                  style={{ fontSize: "1.6rem", color: "white" }}
-                ></i>
-              </Navbar.Toggle>
-              <Navbar.Collapse
-                id="responsive-navbar-nav"
-                style={{ width: "100%", color: "white" }}
-              >
-                <Nav className={style.meauto}>
-                  <NavLink to={`/`}>
-                    <span className={style.navLink}>Bosh sahifa</span>
-                  </NavLink>
-                  <NavLink to={`/hayot/`}>
-                    <span className={style.navLink}>Maktab hayoti</span>
-                  </NavLink>
-                  <NavLink to={`/qabul/`}>
-                    <span className={style.navLink}>Qabul</span>
-                  </NavLink>
-                  <NavLink to={`/yangiliklar/`}>
-                    <span className={style.navLink}>Yangiliklar</span>
-                  </NavLink>
-                  <NavLink to={`/rahbariyat/`}>
-                    <span className={style.navLink}>Maktab ma'muriyati</span>
-                  </NavLink>
-                  <NavLink to={`/alochilar/`}>
-                    <span className={style.navLink}>Maktab a'lochilari</span>
-                  </NavLink>
-                  {/* <div className={style.bayroqlar}>
-                               <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
-                              <Link to='/ru'><img src={flagRU} /></Link>
-                          </div> */}
-                  {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-          {/* <NavbarContainer>
-            <Navbar collapseOnSelect expand="lg">
-              <Container>
-                <Navbar.Brand>
-                  <p className={"maktabLogo"} style={{ cursor: "pointer", marginTop: "8px" }}>
-                    <Link to="">Maktab logosi</Link>
-                  </p>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ marginTop: "-10px", padding: "0", width: "50px", backgroundColor: "white" }} />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="mx-auto">
-                    <NavLink style={{ marginLeft: "20px" }} to="">
-                      <p className="navLink">Bosh sahifa</p>
-                    </NavLink>
-                    <NavLink style={{ marginLeft: "20px" }} to="/hayot">
-                      <p className="navLink">Maktab haqida</p>
-                    </NavLink>
-                    <NavLink style={{ marginLeft: "20px" }} to="/qabul">
-                      <p className="navLink">Qabul</p>
-                    </NavLink>
-                    <NavLink style={{ marginLeft: "20px" }} to="/yangiliklar">
-                      <p className="navLink">Yangiliklar</p>
-                    </NavLink>
-                    <NavLink style={{ marginLeft: "20px" }} to="/rahbariyat">
-                      <p className="navLink">Maktab ma'muriyati</p>
-                    </NavLink>
-                    <NavLink style={{ marginLeft: "20px" }} to="/alochilar">
-                      <p className="navLink">Maktab alochilari</p>
-                    </NavLink>
-                    {/* <div className={style.bayroqlar}>
-                      <Link to="">
-                        <img alt="" style={{ marginLeft: "15px" }} src={flagUZ} />
-                      </Link>
-                      <Link to="/ru">
-                        <img alt="" src={flagRU} />
-                      </Link>
-                    </div> */}
-          {/* <Link to="/login" className="kirish">
-                      <FontAwesomeIcon style={{ display: "inline-block" }} icon={faUserCircle} className="userIcon" /> Kirish
-                    </Link>
-                  </Nav>
-                </Navbar.Collapse> */}
-          {/* </Container>
-            </Navbar> */}
-          {/* </NavbarContainer> */} */
-        </div>
-      </div>
-    );
-  }
+                    </div>
+                </div>
+                <div style={{position:'absolute',top:'15%',width:'100%'}}>
+                <div className={styles.mobileNavbar}>
+                <div className={styles.rightNavbar}>
+                {this.state.school !== null
+                      ? this.state.school.school_number + " - maktab"
+                      : "Maktab raqami"}
+                    </div>
+                    <div className={styles.openHamburger}>
+                    <MenuOutlined onClick={()=>this.openNavbar()} style={{color:'white',marginRight:'10px',fontSize:'25px',cursor:'pointer'}}/>
+                    </div>
+                </div>
+                <div  className={this.state.visible? styles.navMobile:styles.noNav}>
+                    <ul style={{listStyleType:'none'}}>
+                    <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/home">Bosh sahifa</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabhayoti">Maktab hayoti</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/qabul">Qabul</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/yangiliklar">Yangiliklar</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabmamuriyati">Maktab ma'muriyati</Link></li>
+                            <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/maktabalochilari">Maktab a'lochilari</Link></li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        )
+    }
 }

@@ -30,6 +30,7 @@ import myImage from "../img/360.jpeg";
 
 import Global from "../host/Global";
 import { url, user } from "../host/Host";
+import Navbar from "./Navbar";
 
 export default class MaktabHayoti extends Component {
   state = {
@@ -61,21 +62,18 @@ export default class MaktabHayoti extends Component {
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <>
-            <div className={styles.headerSliderText}>
-              <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
-                Maktab hayoti
-              </h3>
-              <div className={styles.headerIcons}>
-                <a href="#1">
-                  <DownCircleOutlined
-                    style={{ fontSize: "40px", color: "white" }}
-                    className={styles.headerIcon}
-                  />
-                </a>
-              </div>
-            </div>
-            <Carousel autoplay className={styles.sliderHeader}>
+          <div>
+          <Navbar/>
+           
+           <div className={styles.header}>
+             <img  src={
+                    data !== null && data.m_h_h1 !== null
+                      ? data.m_h_h1
+                      : school1
+                  }/>
+              <h1 className={styles.headerh}>Maktab hayoti</h1>
+           </div>
+            {/* <Carousel style={{zIndex:'1'}} autoplay className={styles.sliderHeader}>
               <div>
                 <Image
                   src={
@@ -126,7 +124,7 @@ export default class MaktabHayoti extends Component {
                   className={styles.headerImage}
                 />
               </div>
-            </Carousel>
+            </Carousel> */}
 
             <Container fluid className={styles.secondContainer} id="1">
               <Row>
@@ -730,7 +728,7 @@ export default class MaktabHayoti extends Component {
                 </Col>
               </Row>
             </Container>
-          </>
+          </div>
         )}
       </div>
     );
