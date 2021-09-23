@@ -256,7 +256,7 @@ export const XushKelibsiz = styled.div`
 
 export const ButtonWrapper = styled.div`
 .drawBorder {
-    box-shadow: inset 0 0 0 4px #58afd1;
+    
     color: white;
     transition: color 0.25s 0.0833333333s;
     position: relative;
@@ -281,10 +281,11 @@ export const ButtonWrapper = styled.div`
     border-right-width: 4px;
   }
   .drawBorder:hover {
-    color: #ffe593;
+   background_color:white;
+   color:#1EB2A6;
   }
   .drawBorder:hover::before, .drawBorder:hover::after {
-    border-color: #ffe593;
+
     transition: border-color 0s, width 0.25s, height 0.25s;
     width: 100%;
     height: 100%;
@@ -304,6 +305,8 @@ export const ButtonWrapper = styled.div`
     font: 700 1.2rem "Roboto Slab", sans-serif;
     padding: 1em 2em;
     letter-spacing: 0.05rem;
+    background-color:#1EB2A6;
+    color:white;
   }
   @media (max-width: 768px){
       .btn{

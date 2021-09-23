@@ -108,11 +108,11 @@ export default class BoshSahifaDavomi extends Component {
   render() {
     return (
       <div>
-        <div className={style.container}>
+        <div className={style.container} style={{textAlign:'center'}}>
           <Container>
             <Row>
               <Col xs={0} sm={0} md={6} lg={6}></Col>
-              <Col xs={12} sm={12} md={6} lg={6}>
+              <Col xs={12} sm={12} md={6} lg={6} style={{backgroundColor:'rgba(0,0,0,0.4)',marginTop:'50px',paddingBottom:'40px'}}>
                 <h1>Qabul uchun ariza topshiring</h1>
                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
                 <p>

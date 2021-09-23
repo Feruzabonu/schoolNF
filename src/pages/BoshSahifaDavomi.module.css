@@ -48,13 +48,14 @@
   background-color:#1EB2A6
 }
 .container {
-  background-image: url(../img/bgr.png);
+  background-image: url(../img/15.jpg);
   width: 100%;
   height: 500px;
-  background-size: 100% 500px;
   background-repeat: no-repeat;
-  /* background-position: center center; */
-  /* background-position: left top; */
+  object-fit: cover;
+  background-size:cover !important;
+  background-attachment: fixed;
+  background-position: center center;
 }
 .container h1 {
   color: white;
