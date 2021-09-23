@@ -4,6 +4,15 @@ import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
 import students from "../img/Students.png";
 import shakl from "../img/shakl.png";
+import rasm2 from '../img/rasm2.png'
+import rasm3 from '../img/rasm3.png'
+import rasm4 from '../img/rasm4.png'
+import rasm6 from '../img/reading-book.svg'
+import rasm7 from '../img/calendar.svg'
+import rasm8 from '../img/writing.svg'
+import rasm9 from '../img/1.svg'
+import rasm10 from '../img/2.svg'
+import rasm11 from '../img/3.svg'
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
@@ -12,6 +21,10 @@ import axios from "axios";
 import { url, user } from "../host/Host";
 import FadeLoader from "react-spinners/FadeLoader";
 import Global from "../host/Global";
+import { ScaleLoader } from "react-spinners";
+import Navbar from "./Navbar";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import Footer from "./Footer";
 
 class Qabul extends React.Component {
   state = {
@@ -19,6 +32,8 @@ class Qabul extends React.Component {
     qabul: [],
     id: 0,
     school: null,
+    selected:0,
+    jarayon:[]
   };
 
   getSchool = () => {
@@ -30,6 +45,7 @@ class Qabul extends React.Component {
         loader: false,
       });
       console.log(res.data);
+      this.jarayon()
     });
   };
 
@@ -39,512 +55,279 @@ class Qabul extends React.Component {
     });
     this.getSchool();
   }
+
+  toggle(i) {
+    if(this.state.selected==i){
+      return(
+        this.setState({
+          selected:null
+        })
+      )
+    }
+
+    this.setState({
+      selected:i
+    })
+  }
+  jarayon(){
+  var newjarayon=[];
+    this.state.school !== null
+    ? this.state.school.q_j_online !== null
+      ? newjarayon.push({question:"O'nline ro'yxatdan o'ting", answer:this.state.school.q_j_online})
+      : newjarayon.push({question:"O'nline ro'yxatdan o'ting", answer:"O'nline ro'yxatdan o'tish haqida"})
+    : newjarayon.push({question:"O'nline ro'yxatdan o'ting", answer:"O'nline ro'yxatdan o'tish haqida"})
+
+                          this.state.school !== null
+                          ? this.state.school.q_j_forma !== null
+                            ? newjarayon.push({question:"Ariza yozing",answer:this.state.school.q_j_forma}) 
+                            : newjarayon.push({question:"Ariza yozing",answer:"Ro'yxatdan o'tishdagi ariza haqida ma'lumot"})
+                            : newjarayon.push({question:"Ariza yozing",answer:"Ro'yxatdan o'tishdagi ariza haqida ma'lumot"})
+
+                          this.state.school !== null
+                          ? this.state.school.q_j_koz !== null
+                            ? newjarayon.push({question:"Arizani ko'zdan kechiring",answer:this.state.school.q_j_koz})
+                            : newjarayon.push({question:"Arizani ko'zdan kechiring",answer:"Arizani ko'zdan kechirish haqida ma'lumot"})
+                          : newjarayon.push({question:"Arizani ko'zdan kechiring",answer:"Arizani ko'zdan kechirish haqida ma'lumot"})
+
+                          this.state.school !== null
+                          ? this.state.school.q_j_hujjat !== null
+                            ? newjarayon.push({question:"Kerakli hujjatlarni to'plang",answer:this.state.school.q_j_hujjat})
+                            : newjarayon.push({question:"Kerakli hujjatlarni to'plang",answer:"Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"})
+                          : newjarayon.push({question:"Kerakli hujjatlarni to'plang",answer:"Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"})
+
+                          this.state.school !== null
+                          ? this.state.school.q_j_intervyu !== null
+                            ? newjarayon.push({question:"Suhbat jarayoni", answer:this.state.school.q_j_intervyu})
+                            : newjarayon.push({question:"Suhbat jarayoni", answer:"Suhbat jarayoni haqida ma'lumot"})
+                          : newjarayon.push({question:"Suhbat jarayoni", answer:"Suhbat jarayoni haqida ma'lumot"})
+
+                          this.state.school !== null
+                          ? this.state.school.q_j_qaror !== null
+                            ? newjarayon.push({question:"So'nggi qaror", answer:this.state.school.q_j_qaror})
+                            : newjarayon.push({question:"So'nggi qaror", answer:"So'ngi qaror haqida ma'lumot"})
+                            : newjarayon.push({question:"So'nggi qaror", answer:"So'ngi qaror haqida ma'lumot"})
+
+                          console.log(newjarayon)
+                          console.log(newjarayon[0])
+ this.setState({
+   jarayon:newjarayon
+ })
+                         
+  }
+
   render() {
     return (
       <div>
         {this.state.loader ? (
-          <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
-          </div>
+          <div className={styles.loader}>
+          <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
+          </div> 
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
-            <div
-              className={styles.qabulHeader}
-              style={{ backgroundColor: "#318CE7", width: "100%" }}
-            >
-              <Container fluid style={{ padding: "0" }}>
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100vh",
-                    position: "relative",
-                  }}
-                >
-                  <Row>
-                    <Col style={{ padding: "0" }} lg={6} md={12} sm={12}>
-                      {" "}
-                      <div data-aos="fade-right" className={styles.text_q}>
-                        <h1>Qabul uchun ariza topshiring</h1>
-                        <img
-                          src="https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg"
-                          style={{
-                            boxShadow:
-                              "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
-                            width: "200px",
-                            height: "200px",
-                            borderRadius: "50%",
-                            marginLeft: "30%",
-                            marginTop: "10%",
-                          }}
-                        />
-                      </div>
-                    </Col>
-                    <Col
-                      style={{ padding: "0" }}
-                      lg={6}
-                      md={12}
-                      sm={12}
-                      className={styles.img}
-                      data-aos="zoom-in-up"
-                    >
-                      <img
-                        src={shakl}
-                        className={styles.back}
-                        style={{
-                          width: "450px",
-                          height: "450px",
-                          bottom: "0px",
-                          position: "absolute",
-                        }}
-                      />
-                      <img
-                        src={students}
-                        className={styles.main}
-                        style={{
-                          position: "absolute",
-                          bottom: "-50px",
-                          height: "625px",
-                        }}
-                      />
-                    </Col>
-                  </Row>
+                 <Navbar />
+                   <div className={styles.header}>
+                   <h1>Qabul</h1>
                 </div>
-              </Container>
-            </div>
-
-            <div className={styles.tavsilotlar}>
-              <Container fluid style={{ padding: "0" }}>
-                <Row>
-                  <Col
-                    style={{ padding: "0" }}
-                    lg={4}
-                    md={12}
-                    sm={12}
-                    className={styles.tavsilot}
-                  >
-                    <img
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.q !== null
+                
+                <div className={styles.body}>
+                   <Container style={{height:'100%'}}>
+                       <Row style={{height:'100%'}}>
+                       <Col data-aos="fade-right" lg={6} md={5} sm={12} xs={12} style={{backgroundColor:'#F3F3F3', height:'100%', display:'flex', justifyContent:'center', alignItems:'center', }}>
+                              <img src={ this.state.school !== null
+                          ? this.state.school.q!== null
                             ? this.state.school.q
                             : tav_img
-                          : tav_img
-                      }
-                      data-aos="zoom-in-up"
-                    />
-                  </Col>
-                  <Col
-                    style={{ padding: "0" }}
-                    lg={8}
-                    md={12}
-                    sm={12}
-                    className={styles.tavsilottext}
-                    data-aos="zoom-in-up"
-                  >
-                    <h3>Qabul jarayoni bo'yicha tafsilotlar</h3>
-
-                    <p>
-                      {this.state.school !== null
+                          : tav_img} style={{width:'100%', height:'100%'}}/>
+                            </Col>
+                            <Col data-aos="fade-left" lg={6} md={7} sm={12} xs={12} style={{backgroundColor:'#fff', height:'100%',  display:'flex', alignItems:'center'}}>
+                                <div className={styles.tavsilot_text}>
+                                <h1 style={{textAlign:'left'}}>Qabul jarayoni bo'yicha tavsilotlar</h1>
+                                <p>
+                                {this.state.school !== null
                         ? this.state.school.q_t !== null
                           ? this.state.school.q_t
                           : "Qabul jarayonlari bo'yicha tavsilotlar"
                         : "Qabul jarayonlari bo'yicha tavsilotlar"}
-                    </p>
+                                </p>
+                                </div>
+                            </Col>
+                       </Row>
+                   </Container>
+                </div>
+          
 
-                    {/* <p>
-                            Agar siz ertangi kun uchun dunyoni tarannum etishga qaratilgan shahar markazidagi universitetda o'qishni istasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir talabnoma beruvchining ilmiy va shaxsiy arizalarini ko'rib chiqamiz, har xil ma'lumotlarga ega bo'lgan jamoamizga mos talabalarni tanlash uchun.
-                            </p>
-                            <p>
-                            Agar siz shaharning qoq markazida joylashgan universitetda o'qishni xohlasangiz, agar siz ertangi kun uchun dunyoni tarannum etishga e'tibor qaratadigan shahar markazidagi universitetda o'qishni xohlasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir abituriyentning ilmiy va shaxsiy arizasini ko'rib chiqamiz, bu bizning jamoamizga to'liq mos keladigan talabalarni tanlash uchun
-                            </p> */}
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-
-            <div className={styles.talim}>
-              <Container fluid style={{ padding: "0" }}>
-                <Row>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info}
-                      style={{ backgroundColor: "white" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/906/906175.png" />
-                      </div>
-                      <h3>Ta'lim shakli</h3>
-                      <p style={{ fontSize: "18px" }}>
-                        {this.state.school !== null
+                <div className={styles.body2}>
+                 <Container style={{height:'75%'}} className={styles.col}>
+                     <Row style={{height:'100%'}}>
+                         <Col data-aos="fade-up" lg={4} sm={12} md={6} xs={12} className={styles.row1}>
+                             <Row style={{height:'100%', backgroundColor:'#fff',boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} className={styles.row}>
+                                 <Col lg={4} sm={4} xs={4} className={styles.top1}><img src={rasm2}/></Col>
+                                 <Col lg={8} sm={8} xs={8} className={styles.top2}>Ta'lim shakli</Col>
+                                 <Col lg={12} sm={12} xs={12} className={styles.bottom}>
+                                 {this.state.school !== null
                           ? this.state.school.q_talim !== null
                             ? this.state.school.q_talim
                             : "Ta'lim shakli to'g'risida ma'lumot"
-                          : "Ta'lim shakli to'g'risida ma'lumot"}
-                        {/* Bizning maktab ta’lim shakli kunduzgi bo’lib ta’lim jarayonlari 8:30 dan 16:00 gacha belgilangan. */}
-                      </p>
-                    </div>
-                  </Col>
-
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info_b}
-                      style={{ backgroundColor: "#318CE7" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/3829/3829933.png" />
-                      </div>
-                      <h3>Bitiruvchilar</h3>
-                      <p style={{ fontSize: "18px" }}>
-                        {this.state.school !== null
+                          : "Ta'lim shakli to'g'risida ma'lumot"}</Col>
+                             </Row>
+                         </Col>
+                         <Col data-aos="fade-up" lg={4} sm={12} md={6} xs={12} className={styles.row1}>
+                             <Row style={{height:'100%', backgroundColor:'#fff',boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} className={styles.row}>
+                                 <Col lg={4} sm={4} xs={4} className={styles.top1}><img src={rasm3}/></Col>
+                                 <Col lg={8} sm={8} xs={8} className={styles.top2}>Bitiruvchilar</Col>
+                                 <Col lg={12} sm={12} xs={12} className={styles.bottom}>
+                                 {this.state.school !== null
                           ? this.state.school.q_bitiruv !== null
                             ? this.state.school.q_bitiruv
                             : "Bitiruv to'g'risida ma'lumotlar"
-                          : "Bitiruv to'g'risida ma'lumotlar"}
-
-                        {/* 2019-2020 o‘quv yili yakuniga ko‘ra 106 nafar 11-sinf o‘quvchilari maktabni tamomlashdi va ulardan 42 nafar o‘quvchi Xalqaro Universitetlarga kirish imtihonlaridan muvaffaqiyatli o‘tishdi. */}
-                      </p>
-                    </div>
-                  </Col>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info}
-                      style={{ backgroundColor: "white" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/950/950145.png" />
-                      </div>
-                      <h3>O'quvchilar</h3>
-                      <p style={{ fontSize: "18px" }}>
-                        {this.state.school !== null
+                          : "Bitiruv to'g'risida ma'lumotlar"}</Col>
+                             </Row>
+                         </Col>
+                         <Col data-aos="fade-up" lg={4} sm={12} md={6} xs={12} className={styles.row1}>
+                             <Row style={{height:'100%', backgroundColor:'#fff',boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}} className={styles.row}>
+                                 <Col lg={4} sm={4} xs={4} className={styles.top1}><img src={rasm4}/></Col>
+                                 <Col lg={8} sm={8} xs={8} className={styles.top2}>O'quvchilar</Col>
+                                 <Col lg={12} sm={12} xs={12} className={styles.bottom}>
+                                   {this.state.school !== null
                           ? this.state.school.q_oquvchi !== null
                             ? this.state.school.q_oquvchi
                             : "O'quvchilar to'g'risida ma'lumot"
-                          : "O'quvchilar to'g'risida ma'lumot"}
-                        {/* 2019-2020 o‘quv yilida 5- sinfdan 11-sinfgacha bo’lgan 656 nafar o‘quvchi ta’lim oldi. */}
-                      </p>
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-
-            <div className={styles.jarayon}>
-              <Container fluid style={{ padding: "0" }}>
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "Lobster",
-                    fontSize: "50px",
-                  }}
-                >
-                  Qabul jarayoni
-                </h1>
-                <div
-                  className={styles.line}
-                  style={{ marginLeft: "auto", marginRight: "auto" }}
-                ></div>
-                <Row>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_text}>
-                      <h3>1. Onlayn ro'yxatdan o'ting</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_online !== null
-                            ? this.state.school.q_j_online
-                            : "O'nline ro'yxatdan o'tish haqida"
-                          : "O'nline ro'yxatdan o'tish haqida"}
-
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
+                          : "O'quvchilar to'g'risida ma'lumot"}</Col>
+                             </Row>
+                         </Col>
+                     </Row>
+                 </Container>
                     </div>
 
-                    <div className={styles.jarayon_text}>
-                      <h3>2. Ariza yozing</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_forma !== null
-                            ? this.state.school.q_j_forma
-                            : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"
-                          : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"}
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
+                    <Container>
+               <div className={styles.body3}>
+                  <h1 data-aos="fade-up" style={{color:'#1EB2A6'}}>Qabul jarayoni</h1>
+                  
+                <div data-aos="fade-up" className={styles.jarayon}>
+                   {
+                     
+                     this.state.jarayon.map((item,i)=>(
+                       
+                       <div className={styles.item}>
+                         <div className={styles.title} onClick={()=>this.toggle(i)} style={{backgroundColor:`${this.state.selected===i? '#1EB2A6':''}`}}>
+                           <h4 style={{color:`${this.state.selected===i? '#000':''}`}}>{i+1}. {item.question}</h4>
+                           
+                           <span>{this.state.selected===i? <BsChevronUp color="#fff"/>:<BsChevronDown/>}</span>
+                         </div>
+                         <div className={styles.content} style={{display:`${this.state.selected===i? 'flex':''}`} } >{item.answer}</div>
+                       </div>
+                     )
 
-                    <div className={styles.jarayon_text}>
-                      <h3>3. Arizani ko'zdan kechiring</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_koz !== null
-                            ? this.state.school.q_j_koz
-                            : "Arizani ko'zdan kechirish haqida ma'lumot"
-                          : "Arizani ko'zdan kechirish haqida ma'lumot"}
+                     )
+                   }
+                </div>
+               </div>
+               </Container>
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-                  </Col>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_img}>
-                      <img src={jarayon} />
-                    </div>
-                  </Col>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_text}>
-                      <h3>4. Kerakli hujjatlarni to'plang</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_hujjat !== null
-                            ? this.state.school.q_j_hujjat
-                            : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"
-                          : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"}
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-
-                    <div className={styles.jarayon_text}>
-                      <h3>5. Suhbat jarayoni</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_intervyu !== null
-                            ? this.state.school.q_j_intervyu
-                            : "Suhbat jarayoni haqida ma'lumot"
-                          : "Suhbat jarayoni haqida ma'lumot"}
-
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-
-                    <div className={styles.jarayon_text}>
-                      <h3>6. So'nggi qaror</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_qaror !== null
-                            ? this.state.school.q_j_qaror
-                            : "So'ngi qaror haqida ma'lumot"
-                          : "So'ngi qaror haqida ma'lumot"}
-
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-
-            <div className={styles.tavsilotlar} style={{ height: "580px" }}>
-              <Container fluid style={{ padding: "0" }}>
-                <Row>
-                  <Col
-                    style={{ padding: "0" }}
-                    lg={4}
-                    md={12}
-                    sm={12}
-                    className={styles.tavsilot}
-                  >
-                    <img
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.q_imtihon_r !== null
-                            ? this.state.school.q_imtihon_r
-                            : talab
-                          : talab
-                      }
-                      data-aos="zoom-in-up"
-                    />
-                  </Col>
-                  <Col
-                    style={{ padding: "0" }}
-                    lg={8}
-                    md={12}
-                    sm={12}
-                    className={styles.tavsilottext}
-                    data-aos="zoom-in-up"
-                    style={{ height: "570px" }}
-                  >
-                    <h3 style={{ fontSize: "30px" }}>
-                      Imtihonda ishtirok etish talablari
-                    </h3>
-                    <p>
-                      {this.state.school !== null
+            
+               <div className={styles.body}>
+                   <Container style={{height:'100%'}}>
+                       <Row style={{height:'100%'}}>
+                       
+                            <Col data-aos="fade-right" lg={6} md={7} sm={12} xs={12} style={{backgroundColor:'#fff', height:'100%', display:'flex', alignItems:'center'}}>
+                                <div className={styles.tavsilot_text}>
+                                <h1 style={{textAlign:'left'}}>Imtihonda ishtirok etish talablari</h1>
+                                <p>
+                                {this.state.school !== null
                         ? this.state.school.q_imtihon_t !== null
                           ? this.state.school.q_imtihon_t
                           : "Imtixonda ishtirok etish talablari haqida ma'lumot"
                         : "Imtixonda ishtirok etish talablari haqida ma'lumot"}
-                    </p>
-                    {/* <p>
-                            O‘quvchilarning ota-onasi yoki ota-onasining o‘rnini bosuvchi shaxslar quyidagi talablarni bajarishi shart:
-                            – ro‘yxatdan o‘tish vaqtida o‘quvchining ID ko‘rsatib yuborilgan SMS xabarni qabul qiluvchi telefon raqamni aniq ko‘rsatilishi; – veb-ilova orqali uydan yoki infrastruktura mavjud bo‘lgan istalgan joydan o‘quvchi imtihonga qatnasha olishi uchun Internet tarmog‘i bo‘lgan hamda ZOOM ilovasi o‘rnatilgan kompyuter yoki planshet yoki smartfon bilan ta’minlashi; – o‘quvchiga tarmoq orqali sinovlarda qatnashishga tayyorlashi.
-                            </p>
-                            <p>
-                            Ixtisoslashtirilgan maktabga saralash imtihonlarida ishtirok etish uchun hujjatlar davlat va nodavlat umumiy o‘rta ta’lim muassasalarining tartibli bosqichdagi sinflarini muvaffaqiyatli “4” va “5” baholariga tamomlagan o‘quvchilardan qabul qilinadi.
-                            </p>
-                            <p>
-                            O‘quvchining taqdim etgan hujjatlari haqqoniyligi va farzandining sinovlarda shaffof ishtirokini taʼminlash ota-ona zimmasiga yuklatiladi.
-                            </p> */}
-                  </Col>
-                </Row>
-              </Container>
-            </div>
+                                </p>
+                                </div>
+                            </Col>
+                            <Col data-aos="fade-left" lg={6} md={5} sm={12} xs={12} style={{backgroundColor:'#F3F3F3', height:'100%', display:'flex', justifyContent:'center', alignItems:'center', }}>
+                              <img src={ this.state.school !== null
+                          ? this.state.school.q_imtihon_r !== null
+                            ? this.state.school.q_imtihon_r
+                            : talab
+                          : talab} style={{width:'100%'}}/>
+                            </Col>
+                       </Row>
+                   </Container>
+                </div>
+            
 
-            <div className={styles.muddat} data-aos="fade-up">
-              <Container fluid style={{ padding: "0" }}>
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "Lobster",
-                    fontSize: "40px",
-                  }}
-                >
-                  Ma'lumotlar
-                </h1>
-                <div
-                  className={styles.line}
-                  style={{ marginLeft: "auto", marginRight: "auto" }}
-                ></div>
-                <Row>
-                  <div className={styles.muddat_item}>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text1}>
-                        <div>
-                          <h3>O'quv yili</h3>
-                          <p>
-                            {this.state.school !== null
+                <div className={styles.body4}>
+                 <Container style={{height:'100%'}}>
+                   <div className={styles.malumot}>
+                         <div className={styles.info}>
+                           <div className={styles.icon}> <img src={rasm6}/></div>
+                           <div className={styles.text}><h3 style={{color:'#fff'}}>O'quv yili</h3><p> {this.state.school !== null
                               ? this.state.school.q_oquv_yili !== null
                                 ? this.state.school.q_oquv_yili
                                 : "O'quv yili"
-                              : "O'quv yili"}
-                            {/* 2020/2021 */}
-                          </p>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text2}>
-                        <div>
-                          <h3>Hujjat topshirish muddati</h3>
-                          <p>
-                            {this.state.school !== null
+                              : "O'quv yili"}</p></div>
+                         </div>
+                         <div className={styles.info}>
+                           <div className={styles.icon}> <img src={rasm8}/></div>
+                           <div className={styles.text}><h3 style={{color:'#fff'}}>Hujjat topshirish muddati</h3><p>  {this.state.school !== null
                               ? this.state.school.q_muddat !== null
                                 ? this.state.school.q_muddat
                                 : "Muddati haqida ma'lumot"
-                              : "Muddati haqida ma'lumot"}
-                            {/* 10-20-sentabr kunlari */}
-                          </p>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text3}>
-                        <div>
-                          <h3>Imtihon kuni</h3>
-                          <p>
-                            {this.state.school !== null
+                              : "Muddati haqida ma'lumot"}</p></div>
+                         </div>
+                         <div className={styles.info}>
+                           <div className={styles.icon}> <img src={rasm7}/></div>
+                           <div className={styles.text}><h3 style={{color:'#fff'}}>Imtihon kuni</h3><p> {this.state.school !== null
                               ? this.state.school.q_imtihon !== null
                                 ? this.state.school.q_imtihon
                                 : "Imtixon kuni"
-                              : "Imtixon kuni"}
-                            {/* 25-sentabrdan 9-oktabrgacha */}
-                          </p>
-                        </div>
-                      </div>
-                    </Col>
-                  </div>
-                </Row>
-              </Container>
-            </div>
+                              : "Imtixon kuni"}</p></div>
+                         </div>
+                   </div>
+                 </Container>
+               </div>
 
-            <Container fluid style={{ padding: "0" }}>
-              <div className={styles.hujjat}>
-                <div className={styles.hujjat_text} data-aos="fade-right">
-                  <h3>Kerakli hujjatlar</h3>
-                  <div className={styles.line}></div>
-                  <p style={{ padding: "10px" }}>
-                    <b>1.</b>
-                    {this.state.school !== null
-                      ? this.state.school.q_hujjat_t1 !== null
-                        ? this.state.school.q_hujjat_t1
-                        : "Kerakli hujjatlar to'g'risida ma'lumot"
-                      : "Kerakli hujjatlar to'g'risida ma'lumot"}
-                    {/* O‘quvchining tug‘ilganligi haqida guvohnoma (pdf-10Mb oshmagan holatda). */}
-                  </p>
-                  <p style={{ padding: "10px" }}>
-                    <b>2.</b>
-                    {this.state.school !== null
-                      ? this.state.school.q_hujjat_t2 !== null
-                        ? this.state.school.q_hujjat_t2
-                        : "Kerakli hujjatlar to'g'risida ma'lumot"
-                      : "Kerakli hujjatlar to'g'risida ma'lumot"}
-                    {/* 2019-2020 o‘quv yilini “4”va “5” baholarga bitirganligini tasdiqlovchi o‘quvchining tabeli. Maktab direktori tomonidan tasdiqlangan bo‘lishi kerak (pdf-10Mb oshmagan holatda). */}
-                  </p>
-                  <p style={{ padding: "10px" }}>
-                    <b>3.</b>
-                    {this.state.school !== null
-                      ? this.state.school.q_hujjat_t3 !== null
-                        ? this.state.school.q_hujjat_t3
-                        : "Kerakli hujjatlar to'g'risida ma'lumot"
-                      : "Kerakli hujjatlar to'g'risida ma'lumot"}
-                    {/* 3/4 Rasm (jpg/png/jpeg-formatida). */}
-                  </p>
-                  <p style={{ color: "darkgray", marginTop: "30px" }}>
-                    {this.state.school !== null
+
+               <Container className={styles.hujjat}>
+                 <div className={styles.body5}>
+                 <Row style={{height:'100%', width:'100%'}}>
+                       <Col data-aos="fade-right" lg={6} md={6} xs={0} sm={0} className={styles.hujjat_img}>
+                            </Col >
+                            <Col data-aos="fade-left" lg={6} md={6} xs={12} sm={12} style={{ display:'flex', alignItems:'center'}}>
+                                <div className={styles.hujjat_text}>
+                                <h1>Kerakli hujjatlar</h1>
+                                <p> {this.state.school !== null
                       ? this.state.school.address !== null
                         ? this.state.school.address
                         : "Maktab manzili "
-                      : "Maktab manzili "}
-                    {/* Toshkent shahar, Yashnabod tumani, Mahtumquli ko’chasi Call-Center: 1206 (Ish vaqti 08:00dan – 20:00gacha) */}
-                  </p>
-                </div>
-              </div>
-            </Container>
+                      : "Maktab manzili "}</p>
+                                <div className={styles.hujjat_list}>
+                                  <img src={rasm9}/> <h5> {this.state.school !== null
+                      ? this.state.school.q_hujjat_t1 !== null
+                        ? this.state.school.q_hujjat_t1
+                        : "Kerakli hujjatlar to'g'risida ma'lumot"
+                      : "Kerakli hujjatlar to'g'risida ma'lumot"}</h5>
+                                </div>
+                                <div className={styles.hujjat_list}>
+                                  <img src={rasm10}/> <h5> {this.state.school !== null
+                      ? this.state.school.q_hujjat_t2 !== null
+                        ? this.state.school.q_hujjat_t2
+                        : "Kerakli hujjatlar to'g'risida ma'lumot"
+                      : "Kerakli hujjatlar to'g'risida ma'lumot"}</h5>
+                                </div>
+                                <div className={styles.hujjat_list}>
+                                  <img src={rasm11}/> <h5> {this.state.school !== null
+                      ? this.state.school.q_hujjat_t3 !== null
+                        ? this.state.school.q_hujjat_t3
+                        : "Kerakli hujjatlar to'g'risida ma'lumot"
+                      : "Kerakli hujjatlar to'g'risida ma'lumot"}</h5>
+                                </div>
+                                </div>
+                            </Col>
+                       </Row>
+                 </div>
+               </Container>
+                <Footer/>
+          
+
           </div>
         )}
       </div>

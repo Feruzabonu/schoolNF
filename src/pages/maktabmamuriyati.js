@@ -122,7 +122,7 @@ setTimeout(()=>{
               {this.state.loader === true ? 
           <div className={styles.loader}>
           <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div>
+          </div> 
           
          : 
             <>
