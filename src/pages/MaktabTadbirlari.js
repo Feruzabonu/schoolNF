@@ -12,6 +12,7 @@ import "./form.css";
 import yil from "../img/yil.jpg";
 import her6 from "../img/h6.png";
 import {BiTime} from 'react-icons/bi'
+import { Form, Input, Button } from 'antd';
 import {FaRegCalendarAlt} from 'react-icons/fa'
 import {
   Clusterer,
@@ -24,10 +25,11 @@ import {
   YMaps,
   ZoomControl,
 } from "react-yandex-maps";
-import "react-multi-carousel/lib/styles.css";
+
 import {GrLocation} from 'react-icons/gr'
 import rasm3 from "../img/13.jpg";
-import Carousel from "react-multi-carousel";
+import Carousel from "react-multi-carousel"
+import 'react-multi-carousel/lib/styles.css'
 import { Tooltip } from "antd";
 
 import {
@@ -38,6 +40,21 @@ import {
 import { getEvents } from "../host/Config";
 import Global from "../host/Global";
 import {HiLocationMarker} from 'react-icons/hi'
+const { TextArea } = Input;
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+const tailLayout = {
+  wrapperCol: {
+    offset: 8,
+    span: 16,
+  },
+};
 export default class MaktabTadbirlari extends Component {
   state = {
     events: [],
@@ -278,26 +295,59 @@ export default class MaktabTadbirlari extends Component {
                 <br />
               </div>
             </Col>
-            <Col lg={6} md={12} sm={12} className="fgr" style={{textAlign:'center'}}>
+            <Col lg={6} md={12} sm={12} style={{textAlign:'center'}} className={style.form}>
               <h1 className={style.sarlavha}>Murojaat qilish</h1>
+                              <div className={style.formDiv}>
+                              <div className={style.address}>
+                                   <div style={{color:'white',paddingRight:'20px',marginBottom:'15px'}}>
+                                       <span style={{color:'white',fontSize:'20px',fontWeight:'700'}}>Manzil:</span>
+                                       <span style={{color:'white',fontSize:'18px',color:'white',marginLeft:'20px'}}>Yakkasaroy tumani</span>
+                                   </div>
+                                   <div style={{color:'white',paddingRight:'20px',marginBottom:'15px'}}>
+                                    <span style={{color:'white',fontSize:'20px',fontWeight:'700'}}>E-mail:</span>
+                                       <span style={{color:'white',fontSize:'18px',color:'white',marginLeft:'20px'}}>jbvhqbvbyuwebv@gmail.com</span>
+                                   </div>
+                                <div style={{color:'white',paddingRight:'10px',marginBottom:'15px'}}>
+                                    <span style={{color:'white',fontSize:'20px',fontWeight:'700'}}>Telefon:</span>
+                                    <span style={{color:'white',fontSize:'18px',color:'white',marginLeft:'20px'}}>+823721365175</span>
+                                </div>
 
-              <div className="formFER">
-                <div className="container">
-                  <div className="brand-logo"></div>
-                  {/* <div className="brand-title">TWITTER</div> */}
-                  <div className="inputs">
-                    <form>
-                      <label>F.I.O.</label>
-                      <input type="text" placeholder="Ism Familiya Otchistva" />
-                      <label>Telefon raqam</label>
-                      <input type="text" placeholder="+998 99 999 99 99" />
-                      <label>Murojaat</label>
-                      <textarea placeholder="Murojaat matni..."></textarea>
-                      <button type="submit">Yuborish</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+                               </div>
+                               <Form className={style.formInput}  style={{width:'100%',marginLeft:'100px'}} {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}>
+        <Form.Item
+          name="name"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input placeholder="F.I.O ni kiriting" style={{borderRadius:'10px',padding:'8px',width:'100%',border:'2px solid #1EB2A6',marginBottom:'5px',outline:'none',fontSize:'14px'}}/>
+        </Form.Item>
+        <Form.Item
+          name="email"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input placeholder="E-mail kiriting" style={{borderRadius:'10px',padding:'8px',width:'100%',border:'2px solid #1EB2A6',marginBottom:'5px',outline:'none',fontSize:'14px'}}/>
+        </Form.Item>
+        <Form.Item name="text">
+        <TextArea
+        placeholder="Savollar yoki takliflar"
+        style={{borderRadius:'10px',padding:'8px',width:'100%',border:'2px solid #1EB2A6',marginBottom:'5px',outline:'none',fontSize:'14px'}}
+          autoSize={{ minRows: 5, maxRows: 5 }}
+        />
+      </Form.Item>
+        <Form.Item {...tailLayout}>
+          <Button className={style.btnForm} htmlType="submit" style={{backgroundColor:'white',color:'#1EB2A6',fontWeight:'700',width:'100px',border:'none'}}>
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>    
+                              </div>
             </Col>
           </Row>
         </div>
