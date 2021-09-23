@@ -11,6 +11,7 @@ import her5 from "../img/h5.png";
 import "./form.css";
 import yil from "../img/yil.jpg";
 import her6 from "../img/h6.png";
+import {BiTime} from 'react-icons/bi'
 import {FaRegCalendarAlt} from 'react-icons/fa'
 import {
   Clusterer,
@@ -24,6 +25,7 @@ import {
   ZoomControl,
 } from "react-yandex-maps";
 import "react-multi-carousel/lib/styles.css";
+import {GrLocation} from 'react-icons/gr'
 import rasm3 from "../img/13.jpg";
 import Carousel from "react-multi-carousel";
 import { Tooltip } from "antd";
@@ -35,6 +37,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { getEvents } from "../host/Config";
 import Global from "../host/Global";
+import {HiLocationMarker} from 'react-icons/hi'
 export default class MaktabTadbirlari extends Component {
   state = {
     events: [],
@@ -104,9 +107,10 @@ export default class MaktabTadbirlari extends Component {
                             <img src={item.image} style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'5px 5px 0 0'}}/>
                         </div>
                         <div style={{textAlign:"left",padding:'20px',backgroundColor:'white'}}>
-                            <FaRegCalendarAlt style={{color:'#1EB2A6'}}/> <span style={{marginLeft:'10px',color:'#949494',fontSize:'14px',fontWeight:'700'}}>{item.date} {item.time} {item.address}</span>
-                            <h4 style={{marginTop:'20px'}}>{item.title}</h4>
-                            
+                        <h4 style={{marginTop:'20px'}}>{item.title}</h4>
+                            <FaRegCalendarAlt style={{color:'#1EB2A6'}}/> <span style={{marginLeft:'10px',color:'#949494',fontSize:'14px',fontWeight:'700'}}>{item.date}</span><br></br>
+                             <BiTime style={{color:'#1EB2A6'}}/> <span style={{marginLeft:'10px',color:'#949494',fontSize:'14px',fontWeight:'700'}}>{item.time}</span><br></br>
+                             <HiLocationMarker style={{color:'#1EB2A6'}}/> <span style={{marginLeft:'10px',color:'#949494',fontSize:'14px',fontWeight:'700'}}>{item.address}</span>       
                          </div>
                     
                            </Col>
@@ -117,10 +121,10 @@ export default class MaktabTadbirlari extends Component {
           </Row>
           </Container>
           <Link to={`/tadbirlar/`} className={style.barchasiniKurish}>
-            Hamma tadbirlarni ko'rish -&gt;
+            Hamma tadbirlarni ko'rish
           </Link>
         </div>
-        <div style={{ backgroundColor: "white", marginTop: "-30px" }}>
+        <div style={{ backgroundColor: "white", marginTop: "-30px",textAlign:'center' }}>
           <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
 
           <div className="sliderHomiy" style={{ backgroundColor: "white" }}>
@@ -223,7 +227,7 @@ export default class MaktabTadbirlari extends Component {
             </Carousel>
           </div>
         </div>
-        <div style={{ width: "100%" }}>
+        <div style={{ width: "100%",textAlign:'center' }}>
           <Row
             style={{
               backgroundColor: "white",
@@ -274,7 +278,7 @@ export default class MaktabTadbirlari extends Component {
                 <br />
               </div>
             </Col>
-            <Col lg={6} md={12} sm={12} className="fgr">
+            <Col lg={6} md={12} sm={12} className="fgr" style={{textAlign:'center'}}>
               <h1 className={style.sarlavha}>Murojaat qilish</h1>
 
               <div className="formFER">
