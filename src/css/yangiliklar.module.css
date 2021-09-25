@@ -3,30 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-.carusel1{
-    background-image: url(../img/yangilik2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-.carusel2{
-    background-image: url(../img/school3.jpg);
-    background-size: cover;
-}
-.carusel3{
-    background-image: url(../img/school4.jpg);
-    background-size: cover;
-}
-.carusel4{
-    background-image: url(../img/school4.jpg);
-    background-size: cover;
-}
-.headerImage{
+.header{
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    filter:brightness(80%);
-    z-index:5 !important;
+    background-image: url(../img/new2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+.header h1{
+    color:white;
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 250px !important;
 }
 .sliderIMG img{
 width: 100%;
@@ -51,18 +43,23 @@ object-fit: cover;
 
 
 /* ==============Section============== */
-.yangi h1 {
+.yangi {
     text-align: center;
-    font-family: "Lobster";
-    font-size: 60px;
-    font-weight: 500;
-    margin: 5% 5% 10px 5% !important; 
+    padding-top: 50px;
 }
-.line{
-    width: 30%;
-    border-bottom: lightsteelblue solid 4px;
-    margin: auto;
-    margin-bottom: 5%;
+.yangi h1{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 60px;
+}
+.yangi h1::after{
+    content: '';
+    position: absolute;
+    top: 140%;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background-color:#1EB2A6
 }
 .news{
     width: 100%;
@@ -102,18 +99,19 @@ color: gray !important;}
     height: auto;
     padding: 6%;
     position: relative;
-    background-color: lightsteelblue;
+    background-color: #1EB2A6;
     margin-bottom: 5%;
 }
 .title{
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
-    border-bottom: red solid 1px;
+    border-bottom: 1px solid white;
 }
 .title h3{
     font-size: 30px;
     font-family: "Lobster";
+    color:white;
 }
 
 .body_card{

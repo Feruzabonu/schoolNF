@@ -22,7 +22,7 @@ import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FadeLoader } from "react-spinners";
+import {  ScaleLoader } from "react-spinners";
 import axios from "axios";
 
 import { Pannellum } from "pannellum-react";
@@ -60,7 +60,7 @@ export default class MaktabHayoti extends Component {
       <div>
         {this.state.loading === true ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            < ScaleLoader color="blue" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <div>

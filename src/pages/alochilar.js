@@ -16,7 +16,9 @@ import { getExcellent, getPupil } from "../host/Config";
 import { url, user } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 import Global from "../host/Global";
-
+import Navbar from './Navbar'
+import Footer from './Footer'
+import {FaStar} from 'react-icons/fa'
 export default class Alochilar extends Component {
   state = {
     loader: true,
@@ -121,20 +123,16 @@ export default class Alochilar extends Component {
           </div>
         ) : (
           <>
-            <div className={styles.headerSliderText}>
-              <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
-                Maktab A'lochilari
-              </h3>
-              <div className={styles.headerIcons}>
-                <a href="#1">
-                  <DownCircleOutlined
-                    style={{ fontSize: "40px", color: "white" }}
-                    className={styles.headerIcon}
-                  />
-                </a>
-              </div>
-            </div>
-            <Carousel autoplay className={styles.sliderHeader}>
+          <Navbar/>
+          <div className={styles.header}>
+             <img  src={
+                    data !== null && data.m_h_h2 !== null
+                      ? data.m_h_h2
+                      : school1
+                  }/>
+              <h1 className={styles.headerh}>Maktab a'lochilari</h1>
+           </div>
+            {/* <Carousel autoplay className={styles.sliderHeader}>
               <div>
                 <Image
                   src={
@@ -185,49 +183,39 @@ export default class Alochilar extends Component {
                   className={styles.headerImage}
                 />
               </div>
-            </Carousel>
+            </Carousel> */}
 
-            <div style={{ width: "100%", backgroundColor: "white" }}>
-              <br />
-              <br />
-              <br />
-              <br />
-              <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
-              <div className={style.line}></div>
-              <div className={style.tana}>
-                {this.state.excellent !== []
+
+              <div className={style.alochilar}>
+                <Container>
+                  <Row>
+                  <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
+                  {this.state.excellent !== []
                   ? this.state.excellent.map((item) => {
                       var pupil = this.setPupils(item.pupil);
                       var classes = this.echoClasses(pupil.clas);
                       return (
-                        <div className={style.card}>
-                          <div className={style.image}>
-                            <img
-                              src={pupil.image !== null ? pupil.image : school2}
-                              alt=""
-                            />
-                          </div>
-                          <div className={style.content}>
-                            <p>
-                              <b>O'quvchi: </b> {pupil.full_name}
-                            </p>
-                            <p>
-                              <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
-                            </p>
-                            <p>
-                              <b>Sinfi: </b>
-                              {this.echoClasses(pupil.clas).class_number} - "
-                              {this.echoClasses(pupil.clas).class_char}" sinf
-                            </p>
-
-                            {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                          </div>
+                        <Col lg={6} md={12} sm={12}>
+                            <div className={style.card}>
+                        <div className={style.cardImg}>
+                         <img   src={pupil.image !== null ? pupil.image : school2} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                         </div>
+                        <div className={style.cardText} style={{padding:'10px',backgroundColor:'white'}}>
+                            <p style={{color:'#1EB2A6',fontWeight:'600',marginTop:'10px'}}>A'lochi o'quvchi</p>
+                            <h5 style={{fontSize:'23px',marginTop:'-18px',marginLeft:'10px'}}>{pupil.full_name} {pupil.birth_day}</h5>
+                            <FaStar style={{color:'#1EB2A6',marginLeft:'10px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/>
+                            {this.echoClasses(pupil.clas).class_number} - "
+                              {this.echoClasses(pupil.clas).class_char}" sinf
+                        </div>
+                    </div>
+                            </Col>
                       );
                     })
                   : ""}
+                  </Row>
+                </Container>
               </div>
-            </div>
+            <Footer/>
           </>
         )}
       </div>

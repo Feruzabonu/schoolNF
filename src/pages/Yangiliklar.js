@@ -11,6 +11,7 @@ import styles from "../css/yangiliklar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
+
   MDBCard,
   MDBCardTitle,
   MDBCardText,
@@ -23,8 +24,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { getNews } from "../host/Config";
-import FadeLoader from "react-spinners/FadeLoader";
+import  ScaleLoader from "react-spinners/ScaleLoader";
 import { Carousel } from "antd";
+import Navbar from  './Navbar'
+import Footer from './Footer'
 
 // import {DownCircleOutlined} from '@ant-design/icons'
 
@@ -84,51 +87,14 @@ export default class Yangiliklar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            < ScaleLoader color="blue" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <>
-            {/* ============Header============== */}
-
-            <div
-              className={styles.headerSliderText}
-              style={{
-                fontFamily: "Lobster",
-                zIndex: "100",
-                paddingTop: "60px",
-              }}
-            >
-              <h3 style={{ fontFamily: "Lobster", zIndex: "100" }}>
-                Maktabimiz so'nggi yangiliklari bilan tanishing
-              </h3>
-            </div>
-
-            <Carousel autoplay className={styles.sliderContainer}>
-              {/* {
-                            this.state.news.map(item=>{
-                              return(
-                                <div>
-                                <img src={item.image} style={{width:'100%', height:'100vh',zIndex:'-100'}} className={styles.headerImage}/> 
-                                             
-                                </div>
-                                
-                              )
-                            })
-                          } */}
-              <div className={styles.sliderIMG}>
-                <img src={new1} />
-              </div>
-              <div className={styles.sliderIMG}>
-                <img src={new2} />
-              </div>
-              <div className={styles.sliderIMG}>
-                <img src={new3} />
-              </div>
-              <div className={styles.sliderIMG}>
-                <img src={new4} />
-              </div>
-            </Carousel>
-            {/* ==================Section===================== */}
+            <Navbar/>
+            <div className={styles.header}>
+              <h1>Maktabimiz so'nggi yangiliklari</h1>
+           </div>
 
             <Container fluid>
               <div className={styles.yangi}>
@@ -136,7 +102,6 @@ export default class Yangiliklar extends Component {
                   Yangiliklar
                 </h1>
               </div>
-              <div className={styles.line} data-aos="fade-up"></div>
               <Row>
                 <Col lg={7}>
                   {this.state.news.length !== 0 ? (
@@ -145,7 +110,7 @@ export default class Yangiliklar extends Component {
                         src={this.state.news[this.state.id].image}
                         alt="Foto lavha"
                       />
-                      <h3>{this.state.news[this.state.id].title}</h3>
+                      <h4 style={{color:'#1EB2A6',marginTop:'30px'}}>{this.state.news[this.state.id].title}</h4>
 
                       <p className={styles.date}>
                         <i
@@ -224,6 +189,7 @@ export default class Yangiliklar extends Component {
                 </Col>
               </Row>
             </Container>
+            <Footer/>
           </>
         )}
       </div>
