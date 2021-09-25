@@ -13,7 +13,7 @@ import axios from "axios";
 import Aos from "aos";
 import {FaStar} from 'react-icons/fa'
 import { getExcellent, getPupil } from "../host/Config";
-
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { url, user } from "../host/Host";
 import Global from "../host/Global";
 
@@ -184,96 +184,48 @@ export default class BoshSahifaDavomi extends Component {
               <div className={style.tana}>
                 <br />
                 <br />
-                <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
+                <h1 className={style.sarlavha} style={{ fontSize: "28px", marginBottom:'150px' }}>
                   O'qituvchilar doskasi
                 </h1>
-                <Container className={style.back}>
-                  {/* <div className={style.line}></div> */}
-                  <br />
-                  <Row>
-                    <Col lg={12} md={12} sm={12}>
-                      <div style={{ padding: "10px" }}>
-                        <div className={style.card}>
-                          <div className={style.bayroq}></div>
-                          <Row>
-                            <Col lg={5}>
-                              <img src={ustoz1} alt="" />
-                            </Col>
-                            <Col lg={7}>
-                              <p
-                                style={{
-                                  fontSize: "20px",
-                                  marginTop: "20px",
-                                  marginLeft: "20px",
-                                  fontWeight: "bold",
-                                  color: "black",
-                                  width: "80%",
-                                }}
-                              >
-                                Muxlisova Munisa Mahmudovna
-                              </p>
-
-                              <p
-                                style={{
-                                  fontSize: "18px",
-                                  color: "black",
-                                  marginLeft: "20px",
-                                }}
-                              >
-                                Ingliz tili o'qituvchisi
-                              </p>
-
-                              {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                            </Col>
-                          </Row>
-                          {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
-                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                       </p> */}
-                        </div>
-                      </div>
-                    </Col>
-                    <Col lg={12} md={12} sm={12}>
-                      <div style={{ padding: "10px" }}>
-                        <div className={style.card}>
-                          <div className={style.bayroq}></div>
-                          <Row>
-                            <Col lg={5}>
-                              <img src={ustoz2} alt="" />
-                            </Col>
-                            <Col lg={7}>
-                              <p
-                                style={{
-                                  fontSize: "20px",
-                                  marginTop: "20px",
-                                  marginLeft: "20px",
-                                  fontWeight: "bold",
-                                  color: "black",
-                                  width: "80%",
-                                }}
-                              >
-                                Hamidova Shahnoza Elmurodovna
-                              </p>
-
-                              <p
-                                style={{
-                                  fontSize: "18px",
-                                  color: "black",
-                                  marginLeft: "20px",
-                                }}
-                              >
-                                Ona tili o'qituvchisi
-                              </p>
-
-                              {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                            </Col>
-                          </Row>
-                          {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
-                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                       </p> */}
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
+                <Container className={style.back} style={{display:'flex', alignItems:'center', height:'100%'}}>
+                <MDBRow className='row-cols-1 row-cols-md-2 g-4'>
+                
+                   
+      <MDBCol>
+        <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'auto', }} className={style.cardo}>
+          <MDBCardImage
+            src={ustoz1}
+            alt='...'
+            position='top'
+            style={{maxWidth:'280px', maxHeight:'187px'}}
+          />
+          <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={style.card_body}>
+            <MDBCardTitle className={style.body_title}> Muxlisova Munisa Mahmudovna</MDBCardTitle>
+            <MDBCardText style={{fontSize:'18px', fontWeight:'500', color:'#1EB2A6'}} >
+            Ingliz tili o'qituvchisi
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+      <MDBCol>
+        <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'auto', }} className={style.cardo}>
+          <MDBCardImage
+            src={ustoz2}
+            alt='...'
+            position='top'
+            style={{maxWidth:'280px', maxHeight:'187px'}}
+          />
+          <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={style.card_body}>
+            <MDBCardTitle className={style.body_title}>  Hamidova Shahnoza Elmurodovna</MDBCardTitle>
+            <MDBCardText style={{fontSize:'18px', fontWeight:'500', color:'#1EB2A6'}}>
+            Ona tili o'qituvchisi
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+      
+                    
+    </MDBRow>
                 </Container>
               </div>
             </Col>

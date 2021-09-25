@@ -25,6 +25,7 @@
 }
 .social_media a{
     color: #fff;
+    font-size: 16px;
 }
 .social_media a:hover{
     color: #fff;
@@ -36,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0, 25%)
+    transform: translate(0, 27%)
 }
 ul.pages{
     width: 100%;

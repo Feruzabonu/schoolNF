@@ -291,7 +291,7 @@ class Qabul extends React.Component {
                  <Row style={{height:'100%', width:'100%'}}>
                        <Col data-aos="fade-right" lg={6} md={6} xs={0} sm={0} className={styles.hujjat_img}>
                             </Col >
-                            <Col data-aos="fade-left" lg={6} md={6} xs={12} sm={12} style={{ display:'flex', alignItems:'center'}}>
+                            <Col data-aos="fade-left" lg={6} md={6} xs={12} sm={12} style={{ display:'flex', alignItems:'center', height:'100%'}}>
                                 <div className={styles.hujjat_text}>
                                 <h1>Kerakli hujjatlar</h1>
                                 <p> {this.state.school !== null

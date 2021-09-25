@@ -179,7 +179,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -209,7 +209,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -238,7 +238,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -266,7 +266,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Maktab amaliyotchi psixologi
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -295,7 +295,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Kasaba uyushma raisi
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -324,7 +324,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Kutubxona mudirasi
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -353,7 +353,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
@@ -382,7 +382,7 @@ setTimeout(()=>{
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
-                    Maktab Direktori
+                  Boshlang'ich tashkilot yoshlar yetakchisi
                   </MDBCardText>
                 </MDBCardBody>
                 <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>

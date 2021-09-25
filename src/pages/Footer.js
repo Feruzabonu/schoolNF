@@ -4,14 +4,27 @@ import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaInstagram, FaMap, FaTelegramPlane } from 'react-icons/fa';
 import { CgFacebook } from 'react-icons/cg';
+import { AiFillMail } from 'react-icons/ai';
 import { RiTwitterFill } from 'react-icons/ri';
 import { BiCalendar} from 'react-icons/bi';
 import { MdLocalPhone} from 'react-icons/md';
 import { BsArrowRight} from 'react-icons/bs';
+import { idMaktab, url, user } from "../host/Host";
+import axios from "axios";
+import { Link } from 'react-router-dom';
 
 
 export default class Footer extends Component {
-    
+    state = {
+        data: [],
+      };
+      componentDidMount() {
+        //   var a = window.location.href.split("/");
+        var v = user;
+        axios.get(`${url}/school-by-admin/${v}`).then((res) => {
+          this.setState({ data: res.data });
+        });
+      }
     render() {
         const style = {  fontSize: "0.8em", color: "#1EB2A6", fontWeight:"400", marginRight:'5px' }
         return (
@@ -21,8 +34,8 @@ export default class Footer extends Component {
                          <Row>
                              <Col xs={12} sm={12} md={6} lg={3}>
                                  <div className={styles.one}>
-                                    <h2>258-maktab</h2>
-                                    <p style={{textTransform:'uppercase', fontSize:'13px', fontWeight:'600', color:'#1EB2A6'}}>Ixtisoslashtirilgan xususiy maktab</p>
+                                    <h2>{this.state.data !== null ? this.state.data.school_number : ""}-maktab </h2>
+                                    <p style={{textTransform:'uppercase', fontSize:'13px', fontWeight:'600', color:'#1EB2A6'}}>{this.state.data !== null ? this.state.data.type : ""}</p>
                                     <p style={{color:'#999999', fontSize:'16px', marginTop:'40px'}}>Sifatli bilim va yuqori natijalarga bizning maktab bilan erishishingiz mumkin!</p>
                                     <ul className={styles.social_media}>
                                         <li><div><a href='#'><RiTwitterFill/></a></div></li>
@@ -35,12 +48,12 @@ export default class Footer extends Component {
                                  <div className={styles.two}>
                                      <h5>Asosiy Sahifalar</h5>
                                      <ul className={styles.pages}>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Bosh sahifa</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Maktab hayoti</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Qabul</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Yangiliklar</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Maktab ma'muriyati</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Maktab a'lochilari</li>
+                                        <Link to='/boshsahifa'><li className={styles.links} ><BsArrowRight style={style}/>Bosh sahifa</li></Link>
+                                        <Link to='/maktabhayoti'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Maktab hayoti</li></Link>
+                                       <Link to='/qabul'> <li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Qabul</li></Link>
+                                        <Link to='/yangiliklar'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Yangiliklar</li></Link>
+                                        <Link to='/maktabmamuriyati'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Maktab ma'muriyati</li></Link>
+                                        <Link to='/maktabalochilari'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Maktab a'lochilari</li></Link>
                                      </ul>
                                  </div>
                              </Col>
@@ -48,9 +61,9 @@ export default class Footer extends Component {
                                  <div className={styles.three}>
                                  <h5>Qo'shimcha Sahifalar</h5>
                                      <ul className={styles.pages}>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Tadbirlar</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Hamkorlar</li>
-                                        <li className={styles.links}><BsArrowRight style={style}/>Aloqa</li>
+                                        <Link to='/tadbirlar'><li className={styles.links} ><BsArrowRight style={style}/>Tadbirlar</li></Link>
+                                        <Link to='/boshsahifa'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Hamkorlar</li></Link>
+                                        <Link to='/boshsahifa'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Aloqa</li></Link>
                                      </ul>
                                  </div>
                              </Col>
@@ -93,13 +106,19 @@ export default class Footer extends Component {
                                         <ul className={styles.pages}>
                                             <li style={{display:'flex', height:"auto", marginBottom:'20px'}}>
                                                 <div style={{marginRight:'20px'}}><FaMap color="#1EB2A6"/></div>
-                                                <div>Toshkent shahar, Yunusobod tumani</div></li>
+                                                <div>{this.state.data !== null ? this.state.data.address : ""}</div></li>
                                             <li style={{display:'flex', height:"auto", marginBottom:'20px'}}>
                                                 <div style={{marginRight:'20px'}}><MdLocalPhone color="#1EB2A6"/></div>
-                                                <div><a href='#'style={{color:'#666A6F', textDecoration:'none'}}>+99893 555 55 55</a></div></li>
+                                                <div>
+                                                    <a href={`tel: ${
+                    this.state.data !== null ? this.state.data.phone : "#"
+                  }`}style={{color:'#666A6F', textDecoration:'none'}}> {this.state.data !== null ? this.state.data.phone : ""}</a></div></li>
                                             <li style={{display:'flex', height:"auto", marginBottom:'20px'}}>
-                                                <div style={{marginRight:'20px'}}><FaTelegramPlane color="#1EB2A6"/></div>
-                                                <div><a href='#'style={{color:'#666A6F', textDecoration:'none'}}>maktab235@gmail.com</a></div></li>
+                                                <div style={{marginRight:'20px'}}><AiFillMail color="#1EB2A6"/></div>
+                                                <div>
+                                                    <a href={`mailto: ${
+                    this.state.data !== null ? this.state.data.email : "#"
+                  }`} style={{color:'#666A6F', textDecoration:'none'}}> {this.state.data !== null ? this.state.data.email : "#"}</a></div></li>
                                         </ul>
                                     </div>
                                  </div>
