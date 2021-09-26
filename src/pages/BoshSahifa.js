@@ -117,7 +117,7 @@ export default class BoshSahifa extends Component {
             <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <div>
+          <div sryle={{backgroundColor:'white'}}>
             <Navbar/>
 
             <div className={style.header}>
@@ -175,15 +175,7 @@ export default class BoshSahifa extends Component {
                   />
                   <div className={style.overlay}>
                     <Link style={{ color: "white" }} to={`/yangiliklar/`}>
-                      <FontAwesomeIcon
-                        icon={faNewspaper}
-                        className={style.icon}
-                      />
-                      <h3>Yangiliklar</h3>
-                      <p>
-                        Maktabimizga doir bo'lgan yangiliklardan xabardor
-                        bo'ling
-                      </p>
+                      <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yangiliklar</h4>
                     </Link>
                   </div>
                 </div>
@@ -202,17 +194,7 @@ export default class BoshSahifa extends Component {
                     className={style.image}
                   />
                   <div className={style.overlay}>
-                    {/* <Link
-                      style={{ color: "white" }}
-                      to={`/yutuqlar/${Global.user}`}
-                    > */}
-                    <FontAwesomeIcon icon={faSchool} className={style.icon} />
-                    <h3>Yutuqlarimiz</h3>
-                    <p>
-                      Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish
-                      uchun qulay imkoniyat bor
-                    </p>
-                    {/* </Link> */}
+                    <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yutuqlarimiz</h4>
                   </div>
                 </div>
               </div>
@@ -230,15 +212,7 @@ export default class BoshSahifa extends Component {
                   />
                   <div className={style.overlay}>
                     <Link style={{ color: "white" }} to={`/gallery/`}>
-                      <FontAwesomeIcon
-                        icon={faDoorOpen}
-                        className={style.icon}
-                      />
-                      <h3>Fotolavhalar</h3>
-                      <p>
-                        Endi siz maktabimizning fotolavhalarini ko'rishingiz
-                        mumkin
-                      </p>
+                      <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Fotolavhalar</h4>
                     </Link>{" "}
                   </div>
                 </div>

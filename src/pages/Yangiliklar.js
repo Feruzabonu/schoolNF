@@ -87,7 +87,7 @@ export default class Yangiliklar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            < ScaleLoader color="blue" loading={this.state.loader} size={120} />
+            < ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <>

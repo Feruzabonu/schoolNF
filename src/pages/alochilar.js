@@ -14,7 +14,7 @@ import school5 from "../img/school5.jpg";
 import Aos from "aos";
 import { getExcellent, getPupil } from "../host/Config";
 import { url, user } from "../host/Host";
-import { FadeLoader } from "react-spinners";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import Global from "../host/Global";
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -119,7 +119,7 @@ export default class Alochilar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <>

@@ -22,7 +22,7 @@ import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {  ScaleLoader } from "react-spinners";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import axios from "axios";
 
 import { Pannellum } from "pannellum-react";
@@ -60,7 +60,7 @@ export default class MaktabHayoti extends Component {
       <div>
         {this.state.loading === true ? (
           <div className="loaderT">
-            < ScaleLoader color="blue" loading={this.state.loader} size={120} />
+            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
           <div>
@@ -300,19 +300,6 @@ export default class MaktabHayoti extends Component {
                 </Col>
                 <Col lg={12} className={styles.panoramic}>
                   <div className={styles.PannellumReactContainer}>
-                    <Pannellum
-                      className={styles.PannellumReact}
-                      width="100%"
-                      height="500px"
-                      image={myImage}
-                      pitch={10}
-                      yaw={180}
-                      hfov={110}
-                      autoLoad
-                      onLoad={() => {
-                        console.log("panorama loaded");
-                      }}
-                    ></Pannellum>
                     <div className="paramumic_data">
                       <div>
                         <h2 style={{ width: "80%", marginLeft: "10%" }}>

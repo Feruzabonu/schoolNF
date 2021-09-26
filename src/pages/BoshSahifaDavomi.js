@@ -107,8 +107,8 @@ export default class BoshSahifaDavomi extends Component {
 
   render() {
     return (
-      <div>
-        <div className={style.container} style={{textAlign:'center'}}>
+      <div style={{backgroundColor:'white'}}>
+        <div className={style.container} style={{textAlign:'center',backgroundColor:'white'}}>
           <Container>
             <Row>
               <Col xs={0} sm={0} md={6} lg={6}></Col>
