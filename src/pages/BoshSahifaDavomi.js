@@ -150,10 +150,10 @@ export default class BoshSahifaDavomi extends Component {
 
                   <Row>
                     {this.state.excellent !== [] && this.state.class !== []
-                      ? this.state.excellent.map((item) => {
+                      ? this.state.excellent.map((item,key) => {
                           var pupil = this.setPupils(item.pupil);
                           var classes = this.echoClasses(pupil.clas);
-                          return (
+                          return key<2? (
                             <Col lg={12} md={12} sm={12}>
                               <div className={style.card}>
                         <div className={style.cardImg}>
@@ -173,7 +173,7 @@ export default class BoshSahifaDavomi extends Component {
                     </div>
                    </Col>
                 
-                          );
+                          ):''
                         })
                       : ""}
                   </Row>

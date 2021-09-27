@@ -7,11 +7,13 @@ import img4 from "../img/b4.jpg";
 import img5 from "../img/b5.jpg";
 import img6 from "../img/b6.jpg";
 import img7 from "../img/b7.png";
-import FadeLoader from "react-spinners/FadeLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import { idMaktab, url, user } from "../host/Host";
 import axios from "axios";
 import { Col, Container, Row } from "react-bootstrap";
 import Global from "../host/Global";
+import Navbar from './Navbar'
+import Footer from './Footer'
 export default class Gallery extends Component {
   state = {
     school: [],
@@ -47,11 +49,11 @@ export default class Gallery extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <div className={style.mat}>
-            <br />
+          <div>
+           <Navbar/>
             <div className={style.header}>
               <img
                 alt=" "
@@ -64,10 +66,7 @@ export default class Gallery extends Component {
                 }
                 style={{ width: "100%", height: "100%" }}
               />
-              <div className={style.sarlavha}>
-                <h2>Bizning Fotogalareya</h2>
-                <h1>Maktabimiz hayotidan fotolavhalar</h1>
-              </div>
+                <h1 className={style.headerh}>Maktabimiz hayotidan fotolavhalar</h1>
             </div>
 
             <Container>
@@ -410,6 +409,7 @@ export default class Gallery extends Component {
                 </Col>
               </Row>
             </Container>
+            <Footer/>
           </div>
         )}
       </div>
