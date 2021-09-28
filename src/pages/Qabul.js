@@ -137,7 +137,7 @@ class Qabul extends React.Component {
                           ? this.state.school.q!== null
                             ? this.state.school.q
                             : tav_img
-                          : tav_img} style={{width:'100%', height:'100%'}}/>
+                          : tav_img} style={{width:'100%'}}/>
                             </Col>
                             <Col data-aos="fade-left" lg={6} md={7} sm={12} xs={12} style={{backgroundColor:'#fff', height:'100%',  display:'flex', alignItems:'center'}}>
                                 <div className={styles.tavsilot_text}>

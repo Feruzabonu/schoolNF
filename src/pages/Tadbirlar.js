@@ -39,6 +39,9 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import axios from "axios";
 import { url, user } from "../host/Host";
 import Global from "../host/Global";
+import { ScaleLoader } from "react-spinners";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 // import { Carousel } from "antd";
 
 export default class Yangiliklar extends Component {
@@ -75,6 +78,9 @@ export default class Yangiliklar extends Component {
       })
       .catch((err) => {
         console.log(err);
+        this.setState({
+          loader: false,
+        });
       });
   };
   componentDidMount() {
@@ -82,6 +88,7 @@ export default class Yangiliklar extends Component {
       duration: 2000,
     });
     this.getEvents();
+    console.log(this.state.loader)
   }
 
   // onclick_new=(link)=>{
@@ -101,69 +108,19 @@ export default class Yangiliklar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
-          </div>
+          < ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
+        </div>
         ) : (
           <div>
             {/* ============Header============== */}
-
-            <div className={styles.headerSliderText}>
-              <h3 style={{ fontFamily: "Lobster" }}>
-                Maktabimiz so'ngi tadbirlari bilan tanishing
-              </h3>
-            </div>
-            <Carousel autoplay className={styles.sliderHeader}>
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h1 !== null
-                      ? this.state.data.m_h_h1
-                      : new1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h2 !== null
-                      ? this.state.data.m_h_h2
-                      : new2
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h3 !== null
-                      ? this.state.data.m_h_h3
-                      : new3
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
+            <Navbar/>
+            <div className={styles.header_t} style={{backgroundImage:`url(${
                     this.state.data !== null && this.state.data.m_h_h4 !== null
                       ? this.state.data.m_h_h4
-                      : new4
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h5 !== null
-                      ? this.state.data.m_h_h5
-                      : new5
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-            </Carousel>
+                      : new1
+                  })`}}>
+              <h1>Maktabimiz so'nggi tadbirlari bilan tanishing</h1>
+           </div>
 
             <Container fluid>
               <div className={styles.yangi}>
@@ -204,7 +161,7 @@ export default class Yangiliklar extends Component {
                 <Col lg={5}>
                   <div
                     className={styles.recent_news}
-                    style={{ backgroundColor: "#0F4C81" }}
+                    style={{ backgroundColor: "#1EB2A6" }}
                     data-aos="zoom-in-left"
                   >
                     <div className={styles.title}>
@@ -267,8 +224,11 @@ export default class Yangiliklar extends Component {
                 </Col>
               </Row>
             </Container>
+            <Footer/>
           </div>
-        )}
+         
+        )
+        }
       </div>
     );
   }
