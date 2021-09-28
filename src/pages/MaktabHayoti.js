@@ -318,15 +318,16 @@ export default class MaktabHayoti extends Component {
                 </Col>
                 <Col lg={12} className={styles.panoramic}>
                   <div className={styles.PannellumReactContainer}>
-                    <div className="paramumic_data">
+                    <div className="paramumic_data" >
                       <div>
-                        <h2 style={{ width: "80%", marginLeft: "10%" }}>
+                        <h2 className={styles.ph2} style={{ width: "80%", marginLeft: "10%" }}>
                           {data.m_h_k_h !== null && data !== null
                             ? data.m_h_k_h
                             : `Talabalar shaharchasida sayohat qilishning ko'plab
                             variantlari mavjud.`}
                         </h2>
                         <h4
+                        className={styles.ph4}
                           style={{
                             width: "80%",
                             marginLeft: "10%",
@@ -352,28 +353,28 @@ export default class MaktabHayoti extends Component {
                     aos-duration="2000"
                     style={{ position: "absolute", top: "200px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6"  }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "450px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "700px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
                     aos-duration="2000"
                     style={{ position: "absolute", top: "950px", left: "35px" }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6" }} />
                   </div>
                   <div
                     data-aos="fade-down"
@@ -384,7 +385,7 @@ export default class MaktabHayoti extends Component {
                       left: "35px",
                     }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6"  }} />
                   </div>
                   <div
                     data-aos="fade-down"
@@ -395,7 +396,7 @@ export default class MaktabHayoti extends Component {
                       left: "35px",
                     }}
                   >
-                    <BiStop style={{ fontSize: "40px", color: "black" }} />
+                    <BiStop style={{ fontSize: "40px", color: "#1EB2A6"  }} />
                   </div>
                 </Col>
                 <Col lg={11} md={12} sm={12}>

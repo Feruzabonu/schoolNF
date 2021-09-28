@@ -111,7 +111,10 @@ body {
   object-fit: cover !important;
   transition: all 0.5s !important;
 }
-
+.headerh{
+  position: absolute !important;
+  z-index: 111111 !important
+}
 .box:hover {
   flex: 1 1 50%;
 }
@@ -278,7 +281,7 @@ body {
 
 @media screen and (max-width: 566px) {
   .headerh{
-    display: none !important;
+    visibility: hidden!important;
  }
   .headerImage{
     width: 100%;
@@ -330,13 +333,17 @@ body {
     width: 96% !important;
     padding-right: 2% !important;
   }
-  .panoramic{
-    
+  .ph2{
+    font-size: 20px !important;
+  }
+  .ph4{
+    font-size: 17px !important;
+    padding:10px !important ;
   }
 }
 @media screen and (min-width: 567px) {
   .headerh{
-    display: none !important;
+    visibility: hidden!important;
  }
   .headerImage{
     width: 100%;
@@ -399,6 +406,15 @@ body {
     width: 100%;
     height: 100vh;
   }
+  .headerh{
+    visibility: visible !important;
+    color:white;
+    top: 70vh !important;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 45px !important;
+    z-index: 1111 !important;
+}
   .headerSliderText {
     text-align: center;
     top: 70% !important;
@@ -456,6 +472,14 @@ body {
     left: 50% !important;
     transform: translate(-50%, -70%) !important;
   }
+  .headerh{
+    visibility: visible !important;
+    color:white !important;
+    top: 70vh !important;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 45px !important;
+}
   .headerSliderText h3 {
     margin-left: 0px !important;
   }
@@ -504,6 +528,14 @@ body {
   * {
     box-sizing: border-box !important;
   }
+  .headerh{
+    visibility: visible !important;
+    color:white !important;
+    top: 70vh !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+    font-size: 50px !important;
+}
   .header {
     width: 100%;
     height: 100vh !important;
