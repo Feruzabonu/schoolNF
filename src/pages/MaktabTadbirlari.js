@@ -297,7 +297,7 @@ export default class MaktabTadbirlari extends Component {
             </Col>
             <Col lg={6} md={12} sm={12} style={{textAlign:'center'}} className={style.form}>
               <h1 className={style.sarlavha}>Murojaat qilish</h1>
-                              <div className={style.formDiv}>
+                              <div className={style.formDiv} style={{width:'100%'}}>
                               <div className={style.address}>
                                    <div style={{color:'white',paddingRight:'20px',marginBottom:'15px'}}>
                                        <span style={{color:'white',fontSize:'20px',fontWeight:'700'}}>Manzil:</span>

@@ -112,7 +112,7 @@ export default class BoshSahifaDavomi extends Component {
           <Container>
             <Row>
               <Col xs={0} sm={0} md={6} lg={6}></Col>
-              <Col xs={12} sm={12} md={6} lg={6} style={{backgroundColor:'rgba(0,0,0,0.4)',marginTop:'50px',paddingBottom:'40px'}}>
+              <Col xs={12} sm={12} md={6} lg={6} style={{height:'90%',backgroundColor:'rgba(0,0,0,0.4)',marginTop:'5%',paddingBottom:'40px'}}>
                 <h1>Qabul uchun ariza topshiring</h1>
                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
                 <p>
@@ -137,18 +137,10 @@ export default class BoshSahifaDavomi extends Component {
         </div>
         <Container style={{ backgroundColor: "white" }}>
           <Row>
-            <Col lg={6} md={12} sm={12}>
-              <div className={style.tana}>
-                <br />
-                <br />
-                <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
-                  A'lochilar doskasi
-                </h1>
-
-                <Container>
-                  <br />
-
+          <div className={style.alochilar}>
+               <Container>
                   <Row>
+                  <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
                     {this.state.excellent !== [] && this.state.class !== []
                       ? this.state.excellent.map((item,key) => {
                           var pupil = this.setPupils(item.pupil);
@@ -178,9 +170,8 @@ export default class BoshSahifaDavomi extends Component {
                       : ""}
                   </Row>
                 </Container>
-              </div>
-            </Col>
-            <Col lg={6} md={12} sm={12}>
+               </div>
+               <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
                 <br />
                 <br />
@@ -197,7 +188,7 @@ export default class BoshSahifaDavomi extends Component {
             src={ustoz1}
             alt='...'
             position='top'
-            style={{maxWidth:'280px', maxHeight:'187px'}}
+            style={{maxWidth:'100%', maxHeight:'187px'}}
           />
           <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={style.card_body}>
             <MDBCardTitle className={style.body_title}> Muxlisova Munisa Mahmudovna</MDBCardTitle>
@@ -213,7 +204,7 @@ export default class BoshSahifaDavomi extends Component {
             src={ustoz2}
             alt='...'
             position='top'
-            style={{maxWidth:'280px', maxHeight:'187px'}}
+            style={{maxWidth:'100%', maxHeight:'187px'}}
           />
           <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={style.card_body}>
             <MDBCardTitle className={style.body_title}>  Hamidova Shahnoza Elmurodovna</MDBCardTitle>

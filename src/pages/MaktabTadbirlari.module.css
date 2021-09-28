@@ -209,6 +209,9 @@
     font-size: 1.4rem;
     margin-right: 10px;
   }
+  .formInput{
+    margin-left: 150px !important;
+  }
 }
 
 @media (max-width: 860px) {
@@ -263,7 +266,11 @@
   margin-bottom: 20px;
 }
 .form{
+  width: 100% !important;
   padding:0 30px !important;
+}
+.formInput{
+  width: 100% !important;
 }
 .form h2{
   display: inline-block;
@@ -319,3 +326,4 @@
 .formInput{
   margin-top: 50px !important;
 }
+
