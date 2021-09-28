@@ -12,18 +12,64 @@ import { BsArrowRight} from 'react-icons/bs';
 import { idMaktab, url, user } from "../host/Host";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import Global from "../host/Global";
+import { Clock } from "./Clock";
+import { getNews } from "../host/Config";
 
 
 export default class Footer extends Component {
     state = {
         data: [],
+        news: [],
+        school: null,
+        clock: "00 : 00 : 00",
+      };
+   
+      getSchool = () => {
+        axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
+          this.setState({
+            school: res.data,
+          });
+     
+        });
+      };
+    
+      getNews = () => {
+        getNews()
+          .then((res) => {
+            if (window.location.href.indexOf("id=") === -1) {
+              // var a = window.location.href.split("/");
+              var v = user;
+    
+              this.setState({
+                news: res.data,
+                id: v,
+              });
+        
+            } else {
+              this.setState({
+                news: res.data,
+                id: window.location.href.slice(
+                  window.location.href.indexOf("=") + 1
+                ),
+              });
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       };
       componentDidMount() {
         //   var a = window.location.href.split("/");
+        this.getNews();
+        this.getSchool();
         var v = user;
         axios.get(`${url}/school-by-admin/${v}`).then((res) => {
           this.setState({ data: res.data });
         });
+        setInterval(() => {
+            this.setState({ clock: Clock() });
+          }, 1000);
       }
     render() {
         const style = {  fontSize: "0.8em", color: "#1EB2A6", fontWeight:"400", marginRight:'5px' }
@@ -70,7 +116,22 @@ export default class Footer extends Component {
                              <Col xs={12} sm={12} md={6} lg={3}>
                                  <div className={styles.four}>
                                  <h5>So'ngi yangiliklar</h5>
-                                 <div className={styles.new} style={{marginTop:'40px'}}>
+                                 {this.state.news.map((item, key) => {
+                          return key < 3 ? (
+                            <div className={styles.new} style={{marginTop:'40px'}}>
+                                     <div className={styles.new_img}><img src={item.image}/></div>
+                                     <div className={styles.new_text}>
+                                         <div className={styles.meta}>
+                                             <div style={{cursor:"pointer"}}><BiCalendar size="14px" color="#1eb2a6"/><span style={{fontSize:'14px', color: '#1eb2a6', fontWeight:'normal'}}>Jan. 18,2021</span></div>
+                                             <p>{item.title}</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                          ) : (
+                            ""
+                          );
+                        })}
+                                 {/* <div className={styles.new} style={{marginTop:'40px'}}>
                                      <div className={styles.new_img}><img src='https://picsum.photos/50'/></div>
                                      <div className={styles.new_text}>
                                          <div className={styles.meta}>
@@ -96,7 +157,7 @@ export default class Footer extends Component {
                                              <p>Maktabimizda yangi o'quv yili uchun qabul boshlandi.</p>
                                          </div>
                                      </div>
-                                 </div>
+                                 </div> */}
                                  </div>
                              </Col>
                              <Col xs={12} sm={12} md={6} lg={2}>
