@@ -4,28 +4,6 @@
 body {
   background-color: white;
 }
-.header {
-  width: 100%;
-  height: 100vh !important;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  text-align: center;
-}
-.header img{
-  width: 100%;
-  height: 100%;
-  object-fit:cover ;
-}
-.headerh{
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  margin-top: 100px;
-  color:white;
-  font-size: 50px;
-}
 .headerImage {
   width: 100%;
   height: 100vh;
@@ -186,6 +164,8 @@ body {
 .secondContainer {
   padding: 0 !important;
   overflow: hidden;
+  position: relative;
+  z-index: -1 !important
 }
 .PannellumReactContainer {
   position: relative;
@@ -297,6 +277,9 @@ body {
 }
 
 @media screen and (max-width: 566px) {
+  .headerh{
+    display: none !important;
+ }
   .headerImage{
     width: 100%;
     height: 300px;
@@ -347,8 +330,14 @@ body {
     width: 96% !important;
     padding-right: 2% !important;
   }
+  .panoramic{
+    
+  }
 }
 @media screen and (min-width: 567px) {
+  .headerh{
+    display: none !important;
+ }
   .headerImage{
     width: 100%;
     height: 400px;

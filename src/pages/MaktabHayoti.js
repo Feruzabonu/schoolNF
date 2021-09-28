@@ -63,17 +63,35 @@ export default class MaktabHayoti extends Component {
             <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <div>
-          <Navbar/>
-           
-           <div className={styles.header}>
-             <img  src={
+          <div>     
+           <Navbar/>
+              <h1 className={styles.headerh}>Maktab hayoti</h1>
+           <Carousel
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           <div>
+           <img  src={
+                    data !== null && data.m_h_h2 !== null
+                      ? data.m_h_h2
+                      : school1
+                  }
+                  className={styles.headerImage}
+                  />
+             </div>   
+             <div>
+             <img
+                  src={
                     data !== null && data.m_h_h1 !== null
                       ? data.m_h_h1
                       : school1
-                  }/>
-              <h1 className={styles.headerh}>Maktab hayoti</h1>
-           </div>
+                  }
+                  className={styles.headerImage}
+                />
+               </div>      
+           </Carousel>
             {/* <Carousel style={{zIndex:'1'}} autoplay className={styles.sliderHeader}>
               <div>
                 <Image
@@ -127,7 +145,7 @@ export default class MaktabHayoti extends Component {
               </div>
             </Carousel> */}
 
-            <Container fluid className={styles.secondContainer} id="1">
+            <Container fluid className={styles.secondContainer} id="1" >
               <Row>
                 <Col lg={1} className={styles.iconPath}>
                   <div

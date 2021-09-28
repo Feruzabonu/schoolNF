@@ -122,16 +122,35 @@ export default class Alochilar extends Component {
             <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <>
+          <div>
           <Navbar/>
-          <div className={styles.header}>
-             <img  src={
+          <h1 className={style.headerh}>Maktab a'lochilari</h1>
+           <Carousel
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           <div>
+           <img  src={
                     data !== null && data.m_h_h2 !== null
                       ? data.m_h_h2
                       : school1
-                  }/>
-              <h1 className={styles.headerh}>Maktab a'lochilari</h1>
-           </div>
+                  }
+                  className={styles.headerImage}
+                  />
+             </div>   
+             <div>
+             <img
+                  src={
+                    data !== null && data.m_h_h1 !== null
+                      ? data.m_h_h1
+                      : school1
+                  }
+                  className={styles.headerImage}
+                />
+               </div>      
+           </Carousel>
             {/* <Carousel autoplay className={styles.sliderHeader}>
               <div>
                 <Image
@@ -216,7 +235,7 @@ export default class Alochilar extends Component {
                 </Container>
               </div>
             <Footer/>
-          </>
+          </div>
         )}
       </div>
     );

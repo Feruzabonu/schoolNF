@@ -8,6 +8,7 @@
     top: 2%;
     left: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +19,9 @@
     display: flex;
     flex-direction: row;
 }
-
+.name{
+    text-align: center;
+}
 .navbarDiv{
     background-color: rgba(0,0,0, 0.45);
     position: absolute !important;
@@ -113,6 +116,12 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
  @media screen and (max-width:767px) {
+     .mobileNavbar{
+    margin-top: -40px;
+     }
+     .name{
+         width: 100vw !important;
+     }
      .navbarDiv{
          display: none;
      }

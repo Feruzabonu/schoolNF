@@ -50,7 +50,7 @@ export default class Navbar extends Component {
                         <h1 style={{color:'white'}}>{this.state.school !== null
                       ? this.state.school.school_number + " - maktab"
                       : "Maktab raqami"}</h1>
-                        <p style={{color:'white',marginTop:'-10px'}}>Ixtisoslashtirilgan xususiy maktab</p>
+                     <p style={{textTransform:'uppercase', fontWeight:'600', color:'white',marginTop:'-20px'}}>{this.state.school !== null ? this.state.school.type : ""}</p>
                     </div>
                     <div className={styles.info}>
                      <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'30px'}}>

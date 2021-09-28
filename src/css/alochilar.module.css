@@ -10,17 +10,19 @@
     justify-content: center;
     align-items:center
 }
-.header h1{
-    color:white;
-    font-size: 55px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 150px;
+.headerh{
+    position: absolute;
+    top: 15% !important;
+    left: 50%;
+    z-index: 111111 !important
 }
 .alochilar{
     width: 100%;
     background-color:#F8F8F8;
     text-align: center !important;
     padding:50px 60px;
+    position: relative;
+    z-index: -11 !important;
 
 }
 .card{
@@ -42,9 +44,10 @@
   }
 .sarlavha{
     display: inline-block;
-    position: relative;
+    position: relative !important;
     margin-bottom: 90px;
     font-size: 40px !important;
+    z-index: 1 !important;
 }
 .sarlavha::after{
     content: '';
@@ -56,9 +59,9 @@
     background-color:#1EB2A6
 }
 @media screen and (max-width:400px) {
-    .header{
-        text-align: center;
-    }
+    .headerh{
+        display: none !important;
+     }
     .alochilar{
         width: 100%;
         height: max-content !important;
@@ -86,9 +89,9 @@
         width: 100% !important;
     }
 }
-@media screen and (max-width:768px) {
-    .header{
-        text-align: center;
+@media screen and (max-width:767px) {
+    .headerh{
+       display: none !important;
     }
     .alochilar{
         width: 100%;
@@ -119,8 +122,12 @@
     }
 }
 @media screen and (max-width:992px) {
-    .header{
-        text-align: center;
+    .headerh{
+        color:white;
+        top: 70vh !important;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 45px !important;
     }
     .alochilar{
         width: 100%;
@@ -148,8 +155,12 @@
     }
 }
 @media screen and (min-width:993px) {
-    .header{
-        text-align: center;
+    .headerh{
+        color:white;
+        top: 70vh !important;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 45px !important;
     }
     .alochilar{
         width: 100%;
