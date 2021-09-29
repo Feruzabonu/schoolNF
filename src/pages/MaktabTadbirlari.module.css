@@ -334,3 +334,8 @@
     width: 100% !important;
   }
 }
+@media screen and (min-width:768px) {
+  .tadbirCard{
+    height: 450px !important;
+  }
+}

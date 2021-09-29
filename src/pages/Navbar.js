@@ -10,12 +10,24 @@ import { url, user } from "../host/Host";
 import axios from "axios";
 export default class Navbar extends Component {
     state={
+        nav:false,
         visible:false,
         school: null,
         id: null,
     }
     openNavbar=()=>{
         this.state.visible?this.setState({visible:false}):this.setState({visible:true})
+    }
+    change=()=>{
+        if(window.scrollY>=200){
+            this.setState({
+                nav:true
+            })
+        }else{
+          this.setState({
+              nav:false
+          })
+        }
     }
     getSchool = () => {
         // var a=window.location.href.split('/')
@@ -39,6 +51,7 @@ export default class Navbar extends Component {
             loader: false,
           });
         });
+        window.addEventListener("scroll", this.change);
         console.log(this.state.school)
       }
     render() {
@@ -60,7 +73,7 @@ export default class Navbar extends Component {
                              <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>8:00 dan 20:00 gacha</p>
                          </div>
                      </div>
-                     <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'50px'}}>
+                     <div  style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'50px'}}>
                          <div><FiPhone style={{fontSize:'35px',color:'white'}}/></div>
                          <div style={{marginLeft:'10px'}}>
                              <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Qo'ng'iroq qiling</p>
@@ -87,7 +100,7 @@ export default class Navbar extends Component {
                      </div>
                     </div>
                 </div>
-                <div className={styles.navbarDiv}>                    
+                <div className={this.state.nav? styles.navbarDiv1:styles.navbarDiv}>                    
                     <div className={styles.navbar}>
                         <ul style={{listStyleType:'none'}}>
                             <li><Link className={styles.navLink} style={{textDecoration:'none',color:'white'}} to="/boshsahifa">Bosh sahifa</Link></li>
@@ -104,7 +117,7 @@ export default class Navbar extends Component {
                       : "Maktab raqami"}
                     </div>
                 </div>
-                <div style={{position:'absolute',top:'15%',width:'100%'}}>
+                <div className={this.state.nav? styles.fixNav:styles.fixNav1} style={{position:'absolute',top:'15%',width:'100%',zIndex:'111111'}}>
                 <div className={styles.mobileNavbar}>
                 <div className={styles.rightNavbar}>
                 {this.state.school !== null

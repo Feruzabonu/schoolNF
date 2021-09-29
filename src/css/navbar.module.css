@@ -8,7 +8,7 @@
     top: 2%;
     left: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,26 @@
     align-items: center !important;
     justify-content: space-between;
     z-index:2 !important;
+}
+.navbarDiv1{
+    background-color: rgba(0,0,0, 0.65);
+    position: fixed !important;
+    top: 0%;
+    width: 100%;
+    height: 70px;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between;
+    z-index:2 !important;
+    transition: all 0.3s;
+}
+.fixNav{
+    position: fixed !important;
+    top:4% !important;
+    width: 100%;
+    z-index: 11111111 !important
 }
 .navbar ul{
     text-align: left;
@@ -116,6 +136,9 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
  @media screen and (max-width:767px) {
+     .fixNav{
+         top: 4% !important;
+     }
      .top{
          background-color:transparent !important
      }
@@ -123,24 +146,28 @@
     margin-top: -40px;
      }
      .name{
-         width: 100vw !important;
+         width: 100% !important;
      }
      .name h6{
+         width: 90vw !important;
         color:black !important;
         font-weight: 700 !important;
      }
      .navbarDiv{
          display: none;
      }
+     .navbarDiv1{
+        display: none;
+    }
      .info{
-         display: none;
+        display: none;
      }
      .socialMedia{
          visibility: hidden !important;
      }
  }
 
- @media screen and (max-width:991px) {
+ @media screen and (min-width:768px) {
     .top{
         background-color:transparent !important
     }
@@ -155,16 +182,37 @@
     .navbarDiv{
         display: none;
     }
+    .navbarDiv1{
+        display: none;
+    }
     .info{
         display: none;
     }
     .socialMedia{
         visibility: visible;
     }
+    .fixNav{
+        top: -0.5% !important;
+    }
  }
  @media screen and (min-width:992px) {
+     .top{
+         background-color:rgba(0,0,0,0.45) !important
+     }
+    .navbarDiv{
+        display: flex;
+    }
+    .navbarDiv1{
+        display:flex;
+    }
      .name{
          width: 30% !important;
+     }
+     .name h6{
+         color:white !important
+     }
+     .info{
+         display: flex;
      }
      .mobileNavbar{
          display: none;
