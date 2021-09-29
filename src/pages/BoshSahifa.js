@@ -158,9 +158,75 @@ export default class BoshSahifa extends Component {
                 </div>
               </div>
             </div>
+            <div className={style.containerRow} style={{backgroundColor:'#F8F8F8'}}>
+           <Container>
+           <Row>
+                <Col xs={12} sm={12} md={6} lg={6} className={style.video} >
+                  <h3>Maktabga video sayohat</h3>
+                  {/* <img src={rasm1} className={style.img}/> */}
+                  <YouTube
+                    videoId={
+                      this.state.school !== null
+                        ? this.state.school.video !== null
+                          ? this.state.school.video.slice(
+                              this.state.school.video.indexOf("youtu.be/") + 9
+                            )
+                          : ""
+                        : ""
+                    }
+                    opts={{
+                      width: "100%",
+                      height: "300px",
+                      playerVars: {
+                        // https://developers.google.com/youtube/player_parameters
+                        autoplay: 0,
+                      },
+                    }}
+                    className={style.video}
+                  />
+                  <p className={style.pp}>
+                    Maktabimizga virtual sayohat qiling va siz bizning
+                    maktabimiz haqida ko'proq ma'lumotga ega bo'ling.
+                  </p>
+                </Col>
+
+                <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
+                  <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
+                  <Row>
+                    <Col xs={12} sm={12} md={12} lg={12} className={style.newCard}>
+                      <Row>
+                        {this.state.news.map((item, key) => {
+                          return key < 5 ? (
+                            <div className={style.new}>
+                                     <div className={style.new_img}><img src={item.image}/></div>
+                                     <div className={style.new_text}>
+                                         <div className={style.meta}>
+                                             <div style={{cursor:"pointer"}}><BiCalendar size="14px" color="#1eb2a6"/><span style={{fontSize:'14px', color: '#1eb2a6', fontWeight:'normal'}}> {item.published_time.substring(0, 10)}</span></div>
+                                             <p>{item.title}</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                          ) : (
+                            ""
+                          );
+                        })}
+                      </Row>
+                    </Col>
+                  </Row>
+
+                  <Link to={`/yangiliklar/`}>
+                    <button className={style.buttoncha}>
+                      <span>Barchasini o'qish</span>
+                    </button>
+                  </Link>
+                </Col>
+              </Row>
+           </Container>
+            </div>
 
             {/* <div className="oq"></div> */}
-            <div className={style.container} style={{position:'relative',zIndex:'-1'}}>
+            <BoshSahifaDavomi />
+            <div className={style.container} style={{position:'relative'}}>
               <div className={style.bir}>
                 <div className={style.containercha}>
                   <img
@@ -218,73 +284,6 @@ export default class BoshSahifa extends Component {
                 </div>
               </div>
             </div>
-
-            <div className={style.containerRow} style={{backgroundColor:'#F8F8F8'}}>
-           <Container>
-           <Row>
-                <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
-                  <h3>Maktabga video sayohat</h3>
-                  {/* <img src={rasm1} className={style.img}/> */}
-                  <YouTube
-                    videoId={
-                      this.state.school !== null
-                        ? this.state.school.video !== null
-                          ? this.state.school.video.slice(
-                              this.state.school.video.indexOf("youtu.be/") + 9
-                            )
-                          : ""
-                        : ""
-                    }
-                    opts={{
-                      width: "100%",
-                      height: "300px",
-                      playerVars: {
-                        // https://developers.google.com/youtube/player_parameters
-                        autoplay: 0,
-                      },
-                    }}
-                    className={style.video}
-                  />
-                  <p className={style.pp}>
-                    Maktabimizga virtual sayohat qiling va siz bizning
-                    maktabimiz haqida ko'proq ma'lumotga ega bo'ling.
-                  </p>
-                </Col>
-
-                <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
-                  <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
-                  <Row>
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <Row>
-                        {this.state.news.map((item, key) => {
-                          return key < 5 ? (
-                            <div className={style.new}>
-                                     <div className={style.new_img}><img src={item.image}/></div>
-                                     <div className={style.new_text}>
-                                         <div className={style.meta}>
-                                             <div style={{cursor:"pointer"}}><BiCalendar size="14px" color="#1eb2a6"/><span style={{fontSize:'14px', color: '#1eb2a6', fontWeight:'normal'}}> {item.published_time.substring(0, 10)}</span></div>
-                                             <p>{item.title}</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                          ) : (
-                            ""
-                          );
-                        })}
-                      </Row>
-                    </Col>
-                  </Row>
-
-                  <Link to={`/yangiliklar/`}>
-                    <button className={style.buttoncha}>
-                      <span>Barchasini o'qish</span>
-                    </button>
-                  </Link>
-                </Col>
-              </Row>
-           </Container>
-            </div>
-            <BoshSahifaDavomi />
             <MaktabTadbirlari />
             <Footer />
           </div>
