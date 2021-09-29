@@ -270,7 +270,7 @@ export default class BoshSahifaDavomi extends Component {
             style={{width:'100%', height:'100%',objectFit:'cover'}}
           />
           </div>
-          <div className={style.ustozDown} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6',height:'200px',textAlign:'left'}}>
+          <div className={style.ustozDown} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6',textAlign:'left'}}>
             <small className='text-muted' style={{fontSize:'16px'}}>
             <b style={{color:'#1EB2A6'}}>F.I.O: </b>{item.FIO}<br/>
               <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.mutaxasisligi}<br/>
