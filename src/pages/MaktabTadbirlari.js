@@ -295,8 +295,30 @@ export default class MaktabTadbirlari extends Component {
                 <br />
               </div>
             </Col>
-            <Col lg={6} md={12} sm={12} style={{textAlign:'center'}} className={style.form}>
+            <Col lg={6} md={12} sm={12} className="fgr">
               <h1 className={style.sarlavha}>Murojaat qilish</h1>
+
+              <div className="formFER">
+                <div className="container">
+                  <div className="brand-logo"></div>
+                  {/* <div className="brand-title">TWITTER</div> */}
+                  <div className="inputs">
+                    <form>
+                      <label>F.I.O.</label>
+                      <input type="text" placeholder="Ism Familiya Otchistva" />
+                      <label>Telefon raqam</label>
+                      <input type="text" placeholder="+998 99 999 99 99" />
+                      <label>Murojaat</label>
+                      <textarea placeholder="Murojaat matni..."></textarea>
+                      <button type="submit">Yuborish</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            {/* <Col lg={6} md={12} sm={12} style={{textAlign:'center'}} >
+             <div className={style.form}>
+             <h1 className={style.sarlavha}>Murojaat qilish</h1>
                               <div className={style.formDiv} style={{width:'100%'}}>
                               <div className={style.address}>
                                    <div style={{color:'white',paddingRight:'20px',marginBottom:'15px'}}>
@@ -348,7 +370,8 @@ export default class MaktabTadbirlari extends Component {
         </Form.Item>
       </Form>    
                               </div>
-            </Col>
+             </div>
+            </Col> */}
           </Row>
         </div>
       </div>
