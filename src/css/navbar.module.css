@@ -125,7 +125,7 @@
      .name{
          width: 100vw !important;
      }
-     .name h1{
+     .name h6{
         color:black !important;
         font-weight: 700 !important;
      }
@@ -144,7 +144,7 @@
     .top{
         background-color:transparent !important
     }
-    .name h1{
+    .name h6{
         color:black !important;
         font-weight: 700 !important;
 
@@ -160,6 +160,9 @@
     }
  }
  @media screen and (min-width:992px) {
+     .name{
+         width: 30% !important;
+     }
      .mobileNavbar{
          display: none;
      }

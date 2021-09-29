@@ -169,7 +169,9 @@ body{
     /* .dashboard{
         height: 130vh;
     } */
-  
+  .header{
+    height: 40vh !important;
+  }
 }
 
 

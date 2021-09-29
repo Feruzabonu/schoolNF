@@ -160,7 +160,7 @@ export default class BoshSahifa extends Component {
             </div>
 
             {/* <div className="oq"></div> */}
-            <div className={style.container}>
+            <div className={style.container} style={{position:'relative',zIndex:'-1'}}>
               <div className={style.bir}>
                 <div className={style.containercha}>
                   <img

@@ -385,6 +385,9 @@ html {
   }
 }
 @media (max-width: 700px) {
+  .yozuvT{
+    display: none;
+  }
   .maktabLogo {
     margin-left: 30px !important;
   }
@@ -393,7 +396,7 @@ html {
   }
   .carg_img,
   .carg_item {
-    height: 325px;
+    height: 70% !important;
   }
   .gth {
     margin-top: 300px;

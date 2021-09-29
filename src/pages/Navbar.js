@@ -47,9 +47,9 @@ export default class Navbar extends Component {
                 
                 <div className={styles.top} style={{backgroundColor:'rgba(0,0,0,0.45)',width:'96%',marginLeft:'2%'}}>
                     <div className={styles.name}>
-                        <h1 style={{color:'white'}}>{this.state.school !== null
-                      ? this.state.school.school_number + " - maktab"
-                      : "Maktab raqami"}</h1>
+                        <h6 style={{color:'white'}}>{this.state.school !== null
+                      ? this.state.school.address
+                      : "Samarqand viloyati"}</h6>
                      <p style={{textTransform:'uppercase', fontWeight:'600', color:'white',marginTop:'-20px'}}>{this.state.school !== null ? this.state.school.type : ""}</p>
                     </div>
                     <div className={styles.info}>
