@@ -84,7 +84,7 @@ background-size: 100%;
   
 .formFER button {
   margin-top: 20px;
-  background: #0a95cae0;
+  background: #1EB2A6;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -107,7 +107,7 @@ background-size: 100%;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image:url('../img/formnaqsh.jpg');
+  background-color: #1EB2A6;
   background-attachment: fixed;
   
   justify-content: center;
