@@ -204,6 +204,9 @@
   .cardText{
       width: 100% !important;
   }
+  .oquvchi{
+    flex-direction: column !important;
+  }
 }
 @media screen and (max-width:768px) {
   .header{
@@ -294,7 +297,7 @@
 .successful{
   text-align: center;
   padding-top: 60px;
-  padding: 60px 100px;
+  /* padding: 60px 100px; */
   background-color:#F8F8F8;
 
 }

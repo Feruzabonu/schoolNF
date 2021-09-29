@@ -233,7 +233,7 @@ export default class BoshSahifaDavomi extends Component {
                           var classes = this.echoClasses(pupil.clas);
                           return (
                             <div className={style.slider}>
-                         <div style={{display:'flex',flexDirection:'row',padding:'30px'}}>
+                         <div style={{display:'flex',flexDirection:'row',padding:'30px'}} className={style.oquvchi}>
                              <div style={{width:'80px'}}>
                                  <img src={
                                     pupil.image !== null ? pupil.image : school1}
