@@ -67,6 +67,7 @@ export default class MaktabHayoti extends Component {
            <Navbar/>
               <h1 className={styles.headerh}>Maktab hayoti</h1>
            <Carousel
+                   dots={false}
                     autoplay
                     effect="fade"
                     style={{ zIndex: "-1" ,width:'100%'}}

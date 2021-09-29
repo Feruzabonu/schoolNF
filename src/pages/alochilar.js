@@ -126,6 +126,7 @@ export default class Alochilar extends Component {
           <Navbar/>
           <h1 className={style.headerh}>Maktab a'lochilari</h1>
            <Carousel
+                   dots={false}
                     autoplay
                     effect="fade"
                     style={{ zIndex: "-1" ,width:'100%'}}

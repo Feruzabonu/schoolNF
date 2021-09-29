@@ -138,6 +138,7 @@ class Qabul extends React.Component {
                    <div >
                    <h1 className={style.headerh}>Qabul</h1>
                    <Carousel
+                   dots={false}
                     autoplay
                     effect="fade"
                     style={{ zIndex: "-1" ,width:'100%'}}
