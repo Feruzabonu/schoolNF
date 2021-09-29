@@ -233,14 +233,14 @@ export default class BoshSahifaDavomi extends Component {
                           var classes = this.echoClasses(pupil.clas);
                           return (
                             <div className={style.slider}>
-                         <div style={{display:'flex',flexDirection:'row',padding:'30px'}} className={style.oquvchi}>
+                         <div style={{display:'flex',flexDirection:'row',padding:'30px', justifyContent:'space-around'}} className={style.oquvchi}>
                              <div style={{width:'80px'}}>
                                  <img src={
                                     pupil.image !== null ? pupil.image : school1}
-                                    style={{width:'80px',height:'80px',objectFit:'cover',borderRadius:'50%'}}/>
+                                    style={{width:'80px',height:'80px',objectFit:'cover',borderRadius:'50%'}} />
                              </div>
                              <div style={{marginLeft:'10px'}}>
-                                 <h4 style={{marginTop:'10px'}}>{pupil.full_name}</h4>
+                                 <h4 style={{textAlign:'center'}} style={{marginTop:'10px'}}>{pupil.full_name}</h4>
                                  <p style={{marginTop:'-5px',color:'#1EB2A6'}}>{this.echoClasses(pupil.clas).class_number} -
                                   "{this.echoClasses(pupil.clas).class_char}"
                                   sinf</p>

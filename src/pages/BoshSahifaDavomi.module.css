@@ -110,6 +110,9 @@
   .container p {
     font-size: 0.9rem;
   }
+  .oquvchi img{
+    margin-left: 15px !important;
+  }
 }
 
 @media (max-width: 280px) {
@@ -207,6 +210,9 @@
   .oquvchi{
     flex-direction: column !important;
   }
+  .oquvchi img{
+    margin-left: 30px !important;
+  }
 }
 @media screen and (max-width:768px) {
   .header{
@@ -218,6 +224,12 @@
       text-align: center !important;
       padding:50px 60px;
   
+  }
+  .oquvchi{
+    flex-direction: column !important;
+  }
+  .oquvchi img{
+    margin-left: 60px;
   }
   .card{
       display: flex;
@@ -256,6 +268,12 @@
       border:1px solid #1EB2A6;
       width: 100%;
   
+  }
+  .oquvchi{
+    flex-direction: column !important;
+  }
+  .oquvchi img{
+    margin-left: 75px;
   }
   .cardImg{
       width: 50%;
@@ -422,5 +440,6 @@
   .ustozDown{
     height: 250px !important;
   }
+ 
 }
 
