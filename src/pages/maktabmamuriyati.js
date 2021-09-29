@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
-import { Carousel  as Car } from 'antd';
+import style from "../css/maktabHayoti.module.css";
+import { Carousel  } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
 import school3 from '../img/school25.jpg'
@@ -11,7 +12,7 @@ import 'aos/dist/aos.css';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
-import {Carousel} from 'react-bootstrap'
+
 import Global from '../host/Global';
 import { FadeLoader, ScaleLoader } from 'react-spinners';
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
@@ -127,9 +128,41 @@ setTimeout(()=>{
          : 
             <>
             <Navbar/>
-           <div className={styles.header}>
-                   <h1> Maktab ma'muriyati.</h1>
-               </div>
+
+            <div className={styles.header}>
+              <h1>Maktab ma'muriyati</h1>
+            </div>
+            {/* {
+              this.state.direktor!==null?this.state.direktor.map(item=>{
+                return(
+                  <div >
+                   <h1 className={styles.headerh}>Maktab ma'muriyati</h1>
+                   <Carousel
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           <div>
+           <img  src={
+                  item.image
+                  }
+                  className={style.headerImage}
+                  />
+             </div>   
+             <div>
+             <img
+                  src={
+                  item.image
+                  }
+                  className={style.headerImage}
+                />
+               </div>      
+           </Carousel>
+                </div>
+                )
+              }):{}
+            } */}
                 <Container>
                 <div className={styles.body}>
                 <MDBRow className='row-cols-1 row-cols-md-3  g-4'>

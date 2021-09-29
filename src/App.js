@@ -23,7 +23,7 @@ import Register from "./pages/Login/Register";
 import Global from "./host/Global";
 import axios from "axios";
 import { url, user } from "./host/Host";
-import { FadeLoader } from "react-spinners";
+import { FadeLoader, ScaleLoader } from "react-spinners";
 import SelectMap from "./pages/Error";
 import Error404 from "./pages/Error404";
 export default class App extends Component {
@@ -56,9 +56,9 @@ export default class App extends Component {
     return (
       <div style={{ width: "100%", overflowX: "hidden" }}>
         {this.state.loader ? (
-          <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
-          </div>
+         <div className='loader'>
+         <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
+         </div> 
         ) : this.state.error ? (
           <SelectMap />
         ) : (

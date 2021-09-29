@@ -2,6 +2,7 @@ import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
+import style from "../css/maktabHayoti.module.css";
 import students from "../img/Students.png";
 import shakl from "../img/shakl.png";
 import rasm2 from '../img/rasm2.png'
@@ -13,6 +14,8 @@ import rasm8 from '../img/writing.svg'
 import rasm9 from '../img/1.svg'
 import rasm10 from '../img/2.svg'
 import rasm11 from '../img/3.svg'
+import school1 from "../img/school1.jpg";
+import school2 from "../img/school2.jpg";
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
@@ -25,6 +28,7 @@ import { ScaleLoader } from "react-spinners";
 import Navbar from "./Navbar";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import Footer from "./Footer";
+import { Carousel } from "antd";
 
 class Qabul extends React.Component {
   state = {
@@ -33,8 +37,10 @@ class Qabul extends React.Component {
     id: 0,
     school: null,
     selected:0,
-    jarayon:[]
+    jarayon:[],
+    data: null,
   };
+
 
   getSchool = () => {
     //   var a=window.location.href.split('/')
@@ -43,10 +49,13 @@ class Qabul extends React.Component {
       this.setState({
         school: res.data,
         loader: false,
+        data: res.data
       });
+      
       console.log(res.data);
       this.jarayon()
     });
+
   };
 
   componentDidMount() {
@@ -116,6 +125,7 @@ class Qabul extends React.Component {
   }
 
   render() {
+    const { data } = this.state;
     return (
       <div>
         {this.state.loader ? (
@@ -125,8 +135,34 @@ class Qabul extends React.Component {
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />
-                   <div className={styles.header}>
-                   <h1>Qabul</h1>
+                   <div >
+                   <h1 className={style.headerh}>Qabul</h1>
+                   <Carousel
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           <div>
+           <img  src={
+                    data !== null && data.m_h_h2 !== null
+                      ? data.m_h_h2
+                      : school1
+                  }
+                  className={style.headerImage}
+                  />
+             </div>   
+             <div>
+             <img
+                  src={
+                    data !== null && data.m_h_h1 !== null
+                      ? data.m_h_h1
+                      : school1
+                  }
+                  className={style.headerImage}
+                />
+               </div>      
+           </Carousel>
                 </div>
                 
                 <div className={styles.body}>
