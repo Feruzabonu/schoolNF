@@ -45,7 +45,7 @@ export default class Navbar extends Component {
         return (
             <div style={{zIndex:'2'}}>
                 
-                <div className={styles.top}>
+                <div className={styles.top} style={{backgroundColor:'rgba(0,0,0,0.45)',width:'96%',marginLeft:'2%'}}>
                     <div className={styles.name}>
                         <h1 style={{color:'white'}}>{this.state.school !== null
                       ? this.state.school.school_number + " - maktab"
@@ -73,16 +73,16 @@ export default class Navbar extends Component {
                      </div>
                     </div>
                     <div className={styles.socialMedia}>
-                    <div className={styles.icons} style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                    <div className={styles.icons} style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
                          <FaFacebookF style={{color:'#1EB2A6'}}/>
                      </div>
-                     <div className={styles.icons}  style={{ curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                     <div className={styles.icons}  style={{ curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
                          <FaInstagram style={{color:'#1EB2A6'}}/>
                      </div>
-                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
                          <FaTelegramPlane style={{color:'#1EB2A6'}}/>
                      </div>
-                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'rgba(0,0,0,0.35)',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
+                     <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
                          <FaYoutube style={{color:'#1EB2A6'}}/>
                      </div>
                     </div>
