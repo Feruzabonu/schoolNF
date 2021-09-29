@@ -187,7 +187,7 @@ export default class BoshSahifaDavomi extends Component {
                       ? this.state.excellent.map((item,key) => {
                           var pupil = this.setPupils(item.pupil);
                           var classes = this.echoClasses(pupil.clas);
-                          return key<2? (
+                          return  (
                             <div className={style.slider}>
                          <div style={{display:'flex',flexDirection:'row',padding:'30px'}}>
                              <div style={{width:'80px'}}>
@@ -205,7 +205,7 @@ export default class BoshSahifaDavomi extends Component {
                          </div>
                      </div>
                 
-                          ):''
+                          )
                         })
                       : ""}
                     </Slider>
