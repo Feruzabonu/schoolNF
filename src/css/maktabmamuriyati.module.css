@@ -22,7 +22,7 @@
     position: absolute;
     top: 15% !important;
     left: 50%;
-    z-index: 111111 !important
+    z-index: 1 !important
 }
 .headerh h1{
     color:white;
@@ -71,4 +71,50 @@
     .card_img{
         width: 335px !important;
     }
+}
+@media screen and (max-width: 566px) {
+    .headerh{
+      visibility: hidden!important;
+   }
+  }
+  @media screen and (min-width: 567px) {
+    .headerh{
+      visibility: hidden!important;
+   }
+  }
+  @media screen and (min-width: 768px) {
+    .headerh{
+      visibility: visible !important;
+      color:white;
+      top: 70vh !important;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 45px !important;
+      z-index: 1111 !important;
+  }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .headerh{
+      visibility: visible !important;
+      color:white !important;
+      top: 70vh !important;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 45px !important;
+  }
+ 
+  }
+  @media screen and (min-width: 1200px) {
+    * {
+      box-sizing: border-box !important;
+    }
+    .headerh{
+      visibility: visible !important;
+      color:white !important;
+      top: 70vh !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+      font-size: 50px !important;
+  }
 }

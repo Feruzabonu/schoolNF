@@ -4,7 +4,7 @@ import style from "../css/maktabHayoti.module.css";
 import { Carousel  } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
-import school3 from '../img/school25.jpg'
+import school3 from '../img/ustoz2.jpg'
 import school4 from '../img/school13.jpg'
 import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
@@ -126,43 +126,28 @@ setTimeout(()=>{
           </div> 
           
          : 
-            <>
+            <div>
             <Navbar/>
 
-            <div className={styles.header}>
-              <h1>Maktab ma'muriyati</h1>
-            </div>
-            {/* {
-              this.state.direktor!==null?this.state.direktor.map(item=>{
-                return(
-                  <div >
-                   <h1 className={styles.headerh}>Maktab ma'muriyati</h1>
+            
+              <h1 className={styles.headerh}>Maktab ma'muriyati</h1>
+            
                    <Carousel
+                   dots={false}
                     autoplay
                     effect="fade"
                     style={{ zIndex: "-1" ,width:'100%'}}
                  
                   >
-           <div>
-           <img  src={
-                  item.image
-                  }
-                  className={style.headerImage}
-                  />
-             </div>   
-             <div>
-             <img
-                  src={
-                  item.image
-                  }
-                  className={style.headerImage}
-                />
-               </div>      
+                   
+                  <div>
+                  <img  src={
+                      school3
+                         }
+                         className={style.headerImage}
+                         />
+                    </div>    
            </Carousel>
-                </div>
-                )
-              }):{}
-            } */}
                 <Container>
                 <div className={styles.body}>
                 <MDBRow className='row-cols-1 row-cols-md-3  g-4'>
@@ -437,7 +422,7 @@ setTimeout(()=>{
                     </div>
                 </Container>
                 <Footer/>
-                </>
+                </div>
       }  </div>
         )
     }

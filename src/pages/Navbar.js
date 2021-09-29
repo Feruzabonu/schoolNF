@@ -117,7 +117,7 @@ export default class Navbar extends Component {
                       : "Maktab raqami"}
                     </div>
                 </div>
-                <div className={this.state.nav? styles.fixNav:styles.fixNav1} style={{position:'absolute',top:'15%',width:'100%',zIndex:'111111'}}>
+                <div className={this.state.nav? styles.fixNav:styles.fixNav1} style={{position:'absolute',top:'17%',width:'100%',zIndex:'111111'}}>
                 <div className={styles.mobileNavbar}>
                 <div className={styles.rightNavbar}>
                 {this.state.school !== null
@@ -125,7 +125,7 @@ export default class Navbar extends Component {
                       : "Maktab raqami"}
                     </div>
                     <div className={styles.openHamburger}>
-                    <MenuOutlined onClick={()=>this.openNavbar()} style={{color:'white',marginRight:'10px',fontSize:'25px',cursor:'pointer'}}/>
+                    <MenuOutlined onClick={()=>this.openNavbar()} style={{color:'white',marginRight:'0px',fontSize:'25px',cursor:'pointer',zIndex:'11111111'}}/>
                     </div>
                 </div>
                 <div  className={this.state.visible? styles.navMobile:styles.noNav}>

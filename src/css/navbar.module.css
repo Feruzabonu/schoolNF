@@ -13,7 +13,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 5%;
+    padding: 10px 5%;
+    z-index: 11 !important;
 }
 .info{
     display: flex;
@@ -95,7 +96,7 @@
     align-items: center;
     width: 100%;
     background-color: #22C8BA;
-    height: 70px;
+    height: 50px;
     padding: 0 20px;
     overflow-x: hidden !important;
     z-index:2 !important;
@@ -147,10 +148,12 @@
      }
      .name{
          width: 100% !important;
+         background-color:rgba(0,0,0, 0.45) !important;
+         padding: 5px !important;
      }
      .name h6{
-         width: 90vw !important;
-        color:black !important;
+         width: 85vw !important;
+        color:white !important;
         font-weight: 700 !important;
      }
      .navbarDiv{
@@ -169,13 +172,14 @@
 
  @media screen and (min-width:768px) {
     .top{
-        background-color:transparent !important
+        background-color:transparent !important;
+        background-color:rgba(0,0,0, 0.45) !important;
     }
     .name{
         width: 50% !important;
     }
     .name h6{
-        color:black !important;
+        color:white !important;
         font-weight: 700 !important;
 
     }
@@ -208,11 +212,15 @@
      .name{
          width: 30% !important;
      }
+     .navbar ul li{
+         font-size: 13px;
+         padding: 10px 10px !important;
+     }
      .name h6{
          color:white !important
      }
      .info{
-         display: flex;
+         display: none;
      }
      .mobileNavbar{
          display: none;
@@ -228,5 +236,11 @@
     .navbar ul li{
         padding: 10px 20px;
         font-size: 16px;
+       }
+       .info{
+           display: flex;
+       }
+       .top{
+           padding: 0 5%;
        }
  }
