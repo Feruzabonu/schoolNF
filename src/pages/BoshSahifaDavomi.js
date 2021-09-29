@@ -152,6 +152,50 @@ export default class BoshSahifaDavomi extends Component {
           }
       ]
     }
+    const settings1 = {
+      autoplay:true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+          {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+      ]
+    }
+
     const data=[
       {   id:1,
           rasm:ustoz1,
@@ -182,7 +226,7 @@ export default class BoshSahifaDavomi extends Component {
       <div style={{backgroundColor:'white'}}>
         <div className={style.successful}>
                     <h1>Bizning muvaffaqiyatli o'quvchilarimiz</h1>
-                    <Slider {...settings} style={{padding:'20px'}}>
+                    <Slider {...settings1} style={{padding:'20px'}}>
                     {this.state.excellent !== [] && this.state.class !== []
                       ? this.state.excellent.map((item,key) => {
                           var pupil = this.setPupils(item.pupil);
