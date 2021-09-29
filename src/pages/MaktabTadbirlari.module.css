@@ -242,8 +242,9 @@
   font-weight: bold;
   font-size: 20px;
   padding:10px 30px;
+  transition: all 0.3s;
 }
-.barchasiniKurish::hover{
+.barchasiniKurish:hover{
   background-color:white !important;
   color:#1EB2A6 !important;
 }

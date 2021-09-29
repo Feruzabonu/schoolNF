@@ -175,7 +175,7 @@ export default class BoshSahifa extends Component {
                   />
                   <div className={style.overlay}>
                     <Link style={{ color: "white" }} to={`/yangiliklar/`}>
-                      <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yangiliklar</h4>
+                      <h4 style={{transition:'all 0.3', backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yangiliklar</h4>
                     </Link>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default class BoshSahifa extends Component {
                   />
                   <div className={style.overlay}>
                     <Link style={{ color: "white" }} to={`/gallery/`}>
-                      <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Fotolavhalar</h4>
+                      <h4 style={{ transition:'all 0.3',backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Fotolavhalar</h4>
                     </Link>{" "}
                   </div>
                 </div>

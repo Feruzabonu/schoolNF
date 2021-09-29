@@ -137,8 +137,8 @@ export default class MaktabTadbirlari extends Component {
             })}
           </Row>
           </Container>
-          <Link to='/tadbirlar/' className={style.barchasiniKurish}>
-            Hamma tadbirlarni ko'rish
+          <Link to='/tadbirlar/' style={{color:'white'}}>
+           <h3 className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish</h3> 
           </Link>
         </div>
         <div style={{ backgroundColor: "white", marginTop: "-30px",textAlign:'center' }}>

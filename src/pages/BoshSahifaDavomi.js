@@ -19,6 +19,7 @@ import Global from "../host/Global";
 import Slider from "react-slick";
 
 
+
 export default class BoshSahifaDavomi extends Component {
   state = {
     loader: true,
@@ -151,6 +152,32 @@ export default class BoshSahifaDavomi extends Component {
           }
       ]
     }
+    const data=[
+      {   id:1,
+          rasm:ustoz1,
+          lavozim:'Maktab Direktori',
+          FIO:'Ravshanova Mamlakat Sulaymonovna',
+          mutaxasisligi:"Rus tili filologiya o'qituvchi",
+          tel:'+998906056115',
+          qoshimcha:"Xalq ta'limi a'lochisi I -toifali mutaxasis"
+      },
+      {   id:2,
+          rasm:ustoz1,
+          lavozim:"O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari",
+          FIO:'Xusenova Maryam Hakimovna',
+          mutaxasisligi:"Tojik tili va adabiyoti o'qituvchisi",
+          tel:'+998937279465',
+          qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
+      },
+      {   id:3,
+          rasm:ustoz2,
+          lavozim:"Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari",
+          FIO:'Tosheva Gavhar Umarovna',
+          mutaxasisligi:"Tojik tili va adabiyoti o'qituvchisi",
+          tel:'+998933320040',
+          qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
+      },
+  ]
     return (
       <div style={{backgroundColor:'white'}}>
         <div className={style.successful}>
@@ -165,7 +192,7 @@ export default class BoshSahifaDavomi extends Component {
                          <div style={{display:'flex',flexDirection:'row',padding:'30px'}}>
                              <div style={{width:'80px'}}>
                                  <img src={
-                                    pupil.image !== null ? pupil.image : school2}
+                                    pupil.image !== null ? pupil.image : school1}
                                     style={{width:'80px',height:'80px',objectFit:'cover',borderRadius:'50%'}}/>
                              </div>
                              <div style={{marginLeft:'10px'}}>
@@ -173,6 +200,7 @@ export default class BoshSahifaDavomi extends Component {
                                  <p style={{marginTop:'-5px',color:'#1EB2A6'}}>{this.echoClasses(pupil.clas).class_number} -
                                   "{this.echoClasses(pupil.clas).class_char}"
                                   sinf</p>
+                         <FaStar style={{color:'#1EB2A6',marginLeft:'10px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/>
                              </div>
                          </div>
                      </div>
@@ -180,6 +208,36 @@ export default class BoshSahifaDavomi extends Component {
                           ):''
                         })
                       : ""}
+                    </Slider>
+                    
+                </div>
+                <div className={style.successful}>
+                    <h1>O'qituvchilar doskasi</h1>
+                    <Slider {...settings} style={{padding:'20px'}}>
+                   {
+                       data && Array.isArray(data)?data.map((item,key)=>{
+                         return(
+      <div className={style.ustozCard}>
+        <div data-aos="flip-right"  style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', marginBottom:'30px'}} className={style.card}>
+          <img
+            src={item.rasm}
+            alt='...'
+            position='top'
+            style={{width:'100%', height:'100%',objectFit:'cover'}}
+          />
+          </div>
+          <div style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6',height:'200px',textAlign:'left'}}>
+            <small className='text-muted' style={{fontSize:'16px'}}>
+              <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.mutaxasisligi}<br/>
+              <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.tel}<br/>
+              <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.qoshimcha}<br/>
+            </small>
+          </div>
+        
+      </div>
+      )
+                       }):''
+                     }
                     </Slider>
                     
                 </div>
