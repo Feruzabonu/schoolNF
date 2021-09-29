@@ -144,6 +144,9 @@
     .top{
         background-color:transparent !important
     }
+    .name{
+        width: 50% !important;
+    }
     .name h6{
         color:black !important;
         font-weight: 700 !important;
