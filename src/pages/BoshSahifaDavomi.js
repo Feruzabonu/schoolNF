@@ -5,7 +5,7 @@ import { ButtonWrapper } from "./StyleBoshSahifa";
 import school1 from "../img/school1.jpg";
 import ustoz1 from "../img/ustoz1.jpg";
 import ustoz2 from "../img/ustoz2.jpg";
-import ustoz3 from '../img/ustoz3.jpg'
+import ustoz3 from "../img/oqituvchi.jpg";
 import school2 from "../img/school2.jpg";
 import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";

@@ -89,7 +89,7 @@ export default class Alochilar extends Component {
 
   echoClasses = (id) => {
     var classes = {};
-    console.log(id, this.state.class);
+    // console.log(id, this.state.class);
     if (this.state.class !== []) {
       this.state.class.map((item1) => {
         if (item1.id === id) {
@@ -99,6 +99,7 @@ export default class Alochilar extends Component {
       });
     }
     return classes;
+    console.log(classes)
   };
 
   componentDidMount() {
