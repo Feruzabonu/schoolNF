@@ -156,7 +156,7 @@ setTimeout(()=>{
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
  return(
   <MDBCol>
-    <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+    <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
       <MDBCardImage 
       className={styles.card_img}
         src={item.image}
@@ -171,8 +171,8 @@ setTimeout(()=>{
           Maktab Direktori
         </MDBCardText>
       </MDBCardBody>
-      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px', minHeight:'160px'}}>
-        <small className='text-muted' style={{fontSize:'16px'}}>
+      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px', maxHeight:'400px'}}>
+        <small className='text-muted' style={{fontSize:'16px', height:'auto'}}>
           <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
           <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
           <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.description==null? "Ma'lumot to'q":item.description}<br/>
@@ -188,7 +188,7 @@ setTimeout(()=>{
        {this.state.orin1!==null?this.state.orin1.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -218,7 +218,7 @@ setTimeout(()=>{
        {this.state.orin2!==null?this.state.orin2.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -247,7 +247,7 @@ setTimeout(()=>{
        {this.state.orin3!==null?this.state.orin3.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -275,7 +275,7 @@ setTimeout(()=>{
        {this.state.psixolog!==null?this.state.psixolog.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -304,7 +304,7 @@ setTimeout(()=>{
        {this.state.kasaba!==null?this.state.kasaba.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -333,7 +333,7 @@ setTimeout(()=>{
        {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -362,7 +362,7 @@ setTimeout(()=>{
        {this.state.chqbt!==null?this.state.chqbt.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}
@@ -391,7 +391,7 @@ setTimeout(()=>{
        {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
              return(
               <MDBCol>
-              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'560px', marginBottom:'30px'}} className={styles.card}>
+              <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
                 <MDBCardImage
                 className={styles.card_img}
                   src={item.image}

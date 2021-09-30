@@ -66,17 +66,21 @@
     height: 100vh;
     background-color: white;
 }
-
-@media screen and (max-width:400px){
+@media screen and (max-width: 400px) {
     .card_img{
-        width: 335px !important;
-    }
+        width: 100px !important;
+    } 
 }
+
 @media screen and (max-width: 566px) {
     .headerh{
       visibility: hidden!important;
    }
-  }
+   .card_img{
+    width: 385px !important;
+}
+}
+  
   @media screen and (min-width: 567px) {
     .headerh{
       visibility: hidden!important;
