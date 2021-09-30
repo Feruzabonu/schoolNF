@@ -232,6 +232,7 @@ export default class BoshSahifa extends Component {
               <div className={style.bir}>
                 <div className={style.containercha}>
                   <img
+                  style={{objectFit:'cover'}}
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c2 !== null
@@ -252,6 +253,7 @@ export default class BoshSahifa extends Component {
               <div className={style.ikki}>
                 <div className={style.containercha}>
                   <img
+                  style={{objectFit:'cover'}}
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c1 !== null
@@ -269,6 +271,7 @@ export default class BoshSahifa extends Component {
               <div className={style.uch}>
                 <div className={style.containercha}>
                   <img
+                  style={{objectFit:'cover'}}
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c3 !== null
