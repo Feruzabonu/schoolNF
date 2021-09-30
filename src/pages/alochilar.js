@@ -8,7 +8,7 @@ import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
-import { url, user } from "../host/Host";
+import { idMaktab, url, user } from "../host/Host";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -48,7 +48,7 @@ export default class Alochilar extends Component {
       this.setState({ data: res.data });
     });
     axios
-      .get(`${url}/class-by-school/${v}/`)
+      .get(`${url}/class/`)
       .then((res) => {
         this.setState({
           class: res.data,
@@ -89,7 +89,7 @@ export default class Alochilar extends Component {
 
   echoClasses = (id) => {
     var classes = {};
-    console.log(id, this.state.class);
+    // console.log(id, this.state.class);
     if (this.state.class !== []) {
       this.state.class.map((item1) => {
         if (item1.id === id) {
@@ -99,6 +99,7 @@ export default class Alochilar extends Component {
       });
     }
     return classes;
+    console.log(classes)
   };
 
   componentDidMount() {
