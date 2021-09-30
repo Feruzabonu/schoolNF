@@ -278,7 +278,7 @@ body{
 @media screen and (max-width: 900px) {
     .container{
         display: block;
-        height: 830px;
+        height: 630px;
     }
     .bir, .ikki{
         margin-top: 10px;
@@ -288,9 +288,9 @@ body{
     }
     .uch{
         display: block;
-        height: 500px;
-        width: 97%;
-        margin-left: auto;
+        height: 300px;
+        width: 50%;
+        margin-left: 25%;
     }
     .registericon{
         top:0px !important;
@@ -313,7 +313,7 @@ body{
 }
 @media screen and (max-width: 750px) {
     .container{
-        height: 580px;
+        height: max-content !important;
         margin-top:0px;
     }
     .bir, .ikki{
@@ -321,8 +321,9 @@ body{
         width: 48%;
     }
     .uch{
-        height: 300px;
-        width: 97%;
+        height: 250px;
+        width: 50%;
+        margin-left: 25%;
     }
     .registericon{
         top:-15px !important;
