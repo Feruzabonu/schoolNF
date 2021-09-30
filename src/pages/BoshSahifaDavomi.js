@@ -209,7 +209,7 @@ export default class BoshSahifaDavomi extends Component {
           rasm:ustoz1,
           lavozim:"O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari",
           FIO:'Xusenova Maryam Hakimovna',
-          mutaxasisligi:"Tojik tili va adabiyoti o'qituvchisi",
+          mutaxasisligi:"Tarix fani o'qituvchisi",
           tel:'+998937279465',
           qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
       },
@@ -217,7 +217,7 @@ export default class BoshSahifaDavomi extends Component {
           rasm:ustoz2,
           lavozim:"Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari",
           FIO:'Tosheva Gavhar Umarovna',
-          mutaxasisligi:"Tojik tili va adabiyoti o'qituvchisi",
+          mutaxasisligi:"Matematika fani o'qituvchisi",
           tel:'+998933320040',
           qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
       },
