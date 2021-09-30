@@ -550,6 +550,11 @@ body{
     padding: 5px;
     border-radius: 50%;
 }
+.elem{margin-top:40px; height:180px; padding-left: 5%; display: flex; align-items: center; border-top: 2px solid #22c8ba;
+    border-bottom: 2px solid #22c8ba;}
+.elem img{width:30px;}
+.elem h2{color:#22c8ba; font-size:23px}
+
 @media (max-width: 820px){
     .bayroqlar{
         top: 0px;
@@ -1129,3 +1134,26 @@ top:70px !important;
         .rasm{height:100px !important;}
         /* .containerRow{margin-top: 200px;} */
     }
+
+
+.colT{display: flex;color:black; align-items: center; justify-content: center; width:100%; height:30px;}
+.colT:hover{color:#0d8c81;}
+.colT p{margin-left:10px; margin-top:13px; font-size: 15px;}
+
+
+
+@media (min-width:451px) and (max-width:991px){
+   .elem{height: 340px;}
+   .htr{margin-top: 20px;}
+   
+   
+   }
+   
+   @media (max-width:450px){
+   .colT{padding:10px}
+   
+   }
+   @media (max-width:560px) {
+        .elem{height: 40vh ;}
+       .colT{margin-top:10px}
+       }
