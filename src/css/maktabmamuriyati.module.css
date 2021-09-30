@@ -49,6 +49,7 @@
 }
 .card_body{
     transition: all 0.2s;
+    height: 50px !important;
 }
 .card_title{
     transition: all 0.2s;
