@@ -82,7 +82,7 @@ export default class Navbar extends Component {
                              <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>{
                       this.state.school !== null
                         ? this.state.school.phone
-                        : "+998 93 082 03 72"
+                        : "+998977902801"
                     }</p>
                          </div>
                      </div>
