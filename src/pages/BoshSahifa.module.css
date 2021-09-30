@@ -278,17 +278,17 @@ body{
 @media screen and (max-width: 900px) {
     .container{
         display: block;
-        height: 630px;
+        height: 600px;
     }
     .bir, .ikki{
         margin-top: 10px;
         display: inline-block;
-        height: 300px;
+        height: 270px;
         width: 48%;
     }
     .uch{
         display: block;
-        height: 300px;
+        height: 270px;
         width: 50%;
         margin-left: 25%;
     }
@@ -341,17 +341,17 @@ body{
     .bir{
         margin: 0;
         margin-top: 10px;
-        height: 300px;
+        height: 270px;
         width: 95%;
     }
     .ikki{
         margin: auto;
-        height: 300px;
+        height: 270px;
         width: 95%;
     }
     .uch{
         margin: auto;
-        height: 300px;
+        height: 270px;
         width: 95%;
     }
     .registericon{
