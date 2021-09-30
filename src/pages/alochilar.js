@@ -205,7 +205,7 @@ export default class Alochilar extends Component {
                                     marginLeft: "10px",
                                   }}
                                 >
-                                  {pupil.full_name} {pupil.birth_day}
+                                  {pupil.full_name}<p> {pupil.birth_day}</p>
                                 </h6>
                                 <FaStar
                                   style={{
@@ -238,8 +238,10 @@ export default class Alochilar extends Component {
                                   }}
                                 />
                              
-                                {this.echoClasses(pupil.clas).class_number} - "
+                                <p>
+                                  {this.echoClasses(pupil.clas).class_number} - "
                                 {this.echoClasses(pupil.clas).class_char}" sinf
+                                </p>
                               </div>
                             </div>
                           </Col>
