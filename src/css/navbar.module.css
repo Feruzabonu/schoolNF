@@ -120,6 +120,24 @@
     cursor: pointer;
     font-size: 16px;
 }
+.mobileNavbar1{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #22C8BA;
+    height: 50px;
+    padding: 0 20px;
+    overflow-x: hidden !important;
+    z-index:2 !important;
+
+}
+.mobileNavbar1 .rightNavbar{
+    height: 100%;
+    width: 50%;
+}
 .navMobile ul li:hover{
     color: #1EB2A6;
   }
@@ -141,18 +159,18 @@
          top: 4% !important;
      }
      .top{
+         top:0.5%;
          background-color:transparent !important
      }
      .mobileNavbar{
-    margin-top: -40px;
+    display: none;
      }
      .name{
          width: 100% !important;
          background-color:rgba(0,0,0, 0.45) !important;
-         padding: 5px !important;
+         padding: 10px !important;
      }
      .name h6{
-         width: 85vw !important;
         color:white !important;
         font-weight: 700 !important;
      }
@@ -182,6 +200,9 @@
         color:white !important;
         font-weight: 700 !important;
 
+    }
+    .mobileNavbar{
+        display: flex;
     }
     .navbarDiv{
         display: none;
@@ -225,6 +246,9 @@
      .mobileNavbar{
          display: none;
      }
+     .mobileNavbar1{
+        display: none;
+    }
  }
  @media screen and ( max-width:1200px) {
      .navbar ul li{
