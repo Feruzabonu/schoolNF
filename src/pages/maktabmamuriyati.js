@@ -57,14 +57,14 @@ getStaff=()=>{
           if(item1===5){
             orin2.push(item)
           }
-          if(item1===9){
+          if(item1===7){
             orin3.push(item)
           }
           if(item1===6){
             
             psixolog.push(item)
           }
-          if(item1===7){
+          if(item1===9){
             yetakchi.push(item)
           }
           if(item1===8){
