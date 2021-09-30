@@ -5,6 +5,7 @@ import { ButtonWrapper } from "./StyleBoshSahifa";
 import school1 from "../img/school1.jpg";
 import ustoz1 from "../img/ustoz1.jpg";
 import ustoz2 from "../img/ustoz2.jpg";
+import ustoz3 from '../img/ustoz3.jpg'
 import school2 from "../img/school2.jpg";
 import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
@@ -206,7 +207,7 @@ export default class BoshSahifaDavomi extends Component {
           qoshimcha:"Xalq ta'limi a'lochisi I -toifali mutaxasis"
       },
       {   id:2,
-          rasm:ustoz1,
+          rasm:ustoz3,
           lavozim:"O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari",
           FIO:'Xusenova Maryam Hakimovna',
           mutaxasisligi:"Tarix fani o'qituvchisi",
