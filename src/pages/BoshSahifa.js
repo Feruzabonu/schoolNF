@@ -228,7 +228,7 @@ export default class BoshSahifa extends Component {
 
             {/* <div className="oq"></div> */}
             <BoshSahifaDavomi />
-            <div className={style.container} style={{position:'relative'}}>
+            <div className={style.container} style={{position:'relative',textAlign:'center'}}>
               <div className={style.bir}>
                 <div className={style.containercha}>
                   <img
