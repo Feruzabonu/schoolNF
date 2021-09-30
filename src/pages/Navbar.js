@@ -120,7 +120,7 @@ export default class Navbar extends Component {
                     </div>
                 </div>
                 <div className={this.state.nav? styles.fixNav:styles.fixNav1} style={{position:'absolute',top:'17%',width:'100%',zIndex:'111111'}}>
-                <div className={styles.mobileNavbar}>
+                <div className={this.state.nav?styles.mobileNavbar1: styles.mobileNavbar}>
                 <div className={styles.rightNavbar}>
                 {this.state.school !== null
                       ? this.state.school.school_number + " - maktab"
