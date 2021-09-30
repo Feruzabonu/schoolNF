@@ -244,12 +244,43 @@
 }
 
 @media screen and (max-width:350px) {
-    .header img{
-        width: 150px !important;
-        height: 130px !important;
+    .body2{
+        width: 100%;
+        height: 150vh !important;
+        display: flex;
+        align-items: center;
+        background-color: #A5C9CF;
     }
-    .header h1{
-        font-size: 40px;
+    .row{
+        margin: 0px 5px;
+        height: 100% !important;
+    
+    }
+    .top1{
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .top2{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        color: #000;
+        font-weight: 600;
+    }
+    
+    .top1 img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .bottom{
+        height: 50%;
+        color: #A2A2A2;
+        font-size: 17px;
+        padding: 0px 30px;
     }
 }
 
