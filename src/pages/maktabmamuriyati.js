@@ -172,7 +172,7 @@ setTimeout(()=>{
           Maktab Direktori
         </MDBCardText>
       </MDBCardBody>
-      <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px', maxHeight:'400px'}}>
+      <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px', maxHeight:'400px'}}>
         <small className='text-muted' style={{fontSize:'16px', height:'auto'}}>
           <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
           <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -205,7 +205,7 @@ setTimeout(()=>{
                   O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -237,7 +237,7 @@ setTimeout(()=>{
                   Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -268,7 +268,7 @@ setTimeout(()=>{
                   Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -298,7 +298,7 @@ setTimeout(()=>{
                   Maktab amaliyotchi psixologi
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -329,7 +329,7 @@ setTimeout(()=>{
                   Kasaba uyushma raisi
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -360,7 +360,7 @@ setTimeout(()=>{
                   Kutubxona mudirasi
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -391,7 +391,7 @@ setTimeout(()=>{
                   Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
@@ -422,7 +422,7 @@ setTimeout(()=>{
                   Boshlang'ich tashkilot yoshlar yetakchisi
                   </MDBCardText>
                 </MDBCardBody>
-                <MDBCardFooter style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
+                <MDBCardFooter className={styles.card_footer} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6', minHeight:'160px'}}>
                   <small className='text-muted' style={{fontSize:'16px'}}>
                     <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.position}<br/>
                     <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.phone}<br/>
