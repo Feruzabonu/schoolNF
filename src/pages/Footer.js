@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import styles from '../css/footer.module.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaInstagram, FaMap, FaTelegramPlane } from 'react-icons/fa';
+import { FaInstagram, FaMap, FaTelegramPlane,FaYoutube } from 'react-icons/fa';
 import { CgFacebook } from 'react-icons/cg';
 import { AiFillMail } from 'react-icons/ai';
-import { RiTwitterFill } from 'react-icons/ri';
+import { RiTelegramFill } from 'react-icons/ri';
 import { BiCalendar} from 'react-icons/bi';
 import { MdLocalPhone} from 'react-icons/md';
 import { BsArrowRight} from 'react-icons/bs';
@@ -84,9 +84,10 @@ export default class Footer extends Component {
                                     <p style={{textTransform:'uppercase', fontSize:'13px', fontWeight:'600', color:'#1EB2A6'}}>{this.state.data !== null ? this.state.data.type : ""}</p>
                                     <p style={{color:'#999999', fontSize:'16px', marginTop:'40px'}}>Sifatli bilim va yuqori natijalarga bizning maktab bilan erishishingiz mumkin!</p>
                                     <ul className={styles.social_media}>
-                                        <li><div><a href='#'><RiTwitterFill/></a></div></li>
-                                        <li><div><a href='#'><CgFacebook/></a></div></li>
-                                        <li><div><a href='#'><FaInstagram/></a></div></li>
+                                        <li><div><a href='https://t.me/Xorazm_5_maktab'><RiTelegramFill style={{fontSize:'20px'}}/></a></div></li>
+                                        <li><div><a href='https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage'><CgFacebook/></a></div></li>
+                                        <li><div><a href='https://www.instagram.com/5ummumtalimmaktabi/'><FaInstagram/></a></div></li>
+                                        <li><div><a href='https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw'><FaYoutube/></a></div></li>
                                     </ul>
                                  </div>
                              </Col>
