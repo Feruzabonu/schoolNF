@@ -48,16 +48,16 @@ getStaff=()=>{
     res.data.map(item=>{
       if(item.speciality.length!==0){
         item.speciality.map(item1=>{
-          if(item1===2){
+          if(item1===3){
             direktor.push(item)
           }
-          if(item1===3){
+          if(item1===4){
             orin1.push(item)
           }
-          if(item1===4){
+          if(item1===5){
             orin2.push(item)
           }
-          if(item1===5){
+          if(item1===9){
             orin3.push(item)
           }
           if(item1===6){
