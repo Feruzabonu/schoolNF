@@ -142,7 +142,9 @@ setTimeout(()=>{
                    
                   <div>
                   <img  src={
-                      school3
+                      this.state.direktor.map(item=>{
+                        return(item.image)
+                      })
                          }
                          className={style.headerImage}
                          />
