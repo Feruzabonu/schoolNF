@@ -411,6 +411,12 @@ body {
   .director img {
     height: 300px;
   }
+  .ph2{
+    font-size: 25px !important;
+  }
+  .ph4{
+    font-size: 20px !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .headerImage{
@@ -477,6 +483,12 @@ body {
   .director img {
     height: 500px;
   }
+  .ph2{
+    font-size: 30px !important;
+  }
+  .ph4{
+    font-size: 23px !important;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -540,10 +552,22 @@ body {
   .cardDown{
     height: 450px  !important;
   }
+  .ph2{
+    font-size: 30px !important;
+  }
+  .ph4{
+    font-size: 23px !important;
+  }
 }
 @media screen and (min-width: 1200px) {
   * {
     box-sizing: border-box !important;
+  }
+  .ph2{
+    font-size: 30px !important;
+  }
+  .ph4{
+    font-size: 23px !important;
   }
   .headerh{
     visibility: visible !important;

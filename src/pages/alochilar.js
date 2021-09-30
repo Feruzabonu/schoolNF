@@ -39,14 +39,14 @@ export default class Alochilar extends Component {
       .then((res) => {
         this.setState({
           excellent: res.data,
-          loader: false,
+          // loader: false,
         });
       })
       .catch((err) => {
         console.log(err);
         this.setState({
           // excellent: res.data,
-          loader: false,
+          // loader: false,
         });
       });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
@@ -111,6 +111,11 @@ export default class Alochilar extends Component {
       //   loader:false
       // })
     });
+    setInterval(()=>{
+      this.setState({
+          loader:false
+      })
+  },2000)
   }
 
   render() {
