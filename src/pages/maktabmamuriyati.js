@@ -18,6 +18,7 @@ import { FadeLoader, ScaleLoader } from 'react-spinners';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Navbar2 from './Navbar2';
 
 export default class Maktabmamuriyati extends Component {
 state={
@@ -127,7 +128,7 @@ setTimeout(()=>{
           
          : 
             <div>
-            <Navbar/>
+            <Navbar2/>
 
             
               <h1 className={styles.headerh}>Maktab ma'muriyati</h1>
