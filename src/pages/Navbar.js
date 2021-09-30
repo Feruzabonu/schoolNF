@@ -79,11 +79,13 @@ export default class Navbar extends Component {
                          <div><FiPhone style={{fontSize:'35px',color:'white'}}/></div>
                          <div style={{marginLeft:'10px'}}>
                              <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Qo'ng'iroq qiling</p>
-                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>{
+                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>+998977902801
+                                 {/* {
                       this.state.school !== null
                         ? this.state.school.phone
-                        : "+998 93 082 03 72"
-                    }</p>
+                        : "+998977902801"
+                    } */}
+                    </p>
                          </div>
                      </div>
                     </div>
