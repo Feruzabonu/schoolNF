@@ -300,31 +300,31 @@ export default class BoshSahifa extends Component {
                 </Col>
 
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a src="#" className={style.colT} target="_blank">
+                  <a href="https://t.me/Xorazm_5_maktab" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" />
                     <p>Telegram sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a src="#" className={style.colT} target="_blank">
+                  <a href="https://www.instagram.com/5ummumtalimmaktabi/" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
                     <p>Instagram sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a src="#" className={style.colT} target="_blank">
+                  <a href="https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" />
                     <p>Facebook sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a src="#" className={style.colT} target="_blank">
+                  <a href="#" className={style.colT} target="_blank">
                     <img src={pic20} />
                     <p>Twitter sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a src="#" className={style.colT} target="_blank">
+                  <a href="https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" />
                     <p>You tube sahifasi</p>
                   </a>

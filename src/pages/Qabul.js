@@ -136,14 +136,9 @@ class Qabul extends React.Component {
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />
-                   <div className={styles.header}>
-                   <Container style={{height:'100%'}}>
-                     <Row style={{display:'flex', alignItems:'center', height:'100%', paddingTop:'150px'}}>
-                       <Col lg={6} md={6} sm={12} xs={12} data-aos="fade-right"><h1 >Qabul</h1></Col>
-                       <Col lg={6} md={6} sm={12} xs={12} data-aos="fade-left" style={{display:'flex', justifyContent:'center', alignItems:'center'}}><img src={qabulheader}/></Col>
-                     </Row>
-                   </Container>
-                   {/* <Carousel
+                   <div>
+                   <h1 className={style.headerh}>Qabul</h1>
+                   <Carousel
                    dots={false}
                     autoplay
                     effect="fade"
@@ -151,25 +146,32 @@ class Qabul extends React.Component {
                  
                   >
            <div>
-           <img  src={
-                    data !== null && data.m_h_h2 !== null
-                      ? data.m_h_h2
-                      : school1
+           <img  
+             style={{objectFit:'cover'}}
+            src={
+              this.state.school !== null
+              ? this.state.school.q!== null
+                ? this.state.school.q
+                : tav_img
+              : tav_img
                   }
                   className={style.headerImage}
                   />
              </div>   
              <div>
              <img
+             style={{objectFit:'cover'}}
                   src={
-                    data !== null && data.m_h_h1 !== null
-                      ? data.m_h_h1
-                      : school1
+                    this.state.school !== null
+                          ? this.state.school.q_imtihon_r !== null
+                            ? this.state.school.q_imtihon_r
+                            : talab
+                          : talab
                   }
                   className={style.headerImage}
                 />
                </div>      
-           </Carousel> */}
+           </Carousel>
                 </div>
                 
                 <div className={styles.body}>
