@@ -152,7 +152,7 @@ setTimeout(()=>{
            </Carousel>
                 <Container>
                 <div className={styles.body}>
-                <MDBRow className='row-cols-1 row-cols-md-2  g-4'>
+                <MDBRow className='row-cols-1 row-cols-md-2  row-cols-lg-3'>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
  return(
   <MDBCol>

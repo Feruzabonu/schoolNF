@@ -71,19 +71,21 @@
     background-color: white;
 }
 @media screen and (max-width: 400px) {
-    .card_img{
-        width: 100px !important;
+    .card_img img{
+        width: 335px !important;
         height: 250px !important;
     object-fit: cover;
     } 
 }
 
+
+
 @media screen and (max-width: 566px) {
     .headerh{
       visibility: hidden!important;
    }
-   .card_img{
-    width: 385px !important;
+   .card_img img{
+    width: 367px !important;
     height: 250px !important;
     object-fit: cover;
 }
