@@ -139,8 +139,8 @@ class Qabul extends React.Component {
                    <div className={styles.header}>
                    <Container style={{height:'100%'}}>
                      <Row style={{display:'flex', alignItems:'center', height:'100%', paddingTop:'150px'}}>
-                       <Col lg={6} md={6} sm={12} xs={12}><h1 >Qabul</h1></Col>
-                       <Col lg={6} md={6} sm={12} xs={12} style={{display:'flex', justifyContent:'center', alignItems:'center'}}><img src={qabulheader}/></Col>
+                       <Col lg={6} md={6} sm={12} xs={12} data-aos="fade-right"><h1 >Qabul</h1></Col>
+                       <Col lg={6} md={6} sm={12} xs={12} data-aos="fade-left" style={{display:'flex', justifyContent:'center', alignItems:'center'}}><img src={qabulheader}/></Col>
                      </Row>
                    </Container>
                    {/* <Carousel
