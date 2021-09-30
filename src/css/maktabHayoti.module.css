@@ -235,6 +235,9 @@ body {
   z-index: 5 !important;
   cursor: pointer;
 }
+.cardDown{
+  height: 450px !important;
+}
 .cardBolimlar h3::before {
   content: "";
   position: absolute;
@@ -306,6 +309,9 @@ body {
   .secondHeading{
     font-size: 23px !important;
   }
+  .cardDown{
+    height: max-content !important;
+  }
   .secondText{
     font-size: 18px !important;
   }
@@ -347,6 +353,9 @@ body {
   .headerh{
     visibility: hidden!important;
  }
+ .cardDown{
+  height: max-content !important;
+}
   .headerImage{
     width: 100%;
     height: 400px;
@@ -422,6 +431,9 @@ body {
     top: 70% !important;
     left: 50% !important;
     transform: translate(-50%, -70%) !important;
+  }
+  .cardDown{
+    height: 400px !important;
   }
   .headerSliderText h3 {
     margin-left: 0px !important;
@@ -524,6 +536,9 @@ body {
     width: 800px;
     font-size: 20px;
     padding: 2px;
+  }
+  .cardDown{
+    height: 450px  !important;
   }
 }
 @media screen and (min-width: 1200px) {
