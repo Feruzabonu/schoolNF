@@ -15,7 +15,7 @@ import { url } from '../host/Host';
 
 import Global from '../host/Global';
 import { FadeLoader, ScaleLoader } from 'react-spinners';
-import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -157,14 +157,15 @@ setTimeout(()=>{
  return(
   <MDBCol>
     <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-      <MDBCardImage 
-      className={styles.card_img}
-        src={item.image}
-        alt='...'
-        position='top'
-         style={{width:'415px', height:'277px'}}
-      
-      />
+    <div className={styles.card_img}>
+             <img
+               
+                  src={item.image}
+                  alt='...'
+                  position='top'
+                   style={{width:'100%', height:'100%'}}
+                />
+             </div>
       <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
         <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
         <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -189,13 +190,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -219,13 +222,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -248,13 +253,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -276,13 +283,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -305,13 +314,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -334,13 +345,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -363,13 +376,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+              <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>
@@ -392,13 +407,15 @@ setTimeout(()=>{
              return(
               <MDBCol>
               <MDBCard data-aos="flip-right" className='h-100' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', height:'630px', marginBottom:'30px'}} className={styles.card}>
-                <MDBCardImage
-                className={styles.card_img}
+             <div className={styles.card_img}>
+             <img
+               
                   src={item.image}
                   alt='...'
                   position='top'
-                   style={{width:'415px', height:'277px'}}
+                   style={{width:'100%', height:'100%'}}
                 />
+             </div>
                 <MDBCardBody style={{textAlign:'center', padding:'20px 20px', display:'flex', flexDirection:'column', justifyContent:'center'}} className={styles.card_body}>
                   <MDBCardTitle className={styles.boyd_title}>{item.full_name}</MDBCardTitle>
                   <MDBCardText style={{fontSize:'18px', fontWeight:'500'}}>

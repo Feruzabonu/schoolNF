@@ -44,6 +44,7 @@
    height: 200px;
 
 }
+
 .card_body{
     transition: all 0.2s;
 }
@@ -69,6 +70,8 @@
 @media screen and (max-width: 400px) {
     .card_img{
         width: 100px !important;
+        height: 250px !important;
+    object-fit: cover;
     } 
 }
 
@@ -78,6 +81,8 @@
    }
    .card_img{
     width: 385px !important;
+    height: 250px !important;
+    object-fit: cover;
 }
 }
   
