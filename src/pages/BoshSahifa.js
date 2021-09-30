@@ -96,9 +96,12 @@ export default class BoshSahifa extends Component {
     this.getNews();
     this.getSchool();
     window.addEventListener("load", () => {
-      this.setState({
-        loader: false,
-      });
+      setTimeout(() => {
+        this.setState({
+          loader: false,
+        });  
+      }, 2000);
+      
     });
     setInterval(() => {
       this.setState({ clock: Clock() });

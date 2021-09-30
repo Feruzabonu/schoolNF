@@ -13,6 +13,7 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { FaStar } from "react-icons/fa";
+import bg1t from '../img/bg1t.jpg'
 export default class Alochilar extends Component {
   state = {
     loader: true,
@@ -153,9 +154,7 @@ export default class Alochilar extends Component {
               <div>
                 <Image
                   src={
-                    data !== null && data.m_h_h1 !== null
-                      ? data.m_h_h1
-                      : school1
+                   bg1t
                   }
                   className={styles.headerImage}
                 />
