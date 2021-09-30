@@ -44,7 +44,9 @@
    height: 200px;
 
 }
+.card_img{
 
+}
 .card_body{
     transition: all 0.2s;
 }
@@ -125,5 +127,8 @@
       left: 50% !important;
       transform: translate(-50%,-50%) !important;
       font-size: 50px !important;
+  }
+  .card_img{
+      height: 250px !important;
   }
 }
