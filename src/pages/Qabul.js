@@ -19,6 +19,7 @@ import school2 from "../img/school2.jpg";
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
+import qabulheader from '../img/qabulheader.png'
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { url, user } from "../host/Host";
@@ -135,9 +136,14 @@ class Qabul extends React.Component {
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />
-                   <div >
-                   <h1 className={style.headerh}>Qabul</h1>
-                   <Carousel
+                   <div className={styles.header}>
+                   <Container style={{height:'100%'}}>
+                     <Row style={{display:'flex', alignItems:'center', height:'100%', paddingTop:'150px'}}>
+                       <Col lg={6} md={6} sm={12} xs={12}><h1 >Qabul</h1></Col>
+                       <Col lg={6} md={6} sm={12} xs={12} style={{display:'flex', justifyContent:'center', alignItems:'center'}}><img src={qabulheader}/></Col>
+                     </Row>
+                   </Container>
+                   {/* <Carousel
                    dots={false}
                     autoplay
                     effect="fade"
@@ -163,7 +169,7 @@ class Qabul extends React.Component {
                   className={style.headerImage}
                 />
                </div>      
-           </Carousel>
+           </Carousel> */}
                 </div>
                 
                 <div className={styles.body}>
