@@ -15,6 +15,7 @@ import tadbir2 from "../img/tadbir2.jfif";
 import tadbir3 from "../img/tadbir3.jfif";
 import tadbir4 from "../img/tadbir4.jfif";
 import styles from "../css/yangiliklar.module.css";
+import style from "../css/maktabHayoti.module.css";
 
 // import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -104,7 +105,7 @@ export default class Yangiliklar extends Component {
       <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
        </div>
         ) : (
-          <div>
+          <div>f
             {/* ============Header============== */}
             <Navbar/>
             <div className={styles.header_t} style={{backgroundImage:`url(${
@@ -153,13 +154,9 @@ export default class Yangiliklar extends Component {
                   )}
                 </Col>
                 <Col lg={5}>
-                  <div
-                    className={styles.recent_news}
-                    // style={{ backgroundColor: "#1EB2A6" }}
-                    data-aos="zoom-in-left"
-                  >
+                  <div className={styles.recent_news} data-aos="zoom-in-left">
                     <div className={styles.title}>
-                      <h3>So'ngi tadbirlar</h3>
+                      <h3>So'nggi yangiliklar</h3>
                     </div>
                     <div className={styles.body}>
                       <Row>
@@ -176,15 +173,17 @@ export default class Yangiliklar extends Component {
                                 onClick={() => {
                                   this.setState({ id: key });
                                 }}
-                                style={{ maxWidth: "540px" }}
+                                style={{ width:'100%' }}
                               >
                                 <MDBRow className="g-0">
-                                  <MDBCol md="4"  className={styles.card_item_image}>
+                                  <MDBCol
+                                    md="4"
+                                    className={styles.card_item_image}
+                                  >
                                     <MDBCardImage
                                       src={item.image}
                                       alt="..."
                                       fluid
-                                      // style={{ margin: "7px" }}
                                     />
                                   </MDBCol>
                                   <MDBCol md="8">
@@ -210,6 +209,64 @@ export default class Yangiliklar extends Component {
                                 </MDBRow>
                               </MDBCard>
                             </Col>
+                // <Col lg={5}>
+                //   <div
+                //     className={styles.recent_news}
+                //     // style={{ backgroundColor: "#1EB2A6" }}
+                //     data-aos="zoom-in-left"
+                //   >
+                //     <div className={styles.title}>
+                //       <h3>So'ngi tadbirlar</h3>
+                //     </div>
+                //     <div className={styles.body}>
+                //       <Row>
+                //         {this.state.events.map((item, key) => {
+                //           return (
+                //             <Col
+                //               lg={12}
+                //               md={12}
+                //               sm={12}
+                //               style={{ marginBottom: "10px" }}
+                //               className={styles.body_card}
+                //             >
+                //               <MDBCard
+                //                 onClick={() => {
+                //                   this.setState({ id: key });
+                //                 }}
+                //                 style={{ maxWidth: "540px" }}
+                //               >
+                //                 <MDBRow className="g-0">
+                //                   <MDBCol md="4"  className={styles.card_item_image}>
+                //                     <MDBCardImage
+                //                       src={item.image}
+                //                       alt="..."
+                //                       fluid
+                //                       // style={{ margin: "7px" }}
+                //                     />
+                //                   </MDBCol>
+                //                   <MDBCol md="8">
+                //                     <MDBCardBody>
+                //                       <MDBCardTitle>{item.title}</MDBCardTitle>
+
+                //                       <MDBCardText>
+                //                         <small className="text-muted">
+                //                           <p className={styles.date}>
+                //                             <i
+                //                               style={{ marginRight: "10px" }}
+                //                               class="far fa-calendar-alt"
+                //                             ></i>
+                //                             {item.published_time.substring(
+                //                               0,
+                //                               10
+                //                             )}{" "}
+                //                           </p>{" "}
+                //                         </small>
+                //                       </MDBCardText>
+                //                     </MDBCardBody>
+                //                   </MDBCol>
+                //                 </MDBRow>
+                //               </MDBCard>
+                //             </Col>
                           );
                         })}
                       </Row>
