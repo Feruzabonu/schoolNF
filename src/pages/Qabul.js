@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
 import style from "../css/maktabHayoti.module.css";
+import "../App.css";
 import students from "../img/Students.png";
 import shakl from "../img/shakl.png";
 import rasm2 from '../img/rasm2.png'
@@ -130,9 +131,10 @@ class Qabul extends React.Component {
     return (
       <div>
         {this.state.loader ? (
-          <div className={styles.loader}>
-          <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div> 
+          <div className='loader'>
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+          <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+          </div>  
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />

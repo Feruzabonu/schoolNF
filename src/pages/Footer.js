@@ -111,6 +111,7 @@ export default class Footer extends Component {
                                         <Link to='/tadbirlar'><li className={styles.links} ><BsArrowRight style={style}/>Tadbirlar</li></Link>
                                         <Link to='/boshsahifa'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Hamkorlar</li></Link>
                                         <Link to='/boshsahifa'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Aloqa</li></Link>
+                                        <Link to='/gallery'><li className={styles.links} style={{marginTop:'10px'}}><BsArrowRight style={style}/>Fotolavhalar</li></Link>
                                      </ul>
                                  </div>
                              </Col>

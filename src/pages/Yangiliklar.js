@@ -62,12 +62,9 @@ export default class Yangiliklar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loader">
-            <ScaleLoader
-              color="#1EB2A6"
-              loading={this.state.loader}
-              size={120}
-            />
-          </div>
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+      <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+       </div>
         ) : (
           <>
             <Navbar />

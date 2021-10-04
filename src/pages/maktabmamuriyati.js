@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
 import style from "../css/maktabHayoti.module.css";
+import "../App.css";
 import { Carousel  } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
@@ -122,9 +123,10 @@ setTimeout(()=>{
         return (
             <div>
               {this.state.loader === true ? 
-          <div className={styles.loader}>
-          <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div> 
+           <div className="loader">
+           <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+       <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+        </div>
           
          : 
             <div>

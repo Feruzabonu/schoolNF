@@ -59,9 +59,10 @@ export default class MaktabHayoti extends Component {
     return (
       <div>
         {this.state.loading === true ? (
-          <div className="loader">
-            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div>
+         <div className="loader">
+         <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+     <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+      </div>
         ) : (
           <div>     
            <Navbar/>
