@@ -17,6 +17,8 @@ import school10 from "../img/school10.jpg";
 import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
+import bg1t from "../img/xorazim1.jpg";
+import bg2t from "../img/xorazim2.jpg";
 import { Link } from "react-router-dom";
 import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
@@ -92,7 +94,13 @@ export default class MaktabHayoti extends Component {
                   }
                   className={styles.headerImage}
                 />
-               </div>      
+               </div>  
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
            </Carousel>
             {/* <Carousel style={{zIndex:'1'}} autoplay className={styles.sliderHeader}>
               <div>

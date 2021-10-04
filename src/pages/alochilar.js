@@ -6,6 +6,8 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import axios from "axios";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
+import bg2t from "../img/xorazim7.jpg";
+import bg3t from "../img/xorazim1.jpg";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
 import { idMaktab, url, user } from "../host/Host";
@@ -139,7 +141,7 @@ export default class Alochilar extends Component {
               effect="fade"
               style={{ zIndex: "-1", width: "100%" }}
             >
-              <div>
+                 <div>
                 <Image
                   src={
                     data !== null && data.m_h_h2 !== null
@@ -149,10 +151,17 @@ export default class Alochilar extends Component {
                   className={styles.headerImage}
                 />
               </div>
+              <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div> 
+           
               <div>
                 <Image
                   src={
-                   bg1t
+                   bg2t
                   }
                   className={styles.headerImage}
                 />

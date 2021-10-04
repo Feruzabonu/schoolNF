@@ -20,6 +20,8 @@ import school2 from "../img/school2.jpg";
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
+import bg1t from "../img/xorazim3.jpg";
+import bg2t from "../img/xorazim4.jpg";
 import qabulheader from '../img/qabulheader.png'
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
@@ -172,7 +174,13 @@ class Qabul extends React.Component {
                   }
                   className={style.headerImage}
                 />
-               </div>      
+               </div>    
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>   
            </Carousel>
                 </div>
                 
