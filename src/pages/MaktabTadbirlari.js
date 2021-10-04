@@ -305,7 +305,7 @@ export default class MaktabTadbirlari extends Component {
                   <div className="inputs">
                     <form>
                       <label>F.I.O.</label>
-                      <input type="text" placeholder="Ism Familiya Otchistva" />
+                      <input type="text" placeholder="Ism Familiya Sharifi" />
                       <label>Telefon raqam</label>
                       <input type="text" placeholder="+998 99 999 99 99" />
                       <label>Murojaat</label>
