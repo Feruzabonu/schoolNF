@@ -96,6 +96,7 @@ export default class BoshSahifa extends Component {
   componentDidMount() {
     this.getNews();
     this.getSchool();
+
     window.addEventListener("load", () => {
       setTimeout(() => {
         this.setState({
@@ -121,7 +122,7 @@ export default class BoshSahifa extends Component {
         {this.state.loader ? (
           <div className="loader">
              <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
-         <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+         <div><p>Sayt test rejimida ishlamoqda</p></div>
           </div>
         ) : (
           <div sryle={{backgroundColor:'white'}}>
