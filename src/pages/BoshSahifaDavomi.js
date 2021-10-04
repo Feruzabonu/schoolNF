@@ -238,7 +238,7 @@ export default class BoshSahifaDavomi extends Component {
                              <div style={{width:'80px'}}>
                                  <img src={
                                     pupil.image !== null ? pupil.image : school1}
-                                    style={{width:'80px',height:'80px',objectFit:'cover',borderRadius:'50%'}} />
+                                    style={{width:'100px',height:'100px',objectFit:'cover',borderRadius:'50%'}} />
                              </div>
                              <div style={{marginLeft:'10px'}}>
                                  <h4 style={{textAlign:'center'}} style={{marginTop:'10px'}}>{pupil.full_name}</h4>
