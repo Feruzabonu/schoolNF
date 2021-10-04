@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import styles from "../css/yangiliklar.module.css";
+import style from "../css/maktabHayoti.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel } from "antd";
+import bg3t from "../img/xorazim5.jpg";
+import bg2t from "../img/xorazim6.jpg";
+import bg1t from "../img/xorazim8.jpg";
 import {
   MDBCard,
   MDBCardTitle,
@@ -62,17 +67,33 @@ export default class Yangiliklar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loader">
-            <ScaleLoader
-              color="#1EB2A6"
-              loading={this.state.loader}
-              size={120}
-            />
-          </div>
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+      <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+       </div>
         ) : (
-          <>
-            <Navbar />
-            <div className={styles.header}>
-              <h1>Maktabimiz so'nggi yangiliklari</h1>
+         
+              <div style={{ width: "100vw", overflowX: "hidden" }}>
+                 <Navbar />
+                   <div>
+                   <h1 className={style.headerh}>Maktabning so'nggi yangiliklari bilan tinishing </h1>
+              <Carousel
+                   dots={false}
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>   
+               <div className="carg_img">
+                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>   
+           </Carousel>
             </div>
 
             <Container fluid>
@@ -178,7 +199,7 @@ export default class Yangiliklar extends Component {
               </Row>
             </Container>
             <Footer />
-          </>
+          </div>
         )}
       </div>
     );

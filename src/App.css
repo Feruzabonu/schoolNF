@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   /* z-index: 3445; */
 }
-.load {
+.loader {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -20,6 +20,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column !important;
+  color: #1EB2A6;
+  font-size: 25px;
 }
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import style from "../css/gallery.module.css";
+import styles from "../css/maktabHayoti.module.css";
 import img1 from "../img/b1.JPG";
 import img2 from "../img/b2.jpg";
 import img3 from "../img/b3.jpg";
@@ -7,11 +8,22 @@ import img4 from "../img/b4.jpg";
 import img5 from "../img/b5.jpg";
 import img6 from "../img/b6.jpg";
 import img7 from "../img/b7.png";
+import bg10t from "../img/prezident.jpg";
+import bg4t from "../img/p2.jpg";
+import bg2t from "../img/xorazim1.jpg";
+import bg3t from "../img/xorazim2.jpg";
+import bg5t from "../img/xorazim3.jpg";
+import bg6t from "../img/xorazim4.jpg";
+import bg7t from "../img/xorazim5.jpg";
+import bg8t from "../img/xorazim6.jpg";
+import bg9t from "../img/xorazim7.jpg";
+import bg1t from "../img/xorazim8.jpg";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { idMaktab, url, user } from "../host/Host";
 import axios from "axios";
 import { Col, Container, Row } from "react-bootstrap";
 import Global from "../host/Global";
+import { Carousel } from "antd";
 import Navbar from './Navbar'
 import Footer from './Footer'
 export default class Gallery extends Component {
@@ -48,26 +60,67 @@ export default class Gallery extends Component {
     return (
       <div>
         {this.state.loader ? (
-          <div className="loader">
-            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div>
+           <div className="loader">
+           <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+       <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+        </div>
         ) : (
           <div>
            <Navbar/>
-            <div className={style.header}>
-              <img
-                alt=" "
-                src={
-                  this.state.school !== null
-                    ? this.state.school.foto !== null
-                      ? this.state.school.foto
-                      : img1
-                    : img1
-                }
-                style={{ width: "100%", height: "100%" }}
-              />
-                <h1 className={style.headerh}>Maktabimiz hayotidan fotolavhalar</h1>
-            </div>
+           <div>
+                   <h1 className={styles.headerh}>Maktabimiz hayotidan fotolavhalar</h1>
+                   <Carousel
+                   dots={false}
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           <div>
+           <img  
+             style={{objectFit:'cover'}}
+            src={
+              this.state.school !== null
+              ? this.state.school.foto!== null
+                ? this.state.school.foto
+                : img1
+              : img1
+                  }
+                  className={styles.headerImage}
+                  />
+             </div>   
+             
+             <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg4t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg5t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg6t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg7t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg8t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg9t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg10t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div> 
+                     
+           </Carousel>
+                </div>
+            
 
             <Container>
               <Row style={{ justifyContent: "center" }}>

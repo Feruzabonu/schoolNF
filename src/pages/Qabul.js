@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
 import style from "../css/maktabHayoti.module.css";
+import "../App.css";
 import students from "../img/Students.png";
 import shakl from "../img/shakl.png";
 import rasm2 from '../img/rasm2.png'
@@ -19,6 +20,8 @@ import school2 from "../img/school2.jpg";
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
+import bg1t from "../img/xorazim3.jpg";
+import bg2t from "../img/xorazim4.jpg";
 import qabulheader from '../img/qabulheader.png'
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
@@ -130,9 +133,10 @@ class Qabul extends React.Component {
     return (
       <div>
         {this.state.loader ? (
-          <div className={styles.loader}>
-          <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div> 
+          <div className='loader'>
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+          <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+          </div>  
         ) : (
           <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />
@@ -170,7 +174,13 @@ class Qabul extends React.Component {
                   }
                   className={style.headerImage}
                 />
-               </div>      
+               </div>    
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>   
            </Carousel>
                 </div>
                 

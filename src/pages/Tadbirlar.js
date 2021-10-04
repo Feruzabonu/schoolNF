@@ -95,21 +95,14 @@ export default class Yangiliklar extends Component {
   //       <Link to="/${link}/uz"></Link>
   // }
   render() {
-    const contentStyle = {
-      width: "100%",
-      height: "97vh",
-      objectFit: "cover",
-      color: "#fff",
-      lineHeight: "90vh",
-      textAlign: "center",
-      fontFamily: "Lobster",
-    };
+ 
     return (
       <div>
         {this.state.loader ? (
           <div className="loader">
-          < ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-        </div>
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+      <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+       </div>
         ) : (
           <div>
             {/* ============Header============== */}
@@ -128,20 +121,21 @@ export default class Yangiliklar extends Component {
                   Tadbirlar
                 </h1>
               </div>
-              <div
-                className={styles.line}
-                style={{ borderColor: "#0F4C81" }}
-                data-aos="fade-up"
-              ></div>
+       
               <Row>
                 <Col lg={7}>
                   {this.state.events.length !== 0 ? (
                     <div className={styles.news} data-aos="zoom-in-right">
-                      <img
-                        src={this.state.events[this.state.id].image}
-                        alt="Foto lavha"
+                      <div className={styles.news_image}
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.events[this.state.id].image
+                        }')`,
+                      }}
+                        // src={this.state.events[this.state.id].image}
+                        // alt="Foto lavha"
                       />
-                      <h3>{this.state.events[this.state.id].title}</h3>
+                      <h4 style={{ color: "#1EB2A6", marginTop: "30px" }}>{this.state.events[this.state.id].title}</h4>
 
                       <p className={styles.date}>
                         <i
@@ -161,11 +155,11 @@ export default class Yangiliklar extends Component {
                 <Col lg={5}>
                   <div
                     className={styles.recent_news}
-                    style={{ backgroundColor: "#1EB2A6" }}
+                    // style={{ backgroundColor: "#1EB2A6" }}
                     data-aos="zoom-in-left"
                   >
                     <div className={styles.title}>
-                      <h3 style={{ color: "white" }}>So'ngi tadbirlar</h3>
+                      <h3>So'ngi tadbirlar</h3>
                     </div>
                     <div className={styles.body}>
                       <Row>
@@ -185,12 +179,12 @@ export default class Yangiliklar extends Component {
                                 style={{ maxWidth: "540px" }}
                               >
                                 <MDBRow className="g-0">
-                                  <MDBCol md="4">
+                                  <MDBCol md="4"  className={styles.card_item_image}>
                                     <MDBCardImage
                                       src={item.image}
                                       alt="..."
                                       fluid
-                                      style={{ margin: "7px" }}
+                                      // style={{ margin: "7px" }}
                                     />
                                   </MDBCol>
                                   <MDBCol md="8">

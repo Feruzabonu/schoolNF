@@ -17,6 +17,8 @@ import school10 from "../img/school10.jpg";
 import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
+import bg1t from "../img/xorazim1.jpg";
+import bg2t from "../img/xorazim2.jpg";
 import { Link } from "react-router-dom";
 import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
@@ -59,9 +61,10 @@ export default class MaktabHayoti extends Component {
     return (
       <div>
         {this.state.loading === true ? (
-          <div className="loader">
-            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
-          </div>
+         <div className="loader">
+         <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+     <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+      </div>
         ) : (
           <div>     
            <Navbar/>
@@ -91,7 +94,13 @@ export default class MaktabHayoti extends Component {
                   }
                   className={styles.headerImage}
                 />
-               </div>      
+               </div>  
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+               <div className="carg_img">
+                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
            </Carousel>
             {/* <Carousel style={{zIndex:'1'}} autoplay className={styles.sliderHeader}>
               <div>

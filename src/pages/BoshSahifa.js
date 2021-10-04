@@ -14,19 +14,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rasm1 from "../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg";
 import rasm2 from "../img/mira-kireeva-xTq26wLo5do-unsplash.jpg";
 import rasm3 from "../img/javier-trueba-iQPr1XkF5F0-unsplash.jpg";
-import sty from "./sty.module.css";
-import gerb from "../img/pngegg.png";
-import rasm41 from "../img/1.jpg";
-import rasm42 from "../img/2.jpg";
-import rasm43 from "../img/3.jpg";
-import rasm44 from "../img/4.jpg";
-import rasm45 from "../img/5.jpg";
-import rasm46 from "../img/6.jpg";
-import flagUZ from "../img/flagUZ.png";
-import flagRU from "../img/flagRU.png";
-import bg1t from "../img/prezident.jpg";
-import bg2t from "../img/p2.jpg";
-import bg3t from "../img/bg3t.jpg";
+
+
+import bg10t from "../img/prezident.jpg";
+import bg4t from "../img/p2.jpg";
+import bg2t from "../img/xorazim1.jpg";
+import bg3t from "../img/xorazim2.jpg";
+import bg5t from "../img/xorazim3.jpg";
+import bg6t from "../img/xorazim4.jpg";
+import bg7t from "../img/xorazim5.jpg";
+import bg8t from "../img/xorazim6.jpg";
+import bg9t from "../img/xorazim7.jpg";
+import bg1t from "../img/xorazim8.jpg";
+
+
 import "../App.css";
 import { Tooltip, Carousel } from "antd";
 import { Link, NavLink } from "react-router-dom";
@@ -119,7 +120,8 @@ export default class BoshSahifa extends Component {
       <div>
         {this.state.loader ? (
           <div className="loader">
-            <ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} />
+             <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+         <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
           </div>
         ) : (
           <div sryle={{backgroundColor:'white'}}>
@@ -149,6 +151,30 @@ export default class BoshSahifa extends Component {
                     </div>
                     <div className="carg_img">
                       <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg4t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg5t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg6t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg7t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg8t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg9t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg10t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
                   </Carousel>
               <div className="yozuvT">
