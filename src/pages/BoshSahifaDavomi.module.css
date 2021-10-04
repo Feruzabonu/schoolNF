@@ -443,3 +443,7 @@
  
 }
 
+@media (min-width:1500px){
+  .ustozCard img{height:300px !important;}
+  .ustozDown{position: relative; top:40px;}
+}

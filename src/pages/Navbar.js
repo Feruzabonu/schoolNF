@@ -71,14 +71,14 @@ export default class Navbar extends Component {
                      <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'30px'}}>
                          <div><BsClock style={{fontSize:'35px',color:'white'}}/></div>
                          <div style={{marginLeft:'10px'}}>
-                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Dushanba-juma</p>
-                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>8:00 dan 20:00 gacha</p>
+                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Dushanba-shanba</p>
+                             <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>8:00 dan 17:00 gacha</p>
                          </div>
                      </div>
                      <div  style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',marginRight:'50px'}}>
                          <div><FiPhone style={{fontSize:'35px',color:'white'}}/></div>
                          <div style={{marginLeft:'10px'}}>
-                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Qo'ng'iroq qiling</p>
+                             <p style={{fontSize:'17px',color:'white',marginTop:'10px'}}>Ishonch telefoni</p>
                              <p style={{fontSize:'18px',color:'white',fontWeight:'600',marginTop:'-12px'}}>+998977902801
                                  {/* {
                       this.state.school !== null
@@ -91,16 +91,16 @@ export default class Navbar extends Component {
                     </div>
                     <div className={styles.socialMedia}>
                     <div className={styles.icons} style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage"><FaFacebookF style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href="https://bit.ly/3ojl7QJ"><FaFacebookF style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{ curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://www.instagram.com/5ummumtalimmaktabi/"><FaInstagram style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href="https://bit.ly/3B2suzE"><FaInstagram style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                        <a target="_blank" href="https://t.me/Xorazm_5_maktab"><FaTelegramPlane style={{color:'#1EB2A6'}}/></a>
+                        <a target="_blank" href="https://bit.ly/39Qt87k"><FaTelegramPlane style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw"><FaYoutube style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href="https://bit.ly/39QGOPL"><FaYoutube style={{color:'#1EB2A6'}}/></a>
                      </div>
                     </div>
                 </div>

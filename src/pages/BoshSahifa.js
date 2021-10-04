@@ -151,15 +151,15 @@ export default class BoshSahifa extends Component {
                       />
                     </div>
                     <div className="carg_img">
-                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
-                    <div className="carg_img">
+                    {/* <div className="carg_img">
                       <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
+                    </div> */}
                     <div className="carg_img">
                       <img src={bg4t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
-                    <div className="carg_img">
+                    {/* <div className="carg_img">
                       <img src={bg5t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
                     <div className="carg_img">
@@ -167,13 +167,13 @@ export default class BoshSahifa extends Component {
                     </div>
                     <div className="carg_img">
                       <img src={bg7t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
+                    </div> */}
+                    {/* <div className="carg_img">
                       <img src={bg8t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
+                    </div> */}
+                    {/* <div className="carg_img">
                       <img src={bg9t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
+                    </div> */}
                     <div className="carg_img">
                       <img src={bg10t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
@@ -293,7 +293,7 @@ export default class BoshSahifa extends Component {
                     className={style.image}
                   />
                   <div className={style.overlay}>
-                  <Link style={{ color: "white" }} to={`/yutuqlar/`}>
+                  <Link style={{ color: "white" }} to={`/`}>
                   
                     <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yutuqlarimiz</h4>
                   </Link>
@@ -330,19 +330,19 @@ export default class BoshSahifa extends Component {
                 </Col>
 
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a href="https://t.me/Xorazm_5_maktab" className={style.colT} target="_blank">
+                  <a href="https://bit.ly/39Qt87k" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" />
                     <p>Telegram sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a href="https://www.instagram.com/5ummumtalimmaktabi/" className={style.colT} target="_blank">
+                  <a href="https://bit.ly/3B2suzE" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
                     <p>Instagram sahifasi</p>
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a href="https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage" className={style.colT} target="_blank">
+                  <a href="https://bit.ly/3ojl7QJ" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" />
                     <p>Facebook sahifasi</p>
                   </a>
@@ -354,7 +354,7 @@ export default class BoshSahifa extends Component {
                   </a>
                 </Col>
                 <Col className={style.htr} lg={2} md={6} sm={12}>
-                  <a href="https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw" className={style.colT} target="_blank">
+                  <a href="https://bit.ly/39QGOPL" className={style.colT} target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" />
                     <p>You tube sahifasi</p>
                   </a>

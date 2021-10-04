@@ -1159,3 +1159,7 @@ top:70px !important;
         .elem{height: 40vh ;}
        .colT{margin-top:10px}
        }
+       @media (min-width:1500px){
+           .container{margin-top: -100px;}
+     .elem{padding-left: 300px;}
+       }
