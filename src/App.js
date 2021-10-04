@@ -58,7 +58,7 @@ export default class App extends Component {
         {this.state.loader ? (
          <div className='loader'>
          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
-         <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+         <div><p>Sayt test rejimida ishlamoqda</p></div>
          </div> 
         ) : this.state.error ? (
           <SelectMap />

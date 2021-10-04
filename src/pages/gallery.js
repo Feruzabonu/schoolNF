@@ -18,6 +18,7 @@ import bg7t from "../img/xorazim5.jpg";
 import bg8t from "../img/xorazim6.jpg";
 import bg9t from "../img/xorazim7.jpg";
 import bg1t from "../img/xorazim8.jpg";
+import x from '../img/x.jpg'
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { idMaktab, url, user } from "../host/Host";
 import axios from "axios";
@@ -80,17 +81,13 @@ export default class Gallery extends Component {
            <img  
              style={{objectFit:'cover'}}
             src={
-              this.state.school !== null
-              ? this.state.school.foto!== null
-                ? this.state.school.foto
-                : img1
-              : img1
+           x
                   }
                   className={styles.headerImage}
                   />
              </div>   
              
-             <div className="carg_img">
+             {/* <div className="carg_img">
                       <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>
                     <div className="carg_img">
@@ -117,7 +114,7 @@ export default class Gallery extends Component {
                     <div className="carg_img">
                       <img src={bg10t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div> 
-                     
+                      */}
            </Carousel>
                 </div>
             
