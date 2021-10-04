@@ -266,7 +266,10 @@ export default class BoshSahifa extends Component {
                     className={style.image}
                   />
                   <div className={style.overlay}>
+                  <Link style={{ color: "white" }} to={`/yutuqlar/`}>
+                  
                     <h4 style={{backgroundColor:'#1EB2A6',color:'white',padding:'10px 30px',display:'inline-block'}}>Yutuqlarimiz</h4>
+                  </Link>
                   </div>
                 </div>
               </div>
