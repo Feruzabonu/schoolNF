@@ -86,6 +86,18 @@ export default class MaktabTadbirlari extends Component {
   componentDidMount() {
     this.getEvents();
   }
+  sendMurojat=()=>{
+    var name=document.getElementbyId('name').value
+    var phone=document.getElementbyId('phone').value
+    var text=document.getElementbyId('text').value
+    var config={
+      name,
+      phone,
+      text,
+      school:Global.schoolId
+    }
+    console.log(config)
+  }
   render() {
     const responsive = {
       superLargeDesktop: {
@@ -305,12 +317,12 @@ export default class MaktabTadbirlari extends Component {
                   <div className="inputs">
                     <form>
                       <label>F.I.O.</label>
-                      <input type="text" placeholder="Ism Familiya Sharifi" />
+                      <input type="text" id="name" placeholder="Ism Familiya Sharifi" />
                       <label>Telefon raqam</label>
-                      <input type="text" placeholder="+998 99 999 99 99" />
+                      <input type="text" id="phone" placeholder="+998 99 999 99 99" />
                       <label>Murojaat</label>
-                      <textarea placeholder="Murojaat matni..."></textarea>
-                      <button type="submit">Yuborish</button>
+                      <textarea id="text" placeholder="Murojaat matni..."></textarea>
+                      <button type="button" onClick="sendMurojat">Yuborish</button>
                     </form>
                   </div>
                 </div>
