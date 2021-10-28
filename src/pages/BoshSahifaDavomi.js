@@ -12,14 +12,21 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import axios from "axios";
 import Aos from "aos";
-import {FaStar} from 'react-icons/fa'
+import { FaStar } from "react-icons/fa";
 import { getExcellent, getPupil } from "../host/Config";
-import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { url, user } from "../host/Host";
+import {
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardFooter,
+  MDBRow,
+  MDBCol,
+} from "mdb-react-ui-kit";
+import { idMaktab, url, user } from "../host/Host";
 import Global from "../host/Global";
 import Slider from "react-slick";
-
-
 
 export default class BoshSahifaDavomi extends Component {
   state = {
@@ -37,7 +44,7 @@ export default class BoshSahifaDavomi extends Component {
     // var a = window.location.href.split("/");
     var v = user;
     axios
-      .get(`${url}/excellent/`)
+      .get(`${url}/excellent/${idMaktab}`)
       .then((res) => {
         this.setState({
           excellent: res.data,
@@ -111,182 +118,247 @@ export default class BoshSahifaDavomi extends Component {
 
   render() {
     const settings = {
-      autoplay:true,
+      autoplay: true,
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
       responsive: [
-          {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
-            },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
           },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 2
-            }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
           },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-      ]
-    }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
     const settings1 = {
-      autoplay:true,
+      autoplay: true,
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
-          {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
-            },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
           },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 2
-            }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
           },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-      ]
-    }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
 
-    const data=[
-      {   id:1,
-          rasm:ustoz1,
-          lavozim:'Maktab Direktori',
-          FIO:'Ravshanova Mamlakat Sulaymonovna',
-          mutaxasisligi:"Rus tili filologiya o'qituvchi",
-          tel:'+998906056115',
-          qoshimcha:"Xalq ta'limi a'lochisi I -toifali mutaxasis"
+    const data = [
+      {
+        id: 1,
+        rasm: ustoz1,
+        lavozim: "Maktab Direktori",
+        FIO: "Ravshanova Mamlakat Sulaymonovna",
+        mutaxasisligi: "Rus tili filologiya o'qituvchi",
+        tel: "+998906056115",
+        qoshimcha: "Xalq ta'limi a'lochisi I -toifali mutaxasis",
       },
-      {   id:2,
-          rasm:ustoz3,
-          lavozim:"O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari",
-          FIO:'Xusenova Maryam Hakimovna',
-          mutaxasisligi:"Tarix fani o'qituvchisi",
-          tel:'+998937279465',
-          qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
+      {
+        id: 2,
+        rasm: ustoz3,
+        lavozim: "O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari",
+        FIO: "Xusenova Maryam Hakimovna",
+        mutaxasisligi: "Tarix fani o'qituvchisi",
+        tel: "+998937279465",
+        qoshimcha:
+          "2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda",
       },
-      {   id:3,
-          rasm:ustoz2,
-          lavozim:"Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari",
-          FIO:'Tosheva Gavhar Umarovna',
-          mutaxasisligi:"Matematika fani o'qituvchisi",
-          tel:'+998933320040',
-          qoshimcha:"2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda"
+      {
+        id: 3,
+        rasm: ustoz2,
+        lavozim: "Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari",
+        FIO: "Tosheva Gavhar Umarovna",
+        mutaxasisligi: "Matematika fani o'qituvchisi",
+        tel: "+998933320040",
+        qoshimcha:
+          "2-toifali mutaxasis 1990-yildan beri maktabda fidokorona faoliyat olib bormoqda",
       },
-  ]
+    ];
     return (
-      <div style={{backgroundColor:'white'}}>
+      <div style={{ backgroundColor: "white" }}>
         <div className={style.successful}>
-                    <h1>Bizning muvaffaqiyatli o'quvchilarimiz</h1>
-                    <Slider {...settings1} style={{padding:'20px'}}>
-                    {this.state.excellent !== [] && this.state.class !== []
-                      ? this.state.excellent.map((item,key) => {
-                          var pupil = this.setPupils(item.pupil);
-                          var classes = this.echoClasses(pupil.clas);
-                          return (
-                            <div className={style.slider}>
-                         <div style={{display:'flex',flexDirection:'row',padding:'30px', justifyContent:'space-around'}} className={style.oquvchi}>
-                             <div style={{width:'80px'}}>
-                                 <img src={
-                                    pupil.image !== null ? pupil.image : school1}
-                                    style={{width:'100px',height:'100px',objectFit:'cover',borderRadius:'50%'}} />
-                             </div>
-                             <div style={{marginLeft:'10px'}}>
-                                 <h4 style={{textAlign:'center'}} style={{marginTop:'10px'}}>{pupil.full_name}</h4>
-                                 <p style={{marginTop:'-5px',color:'#1EB2A6'}}>{this.echoClasses(pupil.clas).class_number} -
-                                  "{this.echoClasses(pupil.clas).class_char}"
-                                  sinf</p>
-                         <FaStar style={{color:'#1EB2A6',marginLeft:'10px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/><FaStar style={{color:'#1EB2A6',marginLeft:'5px'}}/>
-                             </div>
-                         </div>
-                     </div>
-                
-                          )
-                        })
-                      : ""}
-                    </Slider>
-                    
-                </div>
-                <div className={style.successful}>
-                    <h1>O'qituvchilar doskasi</h1>
-                    <Slider {...settings} style={{padding:'20px'}}>
-                   {
-                       data && Array.isArray(data)?data.map((item,key)=>{
-                         return(
-      <div className={style.ustozCard}>
-        <div data-aos="flip-right"  style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', marginBottom:'30px'}} className={style.card}>
-          <img
-            src={item.rasm}
-            alt='...'
-            position='top'
-            style={{width:'100%', height:'100%',objectFit:'cover'}}
-          />
-          </div>
-          <div className={style.ustozDown} style={{backgroundColor:'#fff', padding:'30px 30px', borderTopColor:'#1EB2A6',textAlign:'left'}}>
-            <small className='text-muted' style={{fontSize:'16px'}}>
-            <b style={{color:'#1EB2A6'}}>F.I.O: </b>{item.FIO}<br/>
-              <b style={{color:'#1EB2A6'}}>Mutaxasisligi: </b>{item.mutaxasisligi}<br/>
-              <b style={{color:'#1EB2A6'}}>Telefon raqami: </b>{item.tel}<br/>
-              <b style={{color:'#1EB2A6'}}>Qo'shimcha: </b> {item.qoshimcha}<br/>
-            </small>
-          </div>
-        
-      </div>
-      )
-                       }):''
-                     }
-                    </Slider>
-                    
-                </div>
+          <h1>Bizning muvaffaqiyatli o'quvchilarimiz</h1>
+          <Slider {...settings1} style={{ padding: "20px" }}>
+            {this.state.excellent !== [] && this.state.class !== []
+              ? this.state.excellent.map((item, key) => {
+                  var pupil = this.setPupils(item.pupil);
+                  var classes = this.echoClasses(pupil.clas);
+                  return (
+                    <div className={style.slider}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          padding: "30px",
+                          justifyContent: "space-around",
+                        }}
+                        className={style.oquvchi}
+                      >
+                        <div style={{ width: "80px" }}>
+                          <img
+                            src={pupil.image !== null ? pupil.image : school1}
+                            style={{
+                              width: "100px",
+                              height: "100px",
+                              objectFit: "cover",
+                              borderRadius: "50%",
+                            }}
+                          />
+                        </div>
+                        <div style={{ marginLeft: "10px" }}>
+                          <h4
+                            style={{ textAlign: "center" }}
+                            style={{ marginTop: "10px" }}
+                          >
+                            {pupil.full_name}
+                          </h4>
+                          <p style={{ marginTop: "-5px", color: "#1EB2A6" }}>
+                            {this.echoClasses(pupil.clas).class_number} - "
+                            {this.echoClasses(pupil.clas).class_char}" sinf
+                          </p>
+                          <FaStar
+                            style={{ color: "#1EB2A6", marginLeft: "10px" }}
+                          />
+                          <FaStar
+                            style={{ color: "#1EB2A6", marginLeft: "5px" }}
+                          />
+                          <FaStar
+                            style={{ color: "#1EB2A6", marginLeft: "5px" }}
+                          />
+                          <FaStar
+                            style={{ color: "#1EB2A6", marginLeft: "5px" }}
+                          />
+                          <FaStar
+                            style={{ color: "#1EB2A6", marginLeft: "5px" }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })
+              : ""}
+          </Slider>
+        </div>
+        <div className={style.successful}>
+          <h1>O'qituvchilar doskasi</h1>
+          <Slider {...settings} style={{ padding: "20px" }}>
+            {data && Array.isArray(data)
+              ? data.map((item, key) => {
+                  return (
+                    <div className={style.ustozCard}>
+                      <div
+                        data-aos="flip-right"
+                        style={{
+                          boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                          marginBottom: "30px",
+                        }}
+                        className={style.card}
+                      >
+                        <img
+                          src={item.rasm}
+                          alt="..."
+                          position="top"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                      <div
+                        className={style.ustozDown}
+                        style={{
+                          backgroundColor: "#fff",
+                          padding: "30px 30px",
+                          borderTopColor: "#1EB2A6",
+                          textAlign: "left",
+                        }}
+                      >
+                        <small
+                          className="text-muted"
+                          style={{ fontSize: "16px" }}
+                        >
+                          <b style={{ color: "#1EB2A6" }}>F.I.O: </b>
+                          {item.FIO}
+                          <br />
+                          <b style={{ color: "#1EB2A6" }}>Mutaxasisligi: </b>
+                          {item.mutaxasisligi}
+                          <br />
+                          <b style={{ color: "#1EB2A6" }}>Telefon raqami: </b>
+                          {item.tel}
+                          <br />
+                          <b style={{ color: "#1EB2A6" }}>Qo'shimcha: </b>{" "}
+                          {item.qoshimcha}
+                          <br />
+                        </small>
+                      </div>
+                    </div>
+                  );
+                })
+              : ""}
+          </Slider>
+        </div>
         {/* <Container>
           <Row>
             <Col lg={6} md={12} sm={12}>

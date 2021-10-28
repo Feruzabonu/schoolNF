@@ -15,7 +15,7 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { FaStar } from "react-icons/fa";
-import bg1t from '../img/bg1t.jpg'
+import bg1t from "../img/bg1t.jpg";
 export default class Alochilar extends Component {
   state = {
     loader: true,
@@ -32,7 +32,7 @@ export default class Alochilar extends Component {
     // var a = window.location.href.split("/");
     var v = user;
     axios
-      .get(`${url}/excellent/`)
+      .get(`${url}/excellent/${idMaktab}`)
       .then((res) => {
         this.setState({
           excellent: res.data,
@@ -96,12 +96,11 @@ export default class Alochilar extends Component {
       this.state.class.map((item1) => {
         if (item1.id === id) {
           classes = item1;
-         
         }
       });
     }
     return classes;
-    console.log(classes)
+    console.log(classes);
   };
 
   componentDidMount() {
@@ -115,11 +114,11 @@ export default class Alochilar extends Component {
       //   loader:false
       // })
     });
-    setInterval(()=>{
+    setInterval(() => {
       this.setState({
-          loader:false
-      })
-  },2000)
+        loader: false,
+      });
+    }, 2000);
   }
 
   render() {
@@ -128,9 +127,17 @@ export default class Alochilar extends Component {
       <div>
         {this.state.loader ? (
           <div className="loader">
-          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
-      <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
-       </div>
+            <div>
+              <ScaleLoader
+                color="#1EB2A6"
+                loading={this.state.loader}
+                size={120}
+              />
+            </div>
+            <div>
+              <p>Sayt tajriba tariqasida ishlamoqda</p>
+            </div>
+          </div>
         ) : (
           <div>
             <Navbar />
@@ -141,7 +148,7 @@ export default class Alochilar extends Component {
               effect="fade"
               style={{ zIndex: "-1", width: "100%" }}
             >
-                 <div>
+              <div>
                 <Image
                   src={
                     data !== null && data.m_h_h2 !== null
@@ -152,19 +159,20 @@ export default class Alochilar extends Component {
                 />
               </div>
               <div className="carg_img">
-                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>    
-               <div className="carg_img">
-                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div> 
-           
-              <div>
-                <Image
-                  src={
-                   bg2t
-                  }
-                  className={styles.headerImage}
+                <img
+                  src={bg1t}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
+              </div>
+              <div className="carg_img">
+                <img
+                  src={bg3t}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+
+              <div>
+                <Image src={bg2t} className={styles.headerImage} />
               </div>
             </Carousel>
 
@@ -212,7 +220,8 @@ export default class Alochilar extends Component {
                                     marginLeft: "10px",
                                   }}
                                 >
-                                  {pupil.full_name}<p> {pupil.birth_day}</p>
+                                  {pupil.full_name}
+                                  <p> {pupil.birth_day}</p>
                                 </h6>
                                 <FaStar
                                   style={{
@@ -244,10 +253,11 @@ export default class Alochilar extends Component {
                                     marginLeft: "5px",
                                   }}
                                 />
-                             
+
                                 <p>
-                                  {this.echoClasses(pupil.clas).class_number} - "
-                                {this.echoClasses(pupil.clas).class_char}" sinf
+                                  {this.echoClasses(pupil.clas).class_number} -
+                                  "{this.echoClasses(pupil.clas).class_char}"
+                                  sinf
                                 </p>
                               </div>
                             </div>
