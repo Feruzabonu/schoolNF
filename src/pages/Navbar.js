@@ -91,16 +91,16 @@ export default class Navbar extends Component {
                     </div>
                     <div className={styles.socialMedia}>
                     <div className={styles.icons} style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://bit.ly/3ojl7QJ"><FaFacebookF style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href={this.state.school?this.state.school.facebook:''}><FaFacebookF style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{ curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://bit.ly/3B2suzE"><FaInstagram style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href={this.state.school?this.state.school.instagram:''}><FaInstagram style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                        <a target="_blank" href="https://bit.ly/39Qt87k"><FaTelegramPlane style={{color:'#1EB2A6'}}/></a>
+                        <a target="_blank" href={this.state.school?this.state.school.telegram:''}><FaTelegramPlane style={{color:'#1EB2A6'}}/></a>
                      </div>
                      <div className={styles.icons}  style={{curspor:'pointer',width:'40px',height:'40px',borderRadius:'50%',backgroundColor:'black',display:'flex',justifyContent:'center',alignItems:'center',marginRight:'5px'}}>
-                         <a target="_blank" href="https://bit.ly/39QGOPL"><FaYoutube style={{color:'#1EB2A6'}}/></a>
+                         <a target="_blank" href={this.state.school?this.state.school.youtube:''}><FaYoutube style={{color:'#1EB2A6'}}/></a>
                      </div>
                     </div>
                 </div>
