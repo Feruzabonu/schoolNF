@@ -10,6 +10,15 @@ import img3 from "../img/ch2.jpeg";
 import img4 from "../img/ch4.jpg";
 import img2 from "../img/pp.svg";
 import wins from "../img/wins.jpg";
+import styles from "../css/maktabHayoti.module.css";
+import { Carousel } from "antd";
+import bg3t from "../img/xorazim5.jpg";
+import bg2t from "../img/xorazim6.jpg";
+import bg1t from "../img/xorazim8.jpg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import ScaleLoader from "react-spinners/ScaleLoader";
+
 export default class Yutuqlarimiz extends Component {
   state = {
     loader: true,
@@ -74,82 +83,31 @@ export default class Yutuqlarimiz extends Component {
   render() {
     return (
       <div>
-        {/* <div className={style.body}>
-              <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
-                Maktab Hayoti
-              </h3>
-              <div className={styles.headerIcons}>
-                <a href="#1">
-                  <DownCircleOutlined
-                    style={{ fontSize: "40px", color: "white" }}
-                    className={styles.headerIcon}
-                  />
-                </a>
-              </div>
+         {this.state.loader ? (
+          <div className="loader">
+          <div><ScaleLoader color="#1EB2A6" loading={this.state.loader} size={120} /></div>
+      <div><p>Sayt tajriba tariqasida ishlamoqda</p></div>
+       </div>
+        ) : (
+           <>
+           <Navbar />
+                   <div>
+                   <h1 className={styles.headerh}>Maktabning yutuqlari bilan tinishing </h1>
+              <Carousel
+                   dots={false}
+                    autoplay
+                    effect="fade"
+                    style={{ zIndex: "-1" ,width:'100%'}}
+                 
+                  >
+           
+               <div className="carg_img">
+                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    </div>    
+            
+           </Carousel>
             </div>
-            <Carousel autoplay className={styles.sliderHeader}>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h1 !== null
-                      ? data.m_h_h1
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h2 !== null
-                      ? data.m_h_h2
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h3 !== null
-                      ? data.m_h_h3
-                      : school3
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h4 !== null
-                      ? data.m_h_h4
-                      : school4
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h5 !== null
-                      ? data.m_h_h5
-                      : school5
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-            </Carousel> */}
 
-        <div style={{ width: "100%" }}>
-          {" "}
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <h1 className={style.sarlavha}>Bizning yutuqlarimiz</h1>
-          <div className={style.line}></div>
-        </div>
         <Container>
           {" "}
           <Row>
@@ -183,6 +141,9 @@ export default class Yutuqlarimiz extends Component {
               : ""}
           </Row>
         </Container>
+        <Footer />
+</>
+        )}
       </div>
     );
   }

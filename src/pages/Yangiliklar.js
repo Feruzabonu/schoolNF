@@ -87,13 +87,7 @@ export default class Yangiliklar extends Component {
                <div className="carg_img">
                       <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     </div>    
-               <div className="carg_img">
-                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>   
-               <div className="carg_img">
-                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>   
-           </Carousel>
+               </Carousel>
             </div>
 
             <Container fluid>
