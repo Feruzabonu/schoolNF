@@ -158,6 +158,7 @@ export default class Alochilar extends Component {
                   className={styles.headerImage}
                 />
               </div>
+<<<<<<< Updated upstream
               <div className="carg_img">
                 <img
                   src={bg1t}
@@ -168,6 +169,27 @@ export default class Alochilar extends Component {
                 <img
                   src={bg3t}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
+=======
+              <div>
+                <Image
+                  src={
+                    data !== null && data.m_h_h1 !== null
+                      ? data.m_h_h1
+                      : school1
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+           
+              <div>
+                <Image
+                  src={
+                    data !== null && data.m_h_h3 !== null
+                      ? data.m_h_h3
+                      : school1
+                  }
+                  className={styles.headerImage}
+>>>>>>> Stashed changes
                 />
               </div>
 

@@ -154,8 +154,8 @@ class Qabul extends React.Component {
              style={{objectFit:'cover'}}
             src={
               this.state.school !== null
-              ? this.state.school.q!== null
-                ? this.state.school.q
+              ? this.state.m_h_h3!== null
+                ? this.state.m_h_h3
                 : tav_img
               : tav_img
                   }
@@ -167,20 +167,28 @@ class Qabul extends React.Component {
              style={{objectFit:'cover'}}
                   src={
                     this.state.school !== null
-                          ? this.state.school.q_imtihon_r !== null
-                            ? this.state.school.q_imtihon_r
+                          ? this.state.school.m_h_h1 !== null
+                            ? this.state.school.m_h_h1
                             : talab
                           : talab
                   }
                   className={style.headerImage}
                 />
                </div>    
-               <div className="carg_img">
-                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>    
-               <div className="carg_img">
-                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>   
+               <div>
+             <img
+             style={{objectFit:'cover'}}
+                  src={
+                    this.state.school !== null
+                          ? this.state.school.m_h_h2 !== null
+                            ? this.state.school.m_h_h2
+                            : talab
+                          : talab
+                  }
+                  className={style.headerImage}
+                />
+               </div>    
+           
            </Carousel>
                 </div>
                 

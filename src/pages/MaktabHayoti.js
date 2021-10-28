@@ -95,12 +95,24 @@ export default class MaktabHayoti extends Component {
                   className={styles.headerImage}
                 />
                </div>  
-               <div className="carg_img">
-                      <img src={bg1t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>    
-               <div className="carg_img">
-                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>    
+               <div>
+           <img  src={
+                    data !== null && data.m_h_h3 !== null
+                      ? data.m_h_h3
+                      : school1
+                  }
+                  className={styles.headerImage}
+                  />
+             </div>   
+             <div>
+           <img  src={
+                    data !== null && data.m_h_h4 !== null
+                      ? data.m_h_h4
+                      : school1
+                  }
+                  className={styles.headerImage}
+                  />
+             </div>   
            </Carousel>
             {/* <Carousel style={{zIndex:'1'}} autoplay className={styles.sliderHeader}>
               <div>
