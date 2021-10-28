@@ -44,7 +44,7 @@ export default class BoshSahifaDavomi extends Component {
         });
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
       this.setState({ data: res.data });
@@ -52,14 +52,14 @@ export default class BoshSahifaDavomi extends Component {
     axios
       .get(`${url}/class/`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         this.setState({
           class: res.data,
           loader: false,
         });
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         this.setState({ loader: false });
       });
   };
@@ -106,7 +106,7 @@ export default class BoshSahifaDavomi extends Component {
     this.getExcellents();
     this.getPupil();
     this.setState({ loader: false });
-    console.log(123);
+    // console.log(123);
   }
 
   render() {

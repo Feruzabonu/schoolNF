@@ -38,8 +38,13 @@ import {
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { getEvents } from "../host/Config";
-import Global from "../host/Global";
 import {HiLocationMarker} from 'react-icons/hi'
+
+import Global from "../host/Global";
+import axios from 'axios'
+import {url} from '../host/Host'
+import {message} from 'antd'
+
 const { TextArea } = Input;
 const layout = {
   labelCol: {
@@ -87,16 +92,21 @@ export default class MaktabTadbirlari extends Component {
     this.getEvents();
   }
   sendMurojat=()=>{
-    var name=document.getElementbyId('name').value
-    var phone=document.getElementbyId('phone').value
-    var text=document.getElementbyId('text').value
+    // console.log('wfknfdnhf')
+    var name=document.getElementById('name').value
+    var phone=document.getElementById('phone').value
+    var text=document.getElementById('text').value
     var config={
       name,
       phone,
       text,
       school:Global.schoolId
     }
-    console.log(config)
+    // console.log(config)
+    axios.post(`${url}/murojaat/`, config).then(res=>{message.success('Murojaatingiz yuborildi');
+    name=document.getElementById('name').value=""
+    phone=document.getElementById('phone').value=""
+    text=document.getElementById('text').value=""}).catch(err=>{message.success('Murojaatingiz yuborilmadi')})
   }
   render() {
     const responsive = {
@@ -322,7 +332,7 @@ export default class MaktabTadbirlari extends Component {
                       <input type="text" id="phone" placeholder="+998 99 999 99 99" />
                       <label>Murojaat</label>
                       <textarea id="text" placeholder="Murojaat matni..."></textarea>
-                      <button type="button" onClick="sendMurojat">Yuborish</button>
+                      <button type="button" onClick={this.sendMurojat}>Yuborish</button>
                     </form>
                   </div>
                 </div>
