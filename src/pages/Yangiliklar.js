@@ -75,7 +75,7 @@ export default class Yangiliklar extends Component {
               <div style={{ width: "100vw", overflowX: "hidden" }}>
                  <Navbar />
                    <div>
-                   <h1 className={style.headerh}>Maktabning so'nggi yangiliklari bilan tinishing </h1>
+                   <h1 className={style.headerh}>Maktabning so'nggi yangiliklari bilan tanishing </h1>
               <Carousel
                    dots={false}
                     autoplay

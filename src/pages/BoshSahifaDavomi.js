@@ -41,78 +41,36 @@ export default class BoshSahifaDavomi extends Component {
   };
 
   getExcellents = () => {
-    // var a = window.location.href.split("/");
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-        });
-      })
-      .catch((err) => {
-        // console.log(err);
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+    axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
       this.setState({ data: res.data });
+      axios.get(`${url}/excellent/`).then((res1) => {
+       var v=[]
+       res1.data.map(item=>{
+         if(item.school===res.data.id){
+           v.push(item)
+         }
+       })
+       
+        this.setState({ excellent: v });
+        setInterval(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
+     
+      });
     });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        // console.log(res.data);
-        this.setState({
-          class: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        // console.log(err);
-        this.setState({ loader: false });
-      });
+  
   };
 
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) => {
-        if (item1.id === id) {
-          pupil = item1;
-        }
-      });
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    console.log(id, this.state.class);
-    if (this.state.class !== []) {
-      this.state.class.map((item1) => {
-        if (item1.id === id) {
-          classes = item1;
-        }
-      });
-    }
-    return classes;
-  };
-
+  
   componentDidMount() {
     Aos.init({
       duration: 2000,
     });
     this.getExcellents();
-    this.getPupil();
-    this.setState({ loader: false });
+    // this.getPupil();
+    // this.setState({ loader: false });
     // console.log(123);
   }
 
@@ -237,13 +195,14 @@ export default class BoshSahifaDavomi extends Component {
     ];
     return (
       <div style={{ backgroundColor: "white" }}>
-        <div className={style.successful}>
+        
+            {this.state.excellent.length !== 0
+
+              ?
+              <div className={style.successful}>
           <h1>Bizning muvaffaqiyatli o'quvchilarimiz</h1>
-          <Slider {...settings1} style={{ padding: "20px" }}>
-            {this.state.excellent !== [] && this.state.class !== []
-              ? this.state.excellent.map((item, key) => {
-                  var pupil = this.setPupils(item.pupil);
-                  var classes = this.echoClasses(pupil.clas);
+          <Slider {...settings1} style={{ padding: "20px" }}>{
+              this.state.excellent.map((item, key) => {
                   return (
                     <div className={style.slider}>
                       <div
@@ -257,7 +216,7 @@ export default class BoshSahifaDavomi extends Component {
                       >
                         <div style={{ width: "80px" }}>
                           <img
-                            src={pupil.image !== null ? pupil.image : school1}
+                            src={item.image !== null ? item.image : school1}
                             style={{
                               width: "100px",
                               height: "100px",
@@ -271,11 +230,11 @@ export default class BoshSahifaDavomi extends Component {
                             style={{ textAlign: "center" }}
                             style={{ marginTop: "10px" }}
                           >
-                            {pupil.full_name}
+                            {item.full_name}
                           </h4>
                           <p style={{ marginTop: "-5px", color: "#1EB2A6" }}>
-                            {this.echoClasses(pupil.clas).class_number} - "
-                            {this.echoClasses(pupil.clas).class_char}" sinf
+                            {item.clas}
+                            
                           </p>
                           <FaStar
                             style={{ color: "#1EB2A6", marginLeft: "10px" }}
@@ -296,10 +255,10 @@ export default class BoshSahifaDavomi extends Component {
                       </div>
                     </div>
                   );
-                })
-              : ""}
-          </Slider>
-        </div>
+                })}
+                </Slider>
+                </div> : ""}
+         
         <div className={style.successful}>
           <h1>O'qituvchilar doskasi</h1>
           <Slider {...settings} style={{ padding: "20px" }}>

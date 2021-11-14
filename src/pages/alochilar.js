@@ -27,98 +27,36 @@ export default class Alochilar extends Component {
     school: null,
     class: [],
   };
-
-  getExcellents = () => {
-    // var a = window.location.href.split("/");
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
+getSchool=()=>{
+  axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
+    this.setState({ data: res.data });
+    axios.get(`${url}/excellent/`).then((res1) => {
+     var v=[]
+     res1.data.map(item=>{
+       if(item.school===res.data.id){
+         v.push(item)
+       }
+     })
+     
+      this.setState({ excellent: v });
+      setInterval(() => {
         this.setState({
-          excellent: res.data,
-          // loader: false,
+          loader: false,
         });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          // excellent: res.data,
-          // loader: false,
-        });
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
-      this.setState({ data: res.data });
+      }, 2000);
+   
     });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        // this.setState({loader:false})
-      });
-    setTimeout(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 2000);
-  };
+  });
 
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
+ 
 
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) => {
-        if (item1.id === id) {
-          pupil = item1;
-        }
-      });
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    // console.log(id, this.state.class);
-    if (this.state.class !== []) {
-      this.state.class.map((item1) => {
-        if (item1.id === id) {
-          classes = item1;
-        }
-      });
-    }
-    return classes;
-    console.log(classes);
-  };
-
+}
   componentDidMount() {
     Aos.init({
       duration: 2000,
     });
-    this.getExcellents();
-    this.getPupil();
-    window.addEventListener("load", () => {
-      // this.setState({
-      //   loader:false
-      // })
-    });
-    setInterval(() => {
-      this.setState({
-        loader: false,
-      });
-    }, 2000);
+    // this.getExcellents();
+    this.getSchool();
   }
 
   render() {
@@ -182,14 +120,14 @@ export default class Alochilar extends Component {
                   <h3 className={style.sarlavha}>A'lochilar doskasi</h3>
                   {this.state.excellent !== []
                     ? this.state.excellent.map((item) => {
-                        var pupil = this.setPupils(item.pupil);
+                        // var pupil = this.setPupils(item);
                         return (
                           <Col lg={6} md={12} sm={12}>
                             <div className={style.card}>
                               <div className={style.cardImg}>
                                 <Image
                                   src={
-                                    pupil.image !== null ? pupil.image : school2
+                                    item.image !== null ? item.image : school2
                                   }
                                   style={{
                                     width: "100%",
@@ -220,8 +158,8 @@ export default class Alochilar extends Component {
                                     marginLeft: "10px",
                                   }}
                                 >
-                                  {pupil.full_name}
-                                  <p> {pupil.birth_day}</p>
+                                  {item.full_name}
+                                  {/* <p> {item.birth_day}</p> */}
                                 </h6>
                                 <FaStar
                                   style={{
@@ -254,10 +192,11 @@ export default class Alochilar extends Component {
                                   }}
                                 />
 
+<p>
+                                  {item.clas}
+                                </p>
                                 <p>
-                                  {this.echoClasses(pupil.clas).class_number} -
-                                  "{this.echoClasses(pupil.clas).class_char}"
-                                  sinf
+                                  {item.birth_day}
                                 </p>
                               </div>
                             </div>
