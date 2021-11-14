@@ -98,19 +98,25 @@ getSchool=()=>{
               </div>
               <div className="carg_img">
                 <img
-                  src={bg1t}
+                  src={ data !== null && data.m_h_h3 !== null
+                    ? data.m_h_h3
+                    : school1}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
               <div className="carg_img">
                 <img
-                  src={bg3t}
+                  src={ data !== null && data.m_h_h4 !== null
+                    ? data.m_h_h4
+                    : school1}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
 
               <div>
-                <Image src={bg2t} className={styles.headerImage} />
+                <Image src={ data !== null && data.m_h_h5 !== null
+                      ? data.m_h_h5
+                      : school1} className={styles.headerImage} />
               </div>
             </Carousel>
 
