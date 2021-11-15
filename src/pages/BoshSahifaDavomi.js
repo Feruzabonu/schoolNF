@@ -51,7 +51,7 @@ export default class BoshSahifaDavomi extends Component {
          }
        })
        
-        this.setState({ excellent: v });
+        this.setState({ excellent: v.slice(0,2) });
         setInterval(() => {
           this.setState({
             loader: false,
@@ -68,10 +68,7 @@ export default class BoshSahifaDavomi extends Component {
     Aos.init({
       duration: 2000,
     });
-    this.getExcellents();
-    // this.getPupil();
-    // this.setState({ loader: false });
-    // console.log(123);
+  this.getExcellents() 
   }
 
   render() {

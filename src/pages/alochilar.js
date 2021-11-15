@@ -126,7 +126,6 @@ getSchool=()=>{
                   <h3 className={style.sarlavha}>A'lochilar doskasi</h3>
                   {this.state.excellent !== []
                     ? this.state.excellent.map((item) => {
-                        // var pupil = this.setPupils(item);
                         return (
                           <Col lg={6} md={12} sm={12}>
                             <div className={style.card}>
