@@ -3,21 +3,15 @@ import styles from '../css/maktabmamuriyati.module.css'
 import style from "../css/maktabHayoti.module.css";
 import "../App.css";
 import { Carousel  } from 'antd';
-import school1 from '../img/school19.jpg'
-import school2 from '../img/school20.jpg'
-import school3 from '../img/ustoz2.jpg'
-import school4 from '../img/school13.jpg'
 import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
 
 import Global from '../host/Global';
 import { FadeLoader, ScaleLoader } from 'react-spinners';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardFooter, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import Navbar2 from './Navbar2';
 

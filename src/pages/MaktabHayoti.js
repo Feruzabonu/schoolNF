@@ -7,7 +7,6 @@ import { Carousel } from "antd";
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
-import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import school7 from "../img/school7.jpg";
@@ -17,20 +16,11 @@ import school10 from "../img/school10.jpg";
 import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
-import bg1t from "../img/xorazim1.jpg";
-import bg2t from "../img/xorazim2.jpg";
-import { Link } from "react-router-dom";
-import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import axios from "axios";
-
-import { Pannellum } from "pannellum-react";
-import myImage from "../img/360.jpeg";
-
-import Global from "../host/Global";
 import { url, user } from "../host/Host";
 import Navbar from "./Navbar";
 import Footer from './Footer'

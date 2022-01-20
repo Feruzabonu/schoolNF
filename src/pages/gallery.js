@@ -87,35 +87,7 @@ export default class Gallery extends Component {
                   />
              </div>   
              
-             {/* <div className="carg_img">
-                      <img src={bg2t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg3t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg4t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg5t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg6t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg7t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg8t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg9t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg10t} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-                    </div> 
-                      */}
-           </Carousel>
+            </Carousel>
                 </div>
             
 
