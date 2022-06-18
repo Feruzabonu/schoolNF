@@ -1,12 +1,14 @@
 import Aos from "aos";
 import axios from "axios";
 import React, { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import { ScaleLoader } from "react-spinners";
 import style from "../css/yutuqlarimiz.module.css";
 import styles from "./BoshSahifa.module.css";
 import Global from "../host/Global";
 import { url } from "../host/Host";
+import styleh from "../css/yangiliklar.module.css";
+
 import img1 from "../img/ch1.jpg";
 import img3 from "../img/ch2.jpeg";
 import img4 from "../img/ch4.jpg";
@@ -179,28 +181,41 @@ export default class Yutuqlarimiz extends Component {
           </div>
         ) : (
           <>
-            <div className={style.header}>
-              <Carousel
-                autoplay
-                effect="fade"
-                style={{ zIndex: "-234", width: "100%", height: "100vh" }}
-                {...props}
-              >
-                {this.echoStudents(this.state.students).map((item, key) => {
-                  return (
-                    <div className="carg_img">
-                      <img
-                        src={item}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                        alt="Rasm"
-                      />
-                    </div>
-                  );
-                })}
+             <div className={styleh.yangiliklar_header}>
+              <div className={styleh.rgbas}>
+                <div className={styleh.headerSliderText}>
+                  <h3>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+                </div>
+              </div>
+              <Carousel autoplay className={styleh.sliderContainer}>
+                <div className={styleh.sliderIMG}>
+                  <Image
+                    src={
+                      this.state.school !== null && this.state.school.m_h_h1 !== null ? this.state.school.m_h_h1 : img1
+                    }
+                  />
+                </div>
+                <div className={styleh.sliderIMG}>
+                  <Image
+                    src={
+                      this.state.school !== null && this.state.school.m_h_h2 !== null ? this.state.school.m_h_h2 : img2
+                    }
+                  />
+                </div>
+                <div className={styleh.sliderIMG}>
+                  <Image
+                    src={
+                      this.state.school !== null && this.state.school.m_h_h3 !== null ? this.state.school.m_h_h3 : img3
+                    }
+                  />
+                </div>
+                <div className={styleh.sliderIMG}>
+                  <Image
+                    src={
+                      this.state.school !== null && this.state.school.m_h_h4 !== null ? this.state.school.m_h_h4 : img4
+                    }
+                  />
+                </div>
               </Carousel>
             </div>
             <Navbar />
