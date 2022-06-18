@@ -312,9 +312,7 @@ export default class MaktabTadbirlari extends Component {
                     <ZoomControl options={{ float: "left" }} />
                   </Map>
                 </YMaps>
-                <br />
-                <img className="yil" src={yil} />
-                <br />
+               
               </div>
             </Col>
             <Col lg={6} md={12} sm={12} className="fgr">

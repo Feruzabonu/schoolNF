@@ -175,8 +175,8 @@ export default class Footer extends Component {
                                                 <div>
                                                     <a href={`tel: ${
                     this.state.data !== null ? this.state.data.phone : "+998977902801"
-                  }`}style={{color:'#666A6F', textDecoration:'none'}}> +998977902801
-                  {/* {this.state.data !== null ? this.state.data.phone : "+998977902801"} */}
+                  }`}style={{color:'#666A6F', textDecoration:'none'}}> 
+                  {this.state.data !== null ? this.state.data.phone : "+998977902801"}
                   </a></div></li>
                                             <li style={{display:'flex', height:"auto", marginBottom:'20px'}}>
                                                 <div style={{marginRight:'20px'}}><AiFillMail color="#1EB2A6"/></div>
