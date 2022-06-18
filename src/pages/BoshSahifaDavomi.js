@@ -224,8 +224,8 @@ export default class BoshSahifaDavomi extends Component {
                         </div>
                         <div style={{ marginLeft: "10px" }}>
                           <h4
-                            style={{ textAlign: "center" }}
-                            style={{ marginTop: "10px" }}
+                            style={{ textAlign: "center" , marginTop: "10px" }}
+                          
                           >
                             {item.full_name}
                           </h4>
@@ -256,12 +256,13 @@ export default class BoshSahifaDavomi extends Component {
                 </Slider>
                 </div> : ""}
          
-        <div className={style.successful}>
+        {/* <div className={style.successful}>
           <h1>O'qituvchilar doskasi</h1>
           <Slider {...settings} style={{ padding: "20px" }}>
             {data && Array.isArray(data)
               ? data.map((item, key) => {
-                  return (
+               
+                return (
                     <div className={style.ustozCard}>
                       <div
                         data-aos="flip-right"
@@ -314,7 +315,7 @@ export default class BoshSahifaDavomi extends Component {
                 })
               : ""}
           </Slider>
-        </div>
+        </div> */}
         {/* <Container>
           <Row>
             <Col lg={6} md={12} sm={12}>
