@@ -222,6 +222,7 @@ export default class BoshSahifa extends Component {
                 </Col>
 
                 <Col xs={12} sm={12} md={6} lg={6} className={style.video}>
+               
                   <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
                   <Row>
                     <Col xs={12} sm={12} md={12} lg={12} className={style.newCard}>
@@ -255,7 +256,9 @@ export default class BoshSahifa extends Component {
            </Container>
             </div>
 
-            {/* <div className="oq"></div> */}
+            {/* <div className="oq"></div> */}  <br/>
+                 <br/>
+                
             <BoshSahifaDavomi />
             <div className={style.container} style={{position:'relative',textAlign:'center'}}>
               <div className={style.bir}>

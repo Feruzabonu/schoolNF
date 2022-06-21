@@ -42,7 +42,7 @@ import {HiLocationMarker} from 'react-icons/hi'
 
 import Global from "../host/Global";
 import axios from 'axios'
-import {url} from '../host/Host'
+import {url, user} from '../host/Host'
 import {message} from 'antd'
 
 const { TextArea } = Input;
@@ -65,9 +65,14 @@ export default class MaktabTadbirlari extends Component {
     events: [],
     id: 0,
     number: [1, 2, 3],
+    data:null
   };
 
   getEvents = () => {
+    var v = user;
+    axios.get(`${url}/school-by-admin/${v}`).then((res) => {
+      this.setState({ data: res.data.params, });
+    });
     getEvents()
       .then((res) => {
         console.log(res.data);
@@ -284,7 +289,7 @@ export default class MaktabTadbirlari extends Component {
                     height="400px"
                     // style={{marginLeft:"10%"}}
                     state={{
-                      center: [41.552486, 60.620890],
+                      center: this.state.data!==null && this.state.data.length===2?[Number(this.state.data[0]),Number(this.state.data[1])]:[41.552486, 60.620890],
                       zoom: 13,
                     }}
                   >
@@ -295,7 +300,7 @@ export default class MaktabTadbirlari extends Component {
                     >
                       <Placemark
                         key={-1}
-                        geometry={[41.552486, 60.620890]}
+                        geometry={this.state.data!==null && this.state.data.length===2?[Number(this.state.data[0]),Number(this.state.data[1])]:[41.552486, 60.620890]}
                         options={{
                           iconLayout: "default#image",
                         }}
