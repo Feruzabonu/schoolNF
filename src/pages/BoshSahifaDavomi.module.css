@@ -315,6 +315,7 @@
 .successful{
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 30px;
   /* padding: 60px 100px; */
   background-color:#F8F8F8;
   box-shadow:0px 0px 10px rgb(44, 42, 42);
@@ -336,7 +337,7 @@
 }
 .slider{
   width: 340px !important;
-  height: 300px;
+  height: 430px;
   margin:20px 20px;
   background-color:white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -356,6 +357,7 @@
   flex-direction: column !important;
 
 }
+.ustozCard img{width: 100% !important;}
 @media screen and (max-width:400px) {
   .counter div{
       width: 100% !important;
@@ -376,7 +378,7 @@
       margin:20px 20px;  
   }
   .ustozDown{
-    height: max-content !important;
+    height: 300px !important;
   }
 }
 @media screen and (max-width:768px) {
@@ -397,7 +399,7 @@
       padding: 20px; 
   }
   .ustozDown{
-    height: max-content !important;
+    height: 300px !important;
   }
 }
 @media screen and (min-width:769px) {
@@ -418,7 +420,7 @@
       padding: 20px; 
   }
   .ustozDown{
-    height: 250px !important;
+    height: 300px !important;
   }
 }
 @media screen and (min-width:993px) {
@@ -446,5 +448,11 @@
 
 @media (min-width:1500px){
   .ustozCard img{height:300px !important;}
+  .card {height: 300px !important;}
   .ustozDown{position: relative; top:40px;}
+}
+
+.ustozDown{
+ overflow-y: auto !important;
+
 }
